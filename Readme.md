@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Мария Александрова](https://up.htmlacademy.ru/adaptive/21/user/171145).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Попенко](https://htmlacademy.ru/profile/id66243).
 
 ---
 
