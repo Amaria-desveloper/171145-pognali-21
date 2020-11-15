@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+
+<body class="page__body page__body--form">
+
+  <header class="header header--sticky header--small">
+    <a class="header__logo logo logo--invert">
+      <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100"
+        height="15">
+    </a>
+
+    <button class="header__toggle toggle toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true"
+      aria-label="Открыть или закрыть главное меню"></button>
+
+    <nav class="header__nav nav nav--modal">
+      <ul class="nav__menu menu menu--modal">
+        <li class="menu__item">
+          <a class="menu__link" href="">О сервисе</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./form.html">Направления</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./catalog.html">Попутчики</a>
+        </li>
+      </ul>
+
+      <a class="nav__login login login--modal" href="./authorization.html">Авторизация</a>
+    </nav>
+
+    <ul class="header__contacts contacts contacts--invert">
+      <li class="contacts__item">
+        <a class="contacts__phone contacts__phone" href="tel:88005558628"
+          aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__email contacts__email" href="mailto:mail@htmlacademy.ru"
+          aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
+    </ul>
+
+    <ul class="header__social social social--modal">
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="" aria-label="Наша страница на Фейсбуке">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="" aria-label="Наша группа во Вконтакте">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--instagram" href="" aria-label="Наша страница в Инстаграм">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="main profile-form">
+    <h1 class="headline headline--page">Направления</h1>
+
+    <section class="profile-form__user">
+      <h2 class="visually-hidden">Мой профиль. Общая информация</h2>
+
+      <form class="user" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__user">
+        <fieldset class="user__fieldset">
+          <div class="user__level level-tag level-tag--progress">
+            <p class="level-tag__number">80</p>
+            <p class="level-tag__text">level</p>
+          </div>
+
+          <div class="user__avatar">
+            <img src="http://via.placeholder.com/100x100" alt="Фотография пользователя" width="100" height="100">
+          </div>
+
+          <div class="user__avatar-load">
+            <label class="visually-hidden">
+              <input type="file" name="avatar" accept="image/*">
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="user__fieldset">
+          <legend class="user__legend">Тэги</legend>
+          <textarea name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов"></textarea>
+        </fieldset>
+
+        <fieldset class="user__fieldset">
+          <legend class="user__legend">Транспорт</legend>
+          <label class="transport transport--plane visually-hidden tooltip tooltip--plane transport--checked">
+            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" checked>
+          </label>
+          <label class="transport transport--bus visually-hidden tooltip tooltip--bus transport--checked">
+            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" checked>
+          </label>
+          <label class="transport transport--bycicle visually-hidden  tooltip tooltip--bycicle">
+            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bycicle">
+          </label>
+          <label class="transport transport--walk visually-hidden tooltip tooltip--walk transport--checked">
+            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="walk" checked>
+          </label>
+        </fieldset>
+      </form>
+
+      <h3 class="profile-form__title headline headline--form-title">Мои планы</h3>
+      <ol class="profile-form__plans plans">
+        <li class="plans__plan">
+          <b class="plans__title">Франция, Италия</b>
+          <p class="plans__fellow-quantity">3 попутчика</p>
+          <p class="plans__dates">26 мар — 29 мар</p>
+          <a class="plans__change-button form-button form-button--change" href="">Изменить</a>
+        </li>
+
+        <li class="plans__plan">
+          <b class="plans__title">Таиланд, Индонезия</b>
+          <p class="plans__fellow-quantity">1 попутчик</p>
+          <p class="plans__dates">1 июл — 15 июл</p>
+          <a class="plans__change-button form-button form-button--change" href="">Изменить</a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="profile-form__add-plan add-plan">
+      <h2 class="add-plan__title headline headline--form-title">Добавить план:</h2>
+
+      <ul class="add-plan__steps-indicator steps-indicator">
+        <li class="step step--current"></li>
+        <li class="step"></li>
+        <li class="step"></li>
+      </ul>
+
+      <form class="add-plan__form form-plan" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__form-plan">
+
+        <div class="form-plan__step form-step new-plan">
+          <h3 class="form-step__title headline headline--form-subtitle">Шаг 1. <br> Даты пребывания</h3>
+
+          <p class="form-step__text">
+            Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку и ее предполагаемую длительность.
+          </p>
+
+          <div class="new-plan__settings settings">
+            <fieldset class="new-plan__fellows settings__fieldset">
+              <legend>
+                <span class="settings__text">Ищу попутчиков:</span>
+                <span class="settings__text settings__text--measure">чел.</span>
+              </legend>
+              <div class="settings__input">
+                <button class="settings__button num-button num-button--minus" type="button"></button>
+                <input class="settings__input" type="text" name="fellows-quantity" value="2"
+                  aria-label="введите количество попутчиков">
+                <button class="settings__button num-button num-button--plus" type="button"></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="new-plan__duration settings__fieldset">
+              <legend>
+                <span class="settings__text">Длительность:</span>
+                <span class="settings__text settings__text--measure">дн.</span>
+              </legend>
+              <div class="settings__input">
+                <button class="settings__button num-button num-button--minus" type="button"></button>
+                <input class="settings__input" type="text" name="duration" value="3" aria-label="введите количество дней">
+                <button class="settings__button num-button num-button--plus" type="button"></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="new-plan__children settings__fieldset">
+              <label class="settings__label children children--checked">
+                <input class="visually-hidden" type="checkbox" name="children-allowed" value="yes" checked>
+                Можно с детьми
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="new-plan__calendar calendar">
+            <div class="calendar__caption data-option">
+              <button class="data-option__prev"></button>
+              <p class="data-option__data-text">Март 2019</p>
+              <button class="data-option__next"></button>
+            </div>
+
+            <div class="calendar__table table">
+              <ul class="table__header">
+                <li class="table__header-cell">П</li>
+                <li class="table__header-cell">В</li>
+                <li class="table__header-cell">С</li>
+                <li class="table__header-cell">Ч</li>
+                <li class="table__header-cell">П</li>
+                <li class="table__header-cell table__header-cell--holiday">С</li>
+                <li class="table__header-cell table__header-cell--holiday">В</li>
+              </ul>
+
+              <div class="table__content">
+                <ul class="table__row">
+                  <li class="table-cell table-cell--disabled">23</li>
+                  <li class="table-cell table-cell--disabled">24</li>
+                  <li class="table-cell table-cell--disabled">25</li>
+                  <li class="table-cell table-cell--disabled">26</li>
+                  <li class="table-cell table-cell--disabled">27</li>
+                  <li class="table-cell table-cell--disabled">28</li>
+                  <li class="table-cell table-cell--disabled">1</li>
+                </ul>
+
+                <ul class="table__row">
+                  <li class="table-cell table-cell--disabled">2</li>
+                  <li class="table-cell table-cell--disabled">3</li>
+                  <li class="table-cell table-cell--disabled">4</li>
+                  <li class="table-cell table-cell--disabled">5</li>
+                  <li class="table-cell table-cell--disabled">6</li>
+                  <li class="table-cell table-cell--disabled">7</li>
+                  <li class="table-cell table-cell--disabled">8</li>
+                </ul>
+
+                <ul class="table__row">
+                  <li class="table-cell table-cell--disabled">9</li>
+                  <li class="table-cell table-cell--disabled">10</li>
+                  <li class="table-cell table-cell--disabled">11</li>
+                  <li class="table-cell table-cell--disabled">12</li>
+                  <li class="table-cell table-cell--disabled">13</li>
+                  <li class="table-cell table-cell--disabled">14</li>
+                  <li class="table-cell table-cell--disabled">15</li>
+                </ul>
+
+                <ul class="table__row">
+                  <li class="table-cell table-cell--disabled">16</li>
+                  <li class="table-cell table-cell--disabled">17</li>
+                  <li class="table-cell table-cell--disabled">18</li>
+                  <li class="table-cell table-cell--disabled">19</li>
+                  <li class="table-cell table-cell--disabled">20</li>
+                  <li class="table-cell table-cell--disabled">21</li>
+                  <li class="table-cell table-cell--disabled">22</li>
+                </ul>
+
+                <ul class="table__row">
+                  <li class="table-cell table-cell--disabled">23</li>
+                  <li class="table-cell table-cell--disabled">24</li>
+                  <li class="table-cell table-cell--disabled">25</li>
+                  <li class="table-cell table-cell--chosen table-cell--chosen table-cell--active">26</li>
+                  <li class="table-cell table-cell--chosen">27</li>
+                  <li class="table-cell table-cell--chosen">28</li>
+                  <li class="table-cell">29</li>
+                </ul>
+
+                <ul class="table__row">
+                  <li class="table-cell">30</li>
+                  <li class="table-cell">31</li>
+                  <li class="table-cell">1</li>
+                  <li class="table-cell">2</li>
+                  <li class="table-cell">3</li>
+                  <li class="table-cell">4</li>
+                  <li class="table-cell">5</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a class="new-plan__next-button step-button step-button--next" href="">Следующий шаг</a>
+        </div>
+
+
+        <div class="form-plan__step form-step route">
+          <h3 class="form-step__title headline headline--form-subtitle">Шаг 2. <br> Маршрут</h3>
+
+          <p class="form-step__text">
+            Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+          </p>
+
+          <div class="route__choose-box route__choose-box--selected">
+            <button class="route__button" type="button">
+              Босния и Герцеговина
+              <span class="route__arrow-button"></span>
+            </button>
+            <div class="route__flag flag flag--bosnia-herzegovina">
+              <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+            </div>
+            <button class="route__remove-button button-remove" type="button"></button>
+          </div>
+
+          <div class="route__choose-box route__choose-box--selected">
+            <button class="route__button" type="button">
+              Чехия
+              <span class="route__arrow-button"></span>
+            </button>
+            <div class="route__flag flag flag--czech">
+              <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+            </div>
+            <button class="route__remove-button button-remove" type="button"></button>
+          </div>
+
+          <div class="route__choose-box route__choose-box">
+            <button class="route__button" type="button">
+              Выберите страну
+              <span class="route__arrow-button"></span>
+            </button>
+            <div class="route__flag route__flag--no-chosen"></div>
+            <button class="route__remove-button button-remove" type="button"></button>
+          </div>
+
+          <div class="route__dropdown select-country">
+            <div class="select-country__alphabet">
+              <fieldset class="alphabet-box">
+                <input class="visually-hidden" type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
+                <label class="letter letter--checked" for="letter-A">А</label>
+
+                <input class="visually-hidden" type="radio" id="letter-B" name="alphabet" value="letter-B">
+                <label class="letter" for="letter-B">Б</label>
+
+                <input class="visually-hidden" type="radio" id="letter-V" name="alphabet" value="letter-V">
+                <label class="letter" for="letter-V">В</label>
+
+                <input class="visually-hidden" type="radio" id="letter-G" name="alphabet" value="letter-G">
+                <label class="letter" for="letter-G">Г</label>
+
+                <input class="visually-hidden" type="radio" id="letter-D" name="alphabet" value="letter-D">
+                <label class="letter" for="letter-D">Д</label>
+
+                <input class="visually-hidden" type="radio" id="letter-E" name="alphabet" value="letter-E">
+                <label class="letter" for="letter-E">Е</label>
+
+                <input class="visually-hidden" type="radio" id="letter-Z" name="alphabet" value="letter-Z">
+                <label class="letter" for="letter-Z">З</label>
+
+                <input class="visually-hidden" type="radio" id="letter-I" name="alphabet" value="letter-I">
+                <label class="letter" for="letter-I">И</label>
+
+                <input class="visually-hidden" type="radio" id="letter-K" name="alphabet" value="letter-K">
+                <label class="letter" for="letter-K">К</label>
+
+                <input class="visually-hidden" type="radio" id="letter-L" name="alphabet" value="letter-L">
+                <label class="letter" for="letter-L">Л</label>
+
+                <input class="visually-hidden" type="radio" id="letter-M" name="alphabet" value="letter-M">
+                <label class="letter" for="letter-M">М</label>
+
+                <input class="visually-hidden" type="radio" id="letter-N" name="alphabet" value="letter-N">
+                <label class="letter" for="letter-N">Н</label>
+
+                <input class="visually-hidden" type="radio" id="letter-O" name="alphabet" value="letter-O">
+                <label class="letter" for="letter-O">О</label>
+
+                <input class="visually-hidden" type="radio" id="letter-P" name="alphabet" value="letter-P">
+                <label class="letter" for="letter-P">П</label>
+
+                <input class="visually-hidden" type="radio" id="letter-R" name="alphabet" value="letter-R">
+                <label class="letter" for="letter-R">Р</label>
+
+                <input class="visually-hidden" type="radio" id="letter-S" name="alphabet" value="letter-S">
+                <label class="letter" for="letter-S">С</label>
+
+                <input class="visually-hidden" type="radio" id="letter-T" name="alphabet" value="letter-T">
+                <label class="letter" for="letter-T">Т</label>
+
+                <input class="visually-hidden" type="radio" id="letter-U" name="alphabet" value="letter-U">
+                <label class="letter" for="letter-U">У</label>
+
+                <input class="visually-hidden" type="radio" id="letter-F" name="alphabet" value="letter-F">
+                <label class="letter" for="letter-F">Ф</label>
+
+                <input class="visually-hidden" type="radio" id="letter-KH" name="alphabet" value="letter-KH">
+                <label class="letter" for="letter-KH">Х</label>
+
+                <input class="visually-hidden" type="radio" id="letter-TS" name="alphabet" value="letter-TS">
+                <label class="letter" for="letter-TS">Ц</label>
+
+                <input class="visually-hidden" type="radio" id="letter-CH" name="alphabet" value="letter-CH">
+                <label class="letter" for="letter-CH">Ч</label>
+
+                <input class="visually-hidden" type="radio" id="letter-SH" name="alphabet" value="letter-SH">
+                <label class="letter" for="letter-SH">Ш</label>
+
+                <input class="visually-hidden" type="radio" id="letter-SHCH" name="alphabet" value="letter-SHCH">
+                <label class="letter" for="letter-SHCH">Щ</label>
+
+                <input class="visually-hidden" type="radio" id="letter-EH" name="alphabet" value="letter-EH">
+                <label class="letter" for="letter-EH">Э</label>
+
+                <input class="visually-hidden" type="radio" id="letter-YU" name="alphabet" value="letter-YU">
+                <label class="letter" for="letter-YU">Ю</label>
+              </fieldset>
+            </div>
+
+            <div class="select-country__select-wrapper">
+              <select class="select-country__countries countries" data-dependence="letter-A" size="10" name="country">
+                <option class="country">Австралия</option>
+                <option class="country">Австрия</option>
+                <option class="country">Азербайджан</option>
+                <option class="country">Албания</option>
+                <option class="country">Алжир</option>
+                <option class="country">Ангола</option>
+                <option class="country">Андорра</option>
+                <option class="country">Антигуа и Барбуда</option>
+                <option class="country">Аргентина</option>
+                <option class="country">Армения</option>
+                <option class="country">Афганистан</option>
+              </select>
+            </div>
+          </div>
+
+          <a class="route__next-button form-button form-button--next" href="">Следующий шаг</a>
+          <a class="route__prev-button form-button form-button--prev" href="">На шаг назад</a>
+        </div><!-- step -->
+
+        <div class="form-plan__step form-step leisure">
+          <h3 class="form-step__title headline headline--form-subtitle">Шаг 3. <br> Даты пребывания</h3>
+
+          <p class="form-step__text">
+            Наконец, расскажите о своих планах времяпрепровождения.
+            Можно писать в свободной форме и ставить тэги.
+          </p>
+
+          <div class="leisure__country leisure-country" data-country="bosnia-herzegovina">
+            <p class="leisure-country__title">Босния и Герцеговина</p>
+            <div class="leisure-country__flag flag flag--bosnia-herzegovina">
+              <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+            </div>
+            <textarea class="leisure-country__text" name="leisure-bosnia-herzegovina" placeholder="План действий"></textarea>
+          </div>
+
+          <div class="leisure__country leisure-country" data-country="czech">
+            <p class="leisure-country__title">Чехия</p>
+            <div class="leisure-country__flag flag flag--czech">
+              <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+            </div>
+            <textarea class="leisure-country__text" name="leisure-czech" placeholder="План действий">Пить пиво и лазать по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          </div>
+
+          <button class="leisure__submit form-button form-button--submit" type="submit">Отправить</button>
+          <a class="leisure__prev-button form-button form-button--prev" href="">На шаг назад</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__logo logo">
+      <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
+    </a>
+
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--fb" href="" aria-label="Наша страница на Фейсбуке">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="" aria-label="Наша группа во Вконтакте">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--instagram" href="" aria-label="Наша страница в Инстаграм">
+          <svg width="45" height="45">
+            <rect width="100%" height="100%" fill="#cccccc" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <img class="copyright__logo" src="http://via.placeholder.com/27x34" alt="Логотип «Html Academy»" width="27"
+        height="34">
+    </div>
+  </footer>
+  </body>
+</html>
