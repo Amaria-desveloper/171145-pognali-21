@@ -14,8 +14,7 @@
         height="15">
     </a>
 
-    <button class="header__toggle toggle toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true"
-      aria-label="Открыть или закрыть главное меню"></button>
+    <button class="header__toggle toggle toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
 
     <nav class="header__nav nav nav--modal">
       <ul class="nav__menu menu menu--modal">
@@ -35,11 +34,11 @@
 
     <ul class="header__contacts contacts contacts--invert">
       <li class="contacts__item">
-        <a class="contacts__phone contacts__phone" href="tel:88005558628"
+        <a class="contacts__phone" href="tel:88005558628"
           aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
       </li>
       <li class="contacts__item">
-        <a class="contacts__email contacts__email" href="mailto:mail@htmlacademy.ru"
+        <a class="contacts__email" href="mailto:mail@htmlacademy.ru"
           aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </li>
     </ul>
@@ -137,14 +136,14 @@
       <h2 class="add-plan__title headline headline--form-title">Добавить план:</h2>
 
       <ul class="add-plan__steps-indicator steps-indicator">
-        <li class="step step--current"></li>
-        <li class="step"></li>
-        <li class="step"></li>
+        <li class="step-indicator step-indicator--current"></li>
+        <li class="step-indicator"></li>
+        <li class="step-indicator"></li>
       </ul>
 
       <form class="add-plan__form form-plan" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__form-plan">
 
-        <div class="form-plan__step form-step new-plan">
+        <div class="form-plan__step form-step new-plan" id="new-plan">
           <h3 class="form-step__title headline headline--form-subtitle">Шаг 1. <br> Даты пребывания</h3>
 
           <p class="form-step__text">
@@ -187,6 +186,10 @@
           </div>
 
           <div class="new-plan__calendar calendar">
+            <div class="visually-hidden calendar__input">
+              <input type="text" name="dates" value="2019-03: 26, 27, 28">
+            </div>
+
             <div class="calendar__caption data-option">
               <button class="data-option__prev"></button>
               <p class="data-option__data-text">Март 2019</p>
@@ -268,11 +271,11 @@
             </div>
           </div>
 
-          <a class="new-plan__next-button step-button step-button--next" href="">Следующий шаг</a>
+          <a class="new-plan__next-button step-button step-button--next" href="#route">Следующий шаг</a>
         </div>
 
 
-        <div class="form-plan__step form-step route">
+        <div class="form-plan__step form-step route" id="route">
           <h3 class="form-step__title headline headline--form-subtitle">Шаг 2. <br> Маршрут</h3>
 
           <p class="form-step__text">
@@ -301,12 +304,12 @@
             <button class="route__remove-button button-remove" type="button"></button>
           </div>
 
-          <div class="route__choose-box route__choose-box">
+          <div class="route__choose-box route__choose-box--active">
             <button class="route__button" type="button">
               Выберите страну
               <span class="route__arrow-button"></span>
             </button>
-            <div class="route__flag route__flag--no-chosen"></div>
+            <div class="route__flag route__flag--not-chosen"></div>
             <button class="route__remove-button button-remove" type="button"></button>
           </div>
 
@@ -410,11 +413,19 @@
             </div>
           </div>
 
-          <a class="route__next-button form-button form-button--next" href="">Следующий шаг</a>
-          <a class="route__prev-button form-button form-button--prev" href="">На шаг назад</a>
-        </div><!-- step -->
+          <div class="route__choose-box route__choose-box--button">
+            <button class="route__button" type="button">
+              Добавить страну
+              <span class="route__arrow-button"></span>
+            </button>
+            <div class="route__flag route__flag--add"></div>
+          </div>
 
-        <div class="form-plan__step form-step leisure">
+          <a class="route__next-button form-button form-button--next" href="#leisure">Следующий шаг</a>
+          <a class="route__prev-button form-button form-button--prev" href="#new-plan">На шаг назад</a>
+        </div>
+
+        <div class="form-plan__step form-step leisure" id="leisure">
           <h3 class="form-step__title headline headline--form-subtitle">Шаг 3. <br> Даты пребывания</h3>
 
           <p class="form-step__text">
@@ -435,11 +446,11 @@
             <div class="leisure-country__flag flag flag--czech">
               <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
             </div>
-            <textarea class="leisure-country__text" name="leisure-czech" placeholder="План действий">Пить пиво и лазать по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <textarea class="leisure-country__text" name="leisure-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
           </div>
 
           <button class="leisure__submit form-button form-button--submit" type="submit">Отправить</button>
-          <a class="leisure__prev-button form-button form-button--prev" href="">На шаг назад</a>
+          <a class="leisure__prev-button form-button form-button--prev" href="#route">На шаг назад</a>
         </div>
       </form>
     </section>
