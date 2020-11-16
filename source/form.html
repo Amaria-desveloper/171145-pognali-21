@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Погнали</title>
+  <title>HTML Academy: Погнали. Форма.</title>
 </head>
 
 <body class="page__body page__body--form">
 
   <header class="header header--sticky header--small">
-    <a class="header__logo logo logo--invert" href="index.html">
+    <a class="header__logo logo logo--invert" href="./index.html">
       <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100"
         height="15">
     </a>
@@ -19,10 +19,10 @@
     <nav class="header__nav nav nav--modal">
       <ul class="nav__menu menu menu--modal">
         <li class="menu__item">
-          <a class="menu__link" href="">О сервисе</a>
+          <a class="menu__link" href="./index.html">О сервисе</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="./form.html">Направления</a>
+          <a class="menu__link">Направления</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="./catalog.html">Попутчики</a>
@@ -99,16 +99,16 @@
 
         <fieldset class="user__fieldset">
           <legend class="user__legend">Транспорт</legend>
-          <label class="transport transport--plane visually-hidden tooltip tooltip--plane transport--checked">
+          <label class="transport transport--plane tooltip tooltip--plane transport--checked">
             <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" checked>
           </label>
-          <label class="transport transport--bus visually-hidden tooltip tooltip--bus transport--checked">
+          <label class="transport transport--bus tooltip tooltip--bus transport--checked">
             <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" checked>
           </label>
-          <label class="transport transport--bycicle visually-hidden  tooltip tooltip--bycicle">
+          <label class="transport transport--bycicle tooltip tooltip--bycicle">
             <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bycicle">
           </label>
-          <label class="transport transport--walk visually-hidden tooltip tooltip--walk transport--checked">
+          <label class="transport transport--walk tooltip tooltip--walk transport--checked">
             <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="walk" checked>
           </label>
         </fieldset>
@@ -457,7 +457,7 @@
   </main>
 
   <footer class="footer">
-    <a class="footer__logo logo" href="index.html">
+    <a class="footer__logo logo" href="./index.html">
       <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
     </a>
 
@@ -487,8 +487,10 @@
 
     <div class="footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
-      <img class="copyright__logo" src="http://via.placeholder.com/27x34" alt="Логотип «Html Academy»" width="27"
-        height="34">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__logo" src="http://via.placeholder.com/27x34" alt="Логотип «Html Academy»" width="27"
+          height="34">
+      </a>
     </div>
   </footer>
   </body>
