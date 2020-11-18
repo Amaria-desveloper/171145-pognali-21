@@ -1,0 +1,43 @@
+.header {
+  display: block;
+  width: 270px;
+  margin-bottom: 30px;
+
+  background-color: @bg-color-index;
+
+  .outline(red);
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+
+    background-color: @basic-white;
+  }
+}
+
+.header__toggle {
+  display: inline-block;
+  width: 25px;
+  height: 19px;
+  padding: 0;
+
+  border: none;
+
+  background-color: #cccccc;
+
+  cursor: pointer;
+}
+
+.header__nav {
+  display: block;
+
+  background-color: @basic-white;
+}
+
+.header__contacts {
+  margin-block-end: 12px;
+}
+
+.header__social {
+  margin: 0 auto;
+}
