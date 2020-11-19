@@ -1,11 +1,16 @@
+.intro-wrapper {
+  background-color: @bg-base-dark;
+}
+
 .intro {
-  margin-block-end: 72px;
+  .small-section();
+  padding-block-end: 39px;
 }
 
 .intro__title {
-  width: 271px;
-  margin: 0 auto;
-  padding: 20px 16px;
+  display: block;
+  text-align: center;
+  padding-block-start: 20px;
   .font-style(36px; 40px; 700; @basic-white);
 }
 
@@ -14,24 +19,21 @@
   margin-block-end: 28px;
   margin-inline-start: 24px;
   color: @basic-white;
+}
 
-  &-text {
-    margin-block-start: 28px;
-    margin-block-end: 18px;
-  }
+.intro__quote-text {
+  margin-block-start: 28px;
+  margin-block-end: 18px;
+}
 
-  &-cite {
-    font-weight: 700;
-  }
+.intro__quote-cite {
+  font-weight: 700;
 }
 
 .intro__steps {
   height: 320px;
   margin: 0;
   padding: 0;
-
-  .font-style(18px; 18px; 700; @basic-blue);
-  list-style: none;
 }
 
 .intro__step {
@@ -40,6 +42,9 @@
   height: 160px;
   padding-block-start: 22px;
   padding-inline-start: 24px;
+
+  .font-style(18px; 18px; 700; @text-basic-blue);
+  list-style: none;
 
   border-radius: 10px 10px 0 0;
 

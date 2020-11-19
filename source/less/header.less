@@ -1,11 +1,11 @@
+.header-wrapper {
+  background-color: @bg-base-dark;
+}
+
 .header {
-  display: block;
-  width: 270px;
-  margin-bottom: 30px;
+  .small-section();
 
-  background-color: @bg-color-index;
-
-  .outline(red);
+  .outline(darkred);
 
   &--sticky {
     position: sticky;
@@ -29,8 +29,6 @@
 }
 
 .header__nav {
-  display: block;
-
   background-color: @basic-white;
 }
 

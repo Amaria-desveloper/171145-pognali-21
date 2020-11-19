@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
   <title>HTML Academy: Погнали. Форма.</title>
 </head>
 
@@ -135,11 +136,11 @@
     <section class="profile-form__add-plan add-plan">
       <h2 class="add-plan__title headline headline--form-title">Добавить план:</h2>
 
-      <ul class="add-plan__steps-indicator steps-indicator">
-        <li class="step-indicator step-indicator--current"></li>
+      <ol class="add-plan__steps-indicator steps-indicator">
+        <li class="step-indicator step-indicator--current"><span clas="visually-hidden">Индикатор активности -  шаг первый.</span></li>
         <li class="step-indicator"></li>
         <li class="step-indicator"></li>
-      </ul>
+      </ol>
 
       <form class="add-plan__form form-plan" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__form-plan">
 
