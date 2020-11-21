@@ -1,0 +1,25 @@
+.route {
+  position: relative;
+  top: -110px;
+  z-index: 3;
+
+  height: 238px;
+  padding-top: 77px;
+
+  .background(@bg-color: @basic-yellow);
+}
+
+.route h2 {
+  .visually-hidden();
+}
+
+.route__text {
+  .font-style(@font-weight: 700; @font-color: @text-basic-blue-light);
+  text-transform: uppercase;
+}
+
+.route-map {
+  position: relative;
+  top: -100px;
+  z-index: 2;
+}

@@ -1,0 +1,81 @@
+.intro {
+  display: flex;
+  background-color: @bg-base-dark;
+}
+
+.intro > h2 {
+  .visually-hidden();
+}
+
+.intro__title {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  .font-style(36px; 40px; 700; @basic-white);
+}
+
+.intro__quote {
+  margin: 28px 0;
+  color: @basic-white;
+}
+
+.intro__quote-text {
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+
+.intro__quote-cite {
+  font-weight: 700;
+}
+
+.intro__steps {
+  height: 320px;
+  margin-top: 0;
+  margin-bottom: 33px;
+  padding-left: 0;
+}
+
+.intro__step {
+  display: block;
+  width: 270px;
+  height: 160px;
+  padding-top: 22px;
+  padding-left: 24px;
+
+  .font-style(18px; 18px; 700; @text-basic-blue);
+  list-style: none;
+
+  border-radius: 10px 10px 0 0;
+
+  &--one {
+    background-color: @special-orange;
+  }
+
+  &--two {
+    height: 160px;
+
+    position: relative;
+    top: -80px;
+
+    background-color: @vivid-orange;
+  }
+
+  &--three {
+    height: 100px;
+
+    position: relative;
+    top: -160px;
+
+    background-color: @special-yellow-dark;
+  }
+
+  &--four {
+    height: 80px;
+
+    position: relative;
+    top: -180px;
+
+    border-radius: 10px 10px 10px 10px;
+    background-color: @basic-yellow;
+  }
+}

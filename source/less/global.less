@@ -1,0 +1,37 @@
+/* fonts */
+@font-face {
+  .font(@font-regular);
+}
+
+@font-face {
+  .font(@font-regular, @font-light, 300);
+}
+
+@font-face {
+  .font(@font-regular, @font-medium, 500);
+}
+
+@font-face {
+  .font(@font-regular, @font-bold, 700);
+}
+
+/* common */
+*,
+*::before,
+*::after {
+  .box-sizing();
+}
+
+.container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.modal {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
