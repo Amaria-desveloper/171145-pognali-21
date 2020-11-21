@@ -1,7 +1,7 @@
 .button-login {
   display: block;
-  padding-block-start: 12px;
-  padding-block-end: 8px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   text-align: center;
 
   .font-style(17px, 30px, 700, @text-basic-blue);
@@ -22,10 +22,10 @@
 }
 
 .button-more {
-  display: block;
+  display: flex;
+  align-items: center;
   height: 62px;
-  padding-block-start: 23px;
-  padding-inline-start: 23px;
+  padding-left: 23px;
 
   .font-style(18px, 18px, 700, @text-basic-blue-light);
   text-decoration: none;
@@ -35,7 +35,11 @@
 
   &--like-text {
     background-color: transparent;
-    padding-inline-start: 0;
+    padding-left: 0;
+  }
+
+  &--route {
+    border: 3px solid @text-blue-dark;
   }
 }
 

@@ -1,41 +1,4 @@
-/* colors */
-@bg-base-light: #edeff6;
-@bg-base-dark: #161c35;
-@text-blue-dark: #192144;
-@text-basic-blue: #161c35;
-@text-basic-blue-light: #1d2e5b;
-
-@special-black-6: rgba(0, 0, 0, 0.6);
-
-@basic-white: #ffffff;
-@basic-black: #000000;
-@special-grey: #444444;
-@basic-yellow: #ffd74b;
-@special-yellow-dark: #ffbd30;
-@special-orange: #ff8d30;
-@vivid-orange: #ffa530;
-
-@bg-tooltip: #101d41;
-@bg-button: #f3f4f8;
-@color-link-underline: #706546;
-
-
 /* fonts */
-.font(@font-name; @url-font: @font-name; @weight: 400) {
-  font-family: "@{font-name}";
-  src: url("../fonts/@{url-font}.woff2") format("woff2"),
-    url("../fonts/@{url-font}.woff") format("woff");
-  font-weight: @weight;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-regular: "bloggersans";
-@font-light: "@{font-regular}-light";
-@font-medium: "@{font-regular}-medium";
-@font-bold: "@{font-regular}-bold";
-@body-font-size: 16px;
-
 @font-face {
   .font(@font-regular);
 }
@@ -52,65 +15,23 @@
   .font(@font-regular, @font-bold, 700);
 }
 
-.regular-font-family {
-  font-family: @font-regular, "Arial", sans-serif;
-  font-style: normal;
-}
-
-.font-style(@font-size: @body-font-size; @line-height: 22px; @font-weight: 300; @font-color: @special-grey) {
-  font-size: @font-size;
-  line-height: @line-height;
-
-  font-weight: @font-weight;
-  color: @font-color;
-}
-
 /* common */
-.visually-hidden() {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.box-sizing() {
-  box-sizing: border-box;
-}
-
-.outline(@color: @basic-white) {
-  outline: 1px dashed @color;
-  outline-offset: 1px;
-}
-
-.headline-index() {
-  margin-block-start: 0;
-  margin-block-end: 19px;
-  .font-style(24px; 24px; 700; @special-orange);
-}
-
-.small-section() {
-  width: 270px;
-  margin: 0 auto;
-}
-
-.bg-round(@top-left: 0; @top-right:0; @bottom-right: 30px; @bottom-left: 30px; @bg-color: @bg-base-dark) {
-  background-color: @bg-color;
-  border-top-left-radius: @top-left;
-  border-top-right-radius: @top-right;
-  border-bottom-right-radius: @bottom-right;
-  border-bottom-left-radius: @bottom-left;
-}
-
 *,
 *::before,
 *::after {
   .box-sizing();
+}
+
+.container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.modal {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }

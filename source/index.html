@@ -8,73 +8,72 @@
   <body class="page__body-index">
     <div class="page__container">
 
-      <div class="header-wrapper">
-        <header class="header">
-          <a class="header__logo logo">
-            <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
-          </a>
+      <header class="header">
+        <a class="header__logo logo">
+          <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
+        </a>
 
-          <button class="header__toggle header__toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
+        <button class="header__toggle header__toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
 
-          <div class="header__nav header__nav--modal">
-            <nav class=" nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a class="nav__link">О сервисе</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="./form.html">Направления</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="./catalog.html">Попутчики</a>
-                </li>
-              </ul>
-
-              <a class="nav__login button-login" href="./authorization.html">Авторизация</a>
-            </nav>
-
-            <ul class="header__contacts contacts">
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--invert contacts__link--phone" href="tel:88005558628" aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
+        <div class="header__nav">
+          <nav class=" nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link">О сервисе</a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--invert contacts__link--email" href="mailto:mail@htmlacademy.ru"
-                  aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <li class="nav__item">
+                <a class="nav__link" href="./form.html">Направления</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./catalog.html">Попутчики</a>
               </li>
             </ul>
 
-            <ul class="header__social social">
-              <li class="social__item">
-                <a class="social__link" href="" aria-label="Наша страница на Фейсбуке">
-                  <svg class="social__icon social__icon--fb" width="11" height="21">
-                    <rect width="100%" height="100%" fill="#cccccc" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="" aria-label="Наша группа во Вконтакте">
-                  <svg class="social__icon social__icon--vk" width="23" height="12">
-                    <rect width="100%" height="100%" fill="#cccccc" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="" aria-label="Наша страница в Инстаграм">
-                  <svg class="social__icon social__icon--instagram" width="18" height="18">
-                    <rect width="100%" height="100%" fill="#cccccc" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </header>
-      </div>
+            <a class="nav__login button-login" href="./authorization.html">Авторизация</a>
+          </nav>
+
+          <ul class="header__contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--invert contacts__link--phone" href="tel:88005558628" aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--invert contacts__link--email" href="mailto:mail@htmlacademy.ru"
+                aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+
+          <ul class="header__social social">
+            <li class="social__item">
+              <a class="social__link" href="" aria-label="Наша страница на Фейсбуке">
+                <svg class="social__icon social__icon--fb" width="11" height="21">
+                  <rect width="100%" height="100%" fill="#cccccc" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="" aria-label="Наша группа во Вконтакте">
+                <svg class="social__icon social__icon--vk" width="23" height="12">
+                  <rect width="100%" height="100%" fill="#cccccc" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="" aria-label="Наша страница в Инстаграм">
+                <svg class="social__icon social__icon--instagram" width="18" height="18">
+                  <rect width="100%" height="100%" fill="#cccccc" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
 
       <main class="main">
         <h1 class="main__title">Сервис «Погнали?» для подбора попутчиков.</h1>
 
-        <div class="intro-wrapper">
-          <section class="intro">
+        <section class="intro">
+          <h2>Присоединяйтесь к путешественникам</h2>
+          <div class="container">
             <strong class="intro__title">В путешествие <br> с крутыми попутчиками!</strong>
 
             <ul class="intro__contacts contacts contacts--intro">
@@ -103,11 +102,11 @@
               <li class="intro__step intro__step--three">Находите тех, <br> кто похож на вас</li>
               <li class="intro__step intro__step--four">Путешествуйте <br> вместе!</li>
             </ol>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="about-wrapper">
-          <section class="about">
+        <section class="about">
+          <div class="container">
             <h2 class="about__title">О сервисе</h2>
 
             <p class="about__text">
@@ -124,11 +123,11 @@
                 зовите в совместный трип! <br>
               </strong>
             </p>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="directions-wrapper">
-          <section class="directions">
+        <section class="directions">
+          <div class="container">
             <header class="directions__header">
               <h2 class="directions__title">Направления</h2>
 
@@ -181,11 +180,11 @@
             </div>
 
             <a class="directions__button button-more" href="./form.html">Показать все</a>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="companions-wrapper">
-          <section class="companions">
+        <section class="companions">
+          <div class="container">
             <header class="companions__header">
               <h2 class="companions__title headline">Попутчики</h2>
 
@@ -347,12 +346,12 @@
             </div>
 
             <a class="companions__button button-more" href="./catalog.html">Показать всех</a>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="subscribe-fee-wrapper">
-          <section class="subscribe-fee">
-            <h2>Услуги сервиса.</h2>
+        <section class="subscribe-fee">
+          <h2>Услуги сервиса.</h2>
+          <div class="container">
             <b class="subscribe-fee__title">Добавьте <br> свой <br> профиль</b>
 
             <ol class="subscribe-fee__list">
@@ -378,7 +377,7 @@
 
             <a class="subscribe-fee__button button-more button-more--like-text" href="./catalog.html">Показать тарифы для бизнеса</a>
 
-            <div class="subscribe-fee business-fee modal">
+            <div class="business-fee">
               <h2>Услуги сервиса для бизнеса.</h2>
               <b class="business-fee__title">Бизнес-тарифы</b>
 
@@ -411,11 +410,11 @@
 
               <button class="business-fee__button button-close" type="button">Закрыть окно</button>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="feedback-wrapper">
-          <section class="feedback">
+        <section class="feedback">
+          <div class="container">
             <h2>Обратная связь</h2>
             <b class="feedback__title">Заинтересовались?</b>
 
@@ -447,28 +446,28 @@
                 <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" aria-label="Пишите нам на электронный адрес: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
-          </section>
-        </div>
+          </div>
+        </section>
 
 
-        <div class="route-wrapper">
-          <section class="route">
+        <section class="route">
+          <div class="container">
             <h2>Как проехать к офису</h2>
             <div class="route__address">
               <p class="route__text">ул. Большая Конюшенная, 19/8</p>
-              <button class="route__button button-more">Проложить маршрут</button>
+              <a class="route__button button-more button-more--route" href="">Проложить маршрут</a>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div class="map-wrapper">
+        <div class="route-map">
           <img class="route-map" src="http://via.placeholder.com/320x324" alt="Карта проезда к адресу офиса" width="320"
             height="324">
         </div>
       </main>
 
-      <div class="footer-wrapper">
-        <footer class="footer">
+      <footer class="footer">
+        <div class="container">
           <a class="footer__logo logo">
             <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
           </a>
@@ -504,8 +503,8 @@
                 height="34">
             </a>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

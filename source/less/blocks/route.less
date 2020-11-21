@@ -1,19 +1,15 @@
-.route-wrapper {
+.route {
   position: relative;
   top: -110px;
   z-index: 3;
 
   height: 238px;
-  padding-block-start: 77px;
+  padding-top: 77px;
 
-  .bg-round(@bg-color: @basic-yellow);
+  .background(@bg-color: @basic-yellow);
 }
 
-.route {
-  .small-section();
-}
-
-.route > h2 {
+.route h2 {
   .visually-hidden();
 }
 
@@ -23,8 +19,7 @@
 }
 
 .route-map {
-  display: block;
   position: relative;
-  top: -140px;
+  top: -100px;
   z-index: 2;
 }

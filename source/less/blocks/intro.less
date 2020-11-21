@@ -1,29 +1,27 @@
-.intro-wrapper {
+.intro {
+  display: flex;
   background-color: @bg-base-dark;
 }
 
-.intro {
-  .small-section();
-  padding-block-end: 39px;
+.intro > h2 {
+  .visually-hidden();
 }
 
 .intro__title {
   display: block;
   text-align: center;
-  padding-block-start: 20px;
+  padding-top: 20px;
   .font-style(36px; 40px; 700; @basic-white);
 }
 
 .intro__quote {
-  margin-block-start: 28px;
-  margin-block-end: 28px;
-  margin-inline-start: 24px;
+  margin: 28px 0;
   color: @basic-white;
 }
 
 .intro__quote-text {
-  margin-block-start: 28px;
-  margin-block-end: 18px;
+  margin-top: 28px;
+  margin-bottom: 18px;
 }
 
 .intro__quote-cite {
@@ -32,16 +30,17 @@
 
 .intro__steps {
   height: 320px;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 33px;
+  padding-left: 0;
 }
 
 .intro__step {
   display: block;
   width: 270px;
   height: 160px;
-  padding-block-start: 22px;
-  padding-inline-start: 24px;
+  padding-top: 22px;
+  padding-left: 24px;
 
   .font-style(18px; 18px; 700; @text-basic-blue);
   list-style: none;
