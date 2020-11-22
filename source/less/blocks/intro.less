@@ -7,11 +7,24 @@
   .visually-hidden();
 }
 
+.intro__buttons {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .intro__title {
   display: block;
   text-align: center;
   padding-top: 20px;
   .font-style(36px; 40px; 700; @basic-white);
+
+  @media (min-width: @tablet-width) {
+   .font-style(60px; 70px; 700; @basic-white);
+  }
 }
 
 .intro__quote {
@@ -26,18 +39,29 @@
 
 .intro__quote-cite {
   font-weight: 700;
+  font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .intro__steps {
+  display: flex;
+  flex-direction: column;
   height: 320px;
   margin-top: 0;
   margin-bottom: 33px;
   padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .intro__step {
-  display: block;
-  width: 270px;
   height: 160px;
   padding-top: 22px;
   padding-left: 24px;
@@ -45,37 +69,52 @@
   .font-style(18px; 18px; 700; @text-basic-blue);
   list-style: none;
 
-  border-radius: 10px 10px 0 0;
+  @media (min-width: @tablet-width) {
+    width: 344px;
+    min-height: 140px;
+    .font-style(24px; 24px; 700; @text-basic-blue);
+  }
 
   &--one {
-    background-color: @special-orange;
+    .background(10px; 10px; 0; 0; @special-orange);
+
+    @media (min-width: @tablet-width) {
+      width: 365px;
+      .background(20px; 20px; 0; 0; @special-orange);
+    }
   }
 
   &--two {
-    height: 160px;
+    margin-top: -10px;
+    .background(10px; 10px; 0; 0; @vivid-orange);
 
-    position: relative;
-    top: -80px;
-
-    background-color: @vivid-orange;
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      margin-left: -30px;
+      .background(20px; 20px; 0; 0; @vivid-orange);
+    }
   }
 
   &--three {
-    height: 100px;
 
-    position: relative;
-    top: -160px;
+    margin-top: -10px;
+    .background(0; 0; 10px; 10px; @special-yellow-dark);
 
-    background-color: @special-yellow-dark;
+    @media (min-width: @tablet-width) {
+      width: 365px;
+    .background(0; 0; 20px; 20px; @special-yellow-dark);
+    }
   }
 
   &--four {
-    height: 80px;
-
-    position: relative;
-    top: -180px;
-
+    margin-top: -10px;
     border-radius: 10px 10px 10px 10px;
-    background-color: @basic-yellow;
+    .background(0; 0; 10px; 10px; @basic-yellow);
+
+    @media (min-width: @tablet-width) {
+      margin-left: -30px;
+      .background(0; 0; 20px; 20px; @basic-yellow);
+    }
   }
+
 }

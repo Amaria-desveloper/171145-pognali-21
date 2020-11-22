@@ -1,5 +1,14 @@
 .logo {
-  display: block;
+  display: flex;
   width: 96px;
   height: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+.logo img {
+  object-fit: contain;
 }

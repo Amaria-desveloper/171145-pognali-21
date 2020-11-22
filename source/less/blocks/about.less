@@ -2,8 +2,17 @@
   position: relative;
   z-index: 8;
 
+  display: flex;
+  flex-direction: row;
+
   padding-bottom: 82px;
   .background();
+}
+
+.about__header {
+  @media (min-width: @tablet-width) {
+    width: 309px;
+  }
 }
 
 .about__title {
@@ -12,5 +21,16 @@
 
 .about__text {
   margin-bottom: 20px;
-  .font-style(@font-weight: 300; @font-color: @basic-white);
+}
+
+
+@media (min-width: @tablet-width) {
+  .about > .container {
+    width: 309px;
+    margin-left: 74px;
+  }
+
+  .about__text > strong {
+    .font-style(21px; 25px; 700);
+  }
 }

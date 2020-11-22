@@ -2,6 +2,7 @@
 <html lang="ru" class="page" >
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
@@ -9,14 +10,18 @@
     <div class="page__container">
 
       <header class="header">
-        <a class="header__logo logo">
-          <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
-        </a>
+        <div class="header__menu">
+          <a class="header__logo logo">
+            <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
+          </a>
 
-        <button class="header__toggle header__toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
+          <button class="header__toggle header__toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
+
+          <a class="header__login button-login button-login--header" href="./authorization.html">Авторизация</a>
+        </div>
 
         <div class="header__nav">
-          <nav class=" nav">
+          <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link">О сервисе</a>
@@ -29,7 +34,7 @@
               </li>
             </ul>
 
-            <a class="nav__login button-login" href="./authorization.html">Авторизация</a>
+            <a class="nav__login button-login button-login--nav" href="./authorization.html">Авторизация</a>
           </nav>
 
           <ul class="header__contacts contacts">
@@ -74,18 +79,20 @@
         <section class="intro">
           <h2>Присоединяйтесь к путешественникам</h2>
           <div class="container">
-            <strong class="intro__title">В путешествие <br> с крутыми попутчиками!</strong>
+            <strong class="intro__title">В путешествие <br> с крутыми <br> попутчиками!</strong>
 
-            <ul class="intro__contacts contacts contacts--intro">
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--phone" href="tel:88005558628" aria-label="Звоните нам по телефону 8-800-555-86-28"></a>
-              </li>
-              <li class="contacts__item">
-                <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" aria-label="Пишите нам на электронный адрес: mail@htmlacademy.ru"></a>
-              </li>
-            </ul>
+            <div class="intro__buttons">
+              <ul class="intro__contacts contacts contacts--intro">
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--phone" href="tel:88005558628" aria-label="Звоните нам по телефону 8-800-555-86-28"></a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" aria-label="Пишите нам на электронный адрес: mail@htmlacademy.ru"></a>
+                </li>
+              </ul>
 
-            <a class="intro__login button-login button-login--intro" href="authorization.html">Авторизация</a>
+              <a class="intro__login button-login button-login--intro" href="authorization.html">Авторизация</a>
+            </div>
 
             <blockquote class="intro__quote">
               <p class="intro__quote-text">«Лучшее приложение, <br> что я видел в жизни!»</p>
@@ -110,11 +117,11 @@
             <h2 class="about__title">О сервисе</h2>
 
             <p class="about__text">
-              Любое путешествие веселее <br>
-              с попутчиками, которые на <br>
-              одной волне с тобой! Делитесь <br>
-              своими идеями путешествий <br>
-              и черпайте вдохновение в чужих. <br>
+              Любое путешествие веселее
+              с попутчиками, которые на
+              одной волне с тобой! Делитесь
+              своими идеями путешествий и
+              черпайте вдохновение в чужих.
             </p>
             <p class="about__text">
               <strong>
@@ -123,6 +130,8 @@
                 зовите в совместный трип! <br>
               </strong>
             </p>
+
+            <a class="directions__button button-more" href="./form.html">Подробнее</a>
           </div>
         </section>
 
@@ -148,8 +157,8 @@
                   <img class="direction-card__flag flag flag--thailand" src="http://via.placeholder.com/35x24" alt="Флаг Таиланда" width="35" height="24">
                   <div class="direction-card__info">
                     <h3 class="direction-card__title">Таиланд</h3>
-                    <p class="direction-card__tagline">Джунгли зовут!</p>
                     <p class="direction-card__users">18321</p>
+                    <p class="direction-card__tagline">Джунгли зовут!</p>
                   </div>
                 </article>
               </a>
@@ -160,8 +169,8 @@
                   <img class="direction-card__flag flag flag--france" src="http://via.placeholder.com/35x24" alt="Флаг Франции" width="35" height="24">
                   <div class="direction-card__info">
                     <h3 class="direction-card__title">Франция</h3>
-                    <p class="direction-card__tagline">Трэ бьен, манифик!</p>
                     <p class="direction-card__users">12518</p>
+                    <p class="direction-card__tagline">Трэ бьен, манифик!</p>
                   </div>
                 </article>
               </a>
@@ -172,8 +181,8 @@
                   <img class="direction-card__flag flag flag--czech" src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
                   <div class="direction-card__info">
                     <h3 class="direction-card__title">Чехия</h3>
-                    <p class="direction-card__tagline">Закоулки старой Европы</p>
                     <p class="direction-card__users">5326</p>
+                    <p class="direction-card__tagline">Закоулки старой Европы</p>
                   </div>
                 </article>
               </a>

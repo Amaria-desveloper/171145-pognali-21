@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-.font-style(@font-size: @body-font-size; @line-height: 22px; @font-weight: 300; @font-color: @special-grey) {
+.font-style(@font-size: 16px; @line-height: 22px; @font-weight: 300; @font-color: @basic-white) {
   font-size: @font-size;
   line-height: @line-height;
 
@@ -48,6 +48,10 @@
   margin-top: 0;
   margin-bottom: 19px;
   .font-style(24px; 24px; 700; @special-orange);
+
+  @media (min-width: @tablet-width) {
+  .font-style(45px; 45px; 700; @special-orange);
+  }
 }
 
 .background(@top-left: 0; @top-right:0; @bottom-right: 30px; @bottom-left: 30px; @bg-color: @bg-base-dark) {

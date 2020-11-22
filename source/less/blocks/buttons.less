@@ -1,8 +1,7 @@
 .button-login {
-  display: block;
-  padding-top: 12px;
-  padding-bottom: 8px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .font-style(17px, 30px, 700, @text-basic-blue);
   text-decoration: none;
@@ -11,9 +10,25 @@
   border-radius: 25px;
   background-color: @basic-yellow;
 
+  &--header {
+    display: none;
+    width: 188px;
+    min-height: 50px;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--nav {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   &--intro {
     width: 190px;
-    height: 40px;
+    min-height: 40px;
     line-height: 20px;
 
     background-color: @basic-yellow;
@@ -24,7 +39,7 @@
 .button-more {
   display: flex;
   align-items: center;
-  height: 62px;
+  min-height: 62px;
   padding-left: 23px;
 
   .font-style(18px, 18px, 700, @text-basic-blue-light);
@@ -40,6 +55,15 @@
 
   &--route {
     border: 3px solid @text-blue-dark;
+  }
+}
+
+.about .button-more {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 276px;
   }
 }
 
