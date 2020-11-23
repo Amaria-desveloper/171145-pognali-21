@@ -1,35 +1,28 @@
 .button-login {
-  display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
 
-  .font-style(17px, 30px, 700, @text-basic-blue);
+  .font-style-bold(17px; 30px; @text-basic-blue);
   text-decoration: none;
   text-transform: uppercase;
 
   border-radius: 25px;
   background-color: @basic-yellow;
 
-  &--header {
-    display: none;
+  @media (min-width: @tablet-width) {
     width: 188px;
     min-height: 50px;
-
-    @media (min-width: @tablet-width) {
-      display: flex;
-    }
   }
 
-  &--nav {
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
+  @media (min-width: @desktop-width) {
+    .font-style-bold(20px; 20px; @text-basic-blue);
   }
 
   &--intro {
     width: 190px;
-    min-height: 40px;
-    line-height: 20px;
+    height: 40px;
+    .font-style-bold(@line-height: 20px; @font-color: @text-basic-blue);
 
     background-color: @basic-yellow;
     text-transform: uppercase;
@@ -37,20 +30,27 @@
 }
 
 .button-more {
-  display: flex;
   align-items: center;
   min-height: 62px;
   padding-left: 23px;
 
-  .font-style(18px, 18px, 700, @text-basic-blue-light);
+  .font-style-bold(18px; 18px; @text-basic-blue-light);
   text-decoration: none;
 
   border-radius: 10px;
   background-color: @basic-yellow;
 
+  @media (min-width: @tablet-width) {
+    .font-style-bold(24px; 24px; @text-basic-blue);
+  }
+
   &--like-text {
     background-color: transparent;
     padding-left: 0;
+
+    @media (min-width: @tablet-width) {
+      .font-style-bold(20px; 20px; @special-text-blue);
+    }
   }
 
   &--route {
@@ -68,9 +68,30 @@
 }
 
 .button-close {
-  .font-style(@font-weight: 700; @font-color: @text-basic-blue-light);
+  width: 100%;
+  height: 59px;
+  .font-style-bold(@font-color: @text-basic-blue-light);
+  text-align: center;
   text-transform: uppercase;
 
   border: none;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    height: 108px;
+    .font-style-bold(24px; 24px; @text-basic-blue-light);
+  }
+}
+
+.button-submit {
+  display: block;
+  width: 60px;
+  height: 62px;
+
+  border: 0;
+  .background(10px; 10px; 10px; 10px; @basic-yellow);
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+  }
 }

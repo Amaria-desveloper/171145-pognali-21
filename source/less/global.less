@@ -23,11 +23,18 @@
 }
 
 .container {
-  width: 270px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 15px 25px;
 
   @media (min-width: @tablet-width) {
-    width: 688px;
+    min-width: 688px;
+    padding: 34px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+    padding: 46px 60px;
   }
 }
 
@@ -35,4 +42,13 @@
   overflow-y: hidden;
   z-index: 10;
   background-color: @special-black-6;
+}
+
+.is-hidden {
+  .visually-hidden();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

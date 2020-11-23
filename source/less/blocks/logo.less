@@ -1,14 +1,30 @@
 .logo {
-  display: flex;
+  .outline(green);
+  position: relative;
   width: 96px;
   height: 15px;
 
   @media (min-width: @tablet-width) {
-    width: 166px;
+    width: 134px;
     height: 42px;
   }
-}
 
-.logo img {
-  object-fit: contain;
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    height: 52px;
+    margin-right: 145px;
+  }
+
+  &::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      left: 120px;
+      top: 18px;
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: @basic-white;
+    }
+  }
 }

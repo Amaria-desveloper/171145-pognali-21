@@ -2,24 +2,29 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 190px;
+  justify-content: center;
+  width: 270px;
+  min-height: 190px;
+
   margin-bottom: 9px;
 
   .outline(fuchsia);
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    height: 140px;
+    width: 100%;
+    min-height: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 560px;
   }
 }
 
 .direction-card__photo {
   display: flex;
-  width: 270px;
-  height: 190px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     order: 2;
     width: 200px;
     height: 140px;
@@ -29,7 +34,7 @@
 .direction-card__flag {
   position: absolute;
   top: 86px;
-  right: 210px;;
+  right: 210px;
 
   @media (min-width: @tablet-width) {
     top: 17px;
@@ -45,6 +50,7 @@
 .direction-card__info {
   display: flex;
   flex-wrap: wrap;
+  width: 270px;
   height: 89px;
   margin-top: -88px;
   padding: 26px 24px;
@@ -62,22 +68,22 @@
 .direction-card__title {
   margin: 0;
   margin-right: auto;
-  .font-style(21px; 21px; 700; @basic-black);
+  .font-style-bold(21px; 21px; @basic-black);
 
   @media (min-width: @tablet-width) {
-    .font-style(24px; 24px; 700; @basic-black);
+    .font-style-bold(24px; 24px; @basic-black);
   }
 }
 
 .direction-card__tagline {
   margin: 0;
-  .font-style(16px; 18px; 500; @special-grey);
+  .font-style-middle(16px; 18px; @special-grey);
   opacity: 0.3;
 }
 
 .direction-card__users {
   order: 2;
   margin: 0;
-  .font-style(16px; 20px; 500; @text-basic-blue);
+  .font-style-middle(16px; 20px; @text-basic-blue);
   opacity: 0.3;
 }

@@ -20,17 +20,21 @@
 }
 
 .about__text {
-  margin-bottom: 20px;
+  max-width: 620px;
+  padding-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
 
-
 @media (min-width: @tablet-width) {
-  .about > .container {
-    width: 309px;
-    margin-left: 74px;
-  }
-
   .about__text > strong {
-    .font-style(21px; 25px; 700);
+    .font-style-bold(21px; 25px);
   }
+}
+
+.about__button {
+  display: flex;
+  margin-top: 52px;
 }

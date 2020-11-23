@@ -9,8 +9,36 @@
   .background(@bg-color: @bg-base-light);
 }
 
+.directions > .container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "list header"
+      "list button";
+    gap: 0 175px;
+  }
+}
+
+.directions__list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  margin-top: 104px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
 .directions__item {
   text-decoration: none;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .directions__title {
@@ -26,6 +54,9 @@
 }
 
 .directions__button {
-  width: 100%;
-  margin-top: 25px;
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    width: 275px;
+  }
 }
