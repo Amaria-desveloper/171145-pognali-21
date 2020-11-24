@@ -55,6 +55,10 @@
 
   &--route {
     border: 3px solid @text-blue-dark;
+
+    @media (min-width: @desktop-width) {
+      width: 324px;
+    }
   }
 }
 
@@ -84,14 +88,26 @@
 }
 
 .button-submit {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 60px;
   height: 62px;
+  padding-left: 36px;
+
+  .font-style-bold(24px; 24px; @text-basic-blue);
 
   border: 0;
   .background(10px; 10px; 10px; 10px; @basic-yellow);
 
   @media (min-width: @desktop-width) {
     width: 330px;
+  }
+}
+
+.button-submit > span {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }

@@ -10,10 +10,6 @@
 
 .contacts__item {
   padding-bottom: 27px;
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 0;
-  }
 }
 
 .contacts__link {
@@ -32,16 +28,18 @@
     .font-style-bold(28px; 28px; @basic-yellow);
   }
 
+  &--invert {
+    color: @text-blue-dark;
+  }
+}
+
+.header .contacts__link {
   @media (min-width: @desktop-width) {
     width: 50px;
     height: 50px;
     margin-top: 0;
     padding-left: 0;
     overflow: hidden;
-  }
-
-  &--invert {
-    color: @text-blue-dark;
   }
 }
 
@@ -66,7 +64,9 @@
     width: 60px;
     height: 60px;
   }
+}
 
+.header .contacts__link::before {
   @media (min-width: @desktop-width) {
     top: 0;
     width: 50px;

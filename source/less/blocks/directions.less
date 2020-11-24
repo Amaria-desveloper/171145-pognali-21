@@ -7,6 +7,10 @@
   padding-bottom: 34px;
 
   .background(@bg-color: @bg-base-light);
+
+  @media (min-width: @desktop-width) {
+    padding-left: 69px;
+  }
 }
 
 .directions > .container {
@@ -16,7 +20,7 @@
     grid-template-areas:
       "list header"
       "list button";
-    gap: 0 175px;
+    gap: 0 172px;
   }
 }
 
@@ -47,10 +51,7 @@
 
 .directions__text {
   margin-bottom: 60px;
-
-  @media (min-width: @tablet-width) {
-    color: @special-grey;
-  }
+  color: @special-grey;
 }
 
 .directions__button {

@@ -1,6 +1,6 @@
 .footer {
   position: absolute;
-  bottom: -20px;
+  bottom: -10px;
   z-index: 3;
 
   width: 100%;
@@ -11,6 +11,8 @@
 }
 
 .footer .container {
+  text-align: center;
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
@@ -20,7 +22,6 @@
 
 .footer__logo {
   margin: 0 auto;
-  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -28,7 +29,11 @@
 }
 
 .footer__social {
-  margin: 0;
+  margin-top: 40px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .footer__copyright {

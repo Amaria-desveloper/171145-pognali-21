@@ -9,6 +9,10 @@
   .background();
 }
 
+.feedback > .container {
+  max-width: 1174px;
+}
+
 .feedback h2 {
   .visually-hidden();
 }
@@ -20,7 +24,6 @@
 .feedback__text {
   min-width: 210px;
   text-align: center;
-  .font-style-regular(@font-color: @basic-white);
 }
 
 .feedback__login-link {
@@ -35,6 +38,11 @@
   align-items: center;
   height: 62px;
   .background(10px; 10px; 10px; 10px; @basic-white);
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
 }
 
 .feedback-form__input {
@@ -47,6 +55,10 @@
 
 .feedback-form__input::placeholder {
   .font-style-bold(18px; 18px; @special-grey-3);
+
+  @media (min-width: @tablet-width) {
+    .font-style-bold(24px; 24px; @special-grey-3);
+  }
 }
 
 .feedback-form__input:focus {
@@ -61,4 +73,10 @@
 
 .feedback__contacts {
   text-align: left;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    gap: 0 110px;
+  }
 }
