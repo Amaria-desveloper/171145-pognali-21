@@ -1,17 +1,24 @@
 .page {
-  .box-sizing();
-  margin: 0;
+  height: 100%;
 }
 
 .page__body-index {
-  padding: 0 25px;
+  position: relative;
+
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
 
   .regular-font-family();
-  .font-style();
-}
+  .font-style-regular();
 
-.page__container {
-  position: relative;
-  width: 320px;
-  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    .font-style-regular(28px; 33px);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+    .font-style-regular(28px; 33px);
+  }
 }

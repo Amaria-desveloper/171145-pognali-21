@@ -3,10 +3,18 @@
   top: -110px;
   z-index: 3;
 
-  height: 238px;
+  min-height: 238px;
   padding-top: 77px;
+  padding-bottom: 34px;
 
   .background(@bg-color: @basic-yellow);
+}
+
+.route > .container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .route h2 {
@@ -14,12 +22,29 @@
 }
 
 .route__text {
-  .font-style(@font-weight: 700; @font-color: @text-basic-blue-light);
+  .font-style-bold(@font-color: @text-basic-blue-light);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-style-bold(28px; 28px; @font-color: @text-basic-blue);
+  }
+}
+
+.route__button {
+  display: flex;
+  margin-top: 62px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 147px;
+  }
 }
 
 .route-map {
   position: relative;
   top: -100px;
   z-index: 2;
+
+  max-width: 100%;
+  height: auto;
 }

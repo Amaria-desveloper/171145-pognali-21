@@ -3,12 +3,14 @@
   top: -90px;
   z-index: 4;
 
+  text-align: center;
   padding-top: 77px;
   padding-bottom: 31px;
-
-  text-align: center;
-
   .background();
+}
+
+.feedback > .container {
+  max-width: 1174px;
 }
 
 .feedback h2 {
@@ -20,10 +22,65 @@
 }
 
 .feedback__text {
-  .font-style(@font-color: @basic-white);
+  min-width: 210px;
+  text-align: center;
 }
 
 .feedback__login-link {
   color: @basic-yellow;
   text-decoration-color: @color-link-underline;
+}
+
+
+.feedback-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  .background(10px; 10px; 10px; 10px; @basic-white);
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+}
+
+.feedback-form__input {
+  height: 22px;
+  padding-left: 25px;
+
+  .font-style-bold(18px; 18px; @special-grey);
+  border: none;
+}
+
+.feedback-form__input::placeholder {
+  .font-style-bold(18px; 18px; @special-grey-3);
+
+  @media (min-width: @tablet-width) {
+    .font-style-bold(24px; 24px; @special-grey-3);
+  }
+}
+
+.feedback-form__input:focus {
+  outline: none;
+}
+
+.feedback-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.feedback__contacts {
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    gap: 0 110px;
+  }
 }
