@@ -10,11 +10,6 @@
   border-radius: 25px;
   background-color: @basic-yellow;
 
-  @media (min-width: @tablet-width) {
-    width: 188px;
-    min-height: 50px;
-  }
-
   @media (min-width: @desktop-width) {
     .font-style-bold(20px; 20px; @text-basic-blue);
   }
@@ -22,7 +17,7 @@
   &--intro {
     width: 190px;
     height: 40px;
-    .font-style-bold(@line-height: 20px; @font-color: @text-basic-blue);
+    .font-style-bold(20px; 20px; @text-basic-blue);
 
     background-color: @basic-yellow;
     text-transform: uppercase;
@@ -30,8 +25,10 @@
 }
 
 .button-more {
+  position: relative;
+
   align-items: center;
-  min-height: 62px;
+  height: 62px;
   padding-left: 23px;
 
   .font-style-bold(18px; 18px; @text-basic-blue-light);
@@ -40,13 +37,26 @@
   border-radius: 10px;
   background-color: @basic-yellow;
 
+  &::after {
+    content: "";
+    position: absolute;
+    right: 17px;
+
+    display: block;
+
+    border: 6px solid transparent;
+    border-left: 11px solid @text-basic-blue;
+  }
+
   @media (min-width: @tablet-width) {
+    height: 80px;
     .font-style-bold(24px; 24px; @text-basic-blue);
   }
 
   &--like-text {
-    background-color: transparent;
     padding-left: 0;
+    .font-style-bold(16px; 16px; @special-text-blue);
+    background-color: transparent;
 
     @media (min-width: @tablet-width) {
       .font-style-bold(20px; 20px; @special-text-blue);
@@ -59,15 +69,6 @@
     @media (min-width: @desktop-width) {
       width: 324px;
     }
-  }
-}
-
-.about .button-more {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    width: 276px;
   }
 }
 
@@ -99,20 +100,43 @@
   border: 0;
   .background(10px; 10px; 10px; 10px; @basic-yellow);
 
-  @media (min-width: @tablet-width) {
-    width: 80px;
-    height: 100%;
-  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 17px;
 
-  @media (min-width: @desktop-width) {
-    width: 330px;
+    display: block;
+
+    border: 6px solid transparent;
+    border-left: 11px solid @text-basic-blue;
   }
 }
 
 .button-submit > span {
   display: none;
+}
 
-  @media (min-width: @desktop-width) {
+
+@media (min-width: @tablet-width) {
+  .button-login {
+    width: 188px;
+    min-height: 50px;
+    .font-style-bold(20px; 20px; @text-basic-blue);
+  }
+
+  .button-submit {
+    width: 80px;
+    height: 100%;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .button-submit {
+    width: 330px;
+  }
+
+  .button-submit > span {
     display: inline;
   }
 }

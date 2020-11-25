@@ -3,14 +3,12 @@
   top: -70px;
   z-index: 5;
 
-  padding-top: 57px;
-  padding-bottom: 31px;
 
   .background(@bg-color: @bg-base-light);
+}
 
-  @media (min-width: @desktop-width) {
-    padding-left: 69px;
-  }
+.subscribe-fee > .container {
+  padding: 70px 25px 18px 49px;
 }
 
 .subscribe-fee > h2 {
@@ -21,37 +19,22 @@
   display: inline-block;
   width: 107px;
   .headline-index();
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    text-align: center;
-  }
 }
 
 .subscribe-fee__list {
-  margin: 0;
+  max-width: 246px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   padding: 0;
   list-style: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    margin-top: 73px;
-    margin-bottom: 59px;
-    padding-left: 90px;
-  }
 }
 
 .subscribe-fee__item {
   display: block;
   min-height: 65px;
-  padding: 6px 0;
+  padding: 7px 0;
 
   border-top: 1px solid @special-grey-light;
-
-  @media (min-width: @tablet-width) {
-    padding: 20px 0;
-    margin-right: 40px;
-  }
 }
 
 .subscribe-fee__item:last-child {
@@ -62,28 +45,6 @@
 .subscribe-fee__link {
   .font-style-regular(@line-height: 16px; @font-color: @special-grey);
   text-decoration: none;
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    .font-style-regular(28px; 28px; @font-color: @special-grey);
-  }
-}
-
-.subscribe-fee__link::before {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: -65px;
-    right: -35px;
-    z-index: -1;
-
-    content: "";
-    display: block;
-    width: 198px;
-    height: 165px;
-    .background(20px; 20px; 20px; 20px; @bg-color: @special-blue);
-  }
 }
 
 .subscribe-fee__link p {
@@ -93,10 +54,93 @@
 
 .subscribe-fee__button {
   display: flex;
-  margin-top: 31px;
-  margin-bottom: 38px;
 
-  @media (min-width: @tablet-width) {
+  &::after {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .subscribe-fee > .container {
+    padding: 74px 40px 63px;
+  }
+
+  .subscribe-fee__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-fee__list {
+    display: block;
+    min-width: 650px;
+    margin-top: 73px;
+    margin-bottom: 59px;
+  }
+
+  .subscrieb-fee__item {
+    padding: 20px 0;
+    margin-right: 40px;
+  }
+
+  .subscribe-fee__link {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .font-style-regular(28px; 28px; @font-color: @special-grey);
+  }
+
+  .subscribe-fee__link::before {
+    content: "";
+    position: absolute;
+    top: -65px;
+    right: -35px;
+    z-index: -1;
+
+    display: block;
+    width: 198px;
+    height: 165px;
+
+    .background(20px; 20px; 20px; 20px; @bg-color: @special-blue);
+  }
+
+  .subscribe-fee__button {
+    position: relative;
     padding-left: 90px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      display: block;
+      width: 68px;
+      height: 68px;
+
+      border-radius: 50%;
+      background-color: @special-blue;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .subscribe-fee > .container {
+    padding-left: 69px;
+    padding-bottom: 157px;
+  }
+
+  .subscribe-fee__list {
+    max-width: 905px;
+  }
+
+  .subscribe-fee__link::before {
+    content: "";
+    top: -50px;
+    right: -155px;
+
+    display: block;
+    width: 446px;
+    max-height: 300px;
+
+    .background(20px; 20px; 20px; 20px; @bg-color: @special-blue);
   }
 }
