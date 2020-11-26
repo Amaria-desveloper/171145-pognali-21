@@ -4,31 +4,10 @@
   flex-direction: column;
   justify-content: center;
   width: 270px;
-  min-height: 190px;
-
-  margin-bottom: 9px;
-
-  .outline(fuchsia);
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    width: 100%;
-    min-height: 140px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 560px;
-  }
 }
 
 .direction-card__photo {
   display: flex;
-
-  @media (min-width: @tablet-width) {
-    order: 2;
-    width: 200px;
-    height: 140px;
-  }
 }
 
 .direction-card__flag {
@@ -36,54 +15,81 @@
   top: 86px;
   right: 210px;
 
-  @media (min-width: @tablet-width) {
-    top: 17px;
-    right: 150px;
+  width: 35px;
+  height: 24px;
 
-    width: 70px;
-    height: 47px;
-
-    border-radius: 5px;
-  }
+  border-radius: 5px;
 }
 
 .direction-card__info {
   display: flex;
   flex-wrap: wrap;
+
   width: 270px;
   height: 89px;
-  margin-top: -88px;
+
+  margin-top: -90px;
   padding: 26px 24px;
   .background(10px; 10px; 0; 0; @basic-white);
-
-  @media (min-width: @tablet-width) {
-    flex-grow: 1;
-    flex-direction: column;
-    height: 140px;
-    margin-top: 0;
-    .background(20px; 0; 0; 20px; @basic-white);
-  }
 }
 
 .direction-card__title {
   margin: 0;
   margin-right: auto;
   .font-style-bold(21px; 21px; @basic-black);
-
-  @media (min-width: @tablet-width) {
-    .font-style-bold(24px; 24px; @basic-black);
-  }
 }
 
 .direction-card__tagline {
+  order: 1;
   margin: 0;
   .font-style-middle(16px; 18px; @special-grey);
   opacity: 0.3;
 }
 
 .direction-card__users {
-  order: 2;
   margin: 0;
   .font-style-middle(16px; 20px; @text-basic-blue);
   opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .direction-card {
+    flex-direction: row;
+    width: 100%;
+    min-height: 140px;
+  }
+
+  .direction-card__photo {
+    order: 2;
+    width: 200px;
+    height: 140px;
+  }
+
+  .direction-card__flag {
+    top: 17px;
+    right: 150px;
+
+    width: 70px;
+    height: 47px;
+  }
+
+  .direction-card__info {
+    flex-grow: 1;
+    flex-direction: column;
+    height: 140px;
+    margin-top: 0;
+    .background(20px; 0; 0; 20px; @basic-white);
+  }
+
+  .direction-card__title {
+    .font-style-bold(24px; 24px; @basic-black);
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .direction-card {
+    max-width: 560px;
+  }
 }

@@ -28,10 +28,23 @@
 }
 
 .profile__level-number {
+  position: relative;
+
   margin-top: 15px;
   margin-bottom: 0;
 
   .font-style-bold(24px; 24px; @basic-white);
+}
+
+.profile__level-number::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  display: block;
+  width: 30px;
+  border: 1px solid @basic-white;
+  opacity: 0.3;
 }
 
 .profile__level-text {
@@ -148,7 +161,6 @@
 
 .profile__transport {
   margin-right: 15px;
-  margin-bottom: 20px;
 }
 
 .profile__tooltip {

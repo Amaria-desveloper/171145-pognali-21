@@ -3,18 +3,12 @@
   top: -110px;
   z-index: 3;
 
-  min-height: 238px;
-  padding-top: 77px;
-  padding-bottom: 34px;
-
   .background(@bg-color: @basic-yellow);
 }
 
 .route > .container {
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: center;
-  }
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .route h2 {
@@ -24,27 +18,58 @@
 .route__text {
   .font-style-bold(@font-color: @text-basic-blue-light);
   text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    .font-style-bold(28px; 28px; @font-color: @text-basic-blue);
-  }
 }
 
 .route__button {
   display: flex;
-  margin-top: 62px;
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
-    margin-left: 147px;
-  }
+  margin-top: 35px;
 }
 
 .route-map {
   position: relative;
-  top: -100px;
+  top: -140px;
   z-index: 2;
 
   max-width: 100%;
-  height: auto;
+  min-height: 326px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .route__text {
+    padding-left: 94px;
+    .font-style-bold(28px; 28px; @font-color: @text-basic-blue);
+  }
+
+  .route__text br {
+    display: none;
+  }
+
+  .route__button {
+    margin-top: 44px;
+  }
+
+  .route-map {
+    min-height: 581px;
+    background-color: @special-grey-light;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .route > .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 55px;
+    padding-bottom: 56px;
+  }
+
+  .route__button {
+    margin-top: 0;
+    margin-left: 147px;
+  }
+
+  .route-map {
+    min-height: 581px;
+  }
 }
