@@ -1,0 +1,140 @@
+.calendar {
+  margin-top: 25px;
+}
+
+.calendar__caption {
+  display: flex;
+  align-items: center;
+
+  height: 42px;
+
+  border-top: 1px solid @basic-blue-grey;
+  border-bottom: 1px solid @basic-blue-grey;
+}
+
+.calendar__caption-text {
+  width: 196px;
+  margin: 0;
+  text-align: center;
+
+  .font-style-bold(20px; 20px; @text-basic-blue-light);
+}
+
+.calendar__caption-button {
+  position: relative;
+
+  width: 14px;
+  height: 22px;
+
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+
+    width: 11px;
+    height: 11px;
+    border-left: 2px solid @basic-grey;
+    border-bottom: 2px solid @basic-grey;
+    border-radius: 0.1em;
+  }
+
+  &--prev::after {
+    left: 5px;
+    rotate: 45deg;
+  }
+
+  &--next::after {
+    left: 0;
+    rotate: -135deg;
+  }
+}
+
+.calendar__body {
+  margin: 22px 0;
+}
+
+.calendar__table {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar__row {
+  display: flex;
+  /*border-top: 1px solid @special-grey-lighter;*/
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid @special-grey-lighter;
+  }
+
+  &--header {
+    justify-content: space-between;
+    width: 197px;
+    margin-left: 13px;
+    padding-bottom: 10px;
+  }
+}
+
+.calendar__weekday {
+  .font-style-normal(14px; 18px; @special-grey);
+
+  &--holiday {
+    color: @special-redorange;
+  }
+}
+
+.calendar__button {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  .font-style-middle(14px; 18px; @text-basic-blue-light);
+
+  border: 1px solid @special-grey-lighter;
+  border-bottom: none;
+  border-right: none;
+  background-color: @bg-base-light;
+
+  &:last-child {
+    border-right: 1px solid @special-grey-lighter;
+  }
+
+  &--chosen {
+    color: @basic-white;
+    background-color: @text-basic-blue-light;
+  }
+
+  &--active {
+    position: relative;
+    border-left: none;
+  }
+
+  &--active::before {
+    content: "";
+    position: absolute;
+    top: -1px ;
+    left: 0px;
+
+    display: block;
+    width: 33px;
+    height: 33px;
+
+    border: 2px solid @special-redorange;
+  }
+
+  &--disabled {
+    .font-style-normal(14px; 18px; @special-grey-3);
+    background-color: transparent;
+  }
+}
+
+.calendar__button--active + .calendar__button {
+  border-left: 0;
+}

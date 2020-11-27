@@ -22,6 +22,10 @@
     background-color: @basic-yellow;
     text-transform: uppercase;
   }
+
+  &--next-step {
+    height: 40px;
+  }
 }
 
 .button-more {
@@ -138,5 +142,38 @@
 
   .button-submit > span {
     display: inline;
+  }
+}
+
+.num-button {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+
+  border: none;
+  background-color: transparent;
+  outline-color: @basic-blue-grey;
+
+  &::after {
+    position: absolute;
+    left: 0;
+
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: @basic-grey;
+  }
+
+  &--plus::before {
+    position: absolute;
+    top: 0;
+
+    content: "";
+    display: block;
+    width: 2px;
+    height: 14px;
+    background-color: @basic-grey;
   }
 }

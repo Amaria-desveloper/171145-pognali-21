@@ -1,0 +1,108 @@
+.add-plan h2 {
+  display: inline-flex;
+}
+
+.add-plan__indicator-steps {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 47px;
+  margin-left: 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.add-plan__indicator-step {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: @text-basic-blue-light;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.add-plan__step {
+  .background(10px; 10px; 10px; 10px; @basic-white);
+}
+
+.add-plan__container {
+  min-width: 220px;
+  margin: 0;
+  padding: 24px;
+}
+
+.add-plan__title {
+  .sub-headline-form();
+}
+
+.add-plan__text {
+  .font-style-normal(16px; 22px; @special-grey);
+}
+
+.add-plan__fieldset {
+  margin: 20px 0;
+  padding: 0;
+  border: none;
+}
+
+.add-plan__legend {
+  width: 220px;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.add-plan__legend-text {
+  .font-style-middle(16px; 16px; @text-basic-blue-light);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  &--measure {
+    float: right;
+    letter-spacing: 0.07em;
+    opacity: 0.3;
+  }
+}
+
+.add-plan__field {
+  display: flex;
+  align-items: center;
+  height: 43px;
+  padding: 14px 14px 13px;
+  .input-regular();
+}
+
+.add-plan__input {
+  height: 14px;
+
+  text-align: center;
+  .font-style-middle(14px; 14px; @text-basic-blue-light);
+
+  border: none;
+}
+
+.add-plan__label-children {
+  position: relative;
+
+  padding-top: 8px;
+  padding-left: 39px;
+
+  .font-style-normal(15px; 15px; @text-basic-blue-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid @basic-blue-grey;
+  }
+}
+
+.add-plan__next-button {
+  display: flex;
+}
