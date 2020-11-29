@@ -1,0 +1,79 @@
+.level {
+  width: 60px;
+  height: 60px;
+
+  text-align: center;
+
+  border-radius: 50%;
+  background-color: @special-black-6;
+
+  &--user {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+  }
+}
+
+.level__progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  rotate: -90deg;
+  stroke: @special-orange;
+  stroke-width: 3;
+
+  &--80 {
+    stroke-dasharray: 250 50;
+  }
+
+  &--s80 {
+    stroke-dasharray: 150 30;
+  }
+
+  &--s99 {
+    stroke-dasharray: 170 10;
+  }
+}
+
+.level__number {
+  position: relative;
+
+  margin-top: 12px;
+  margin-bottom: 0;
+
+  .font-style-bold(24px; 24px; @basic-white);
+}
+
+.level__number::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  display: block;
+  width: 30px;
+  border: 1px solid @basic-white;
+  opacity: 0.3;
+}
+
+.level__text {
+  margin: 0;
+  .font-style-normal(14px; 14px; @basic-white);
+}
+
+.level--user .level__number {
+  margin-top: 16px;
+  .font-style-bold(38px; 38px; @basic-blue);
+}
+
+.level--user .level__text {
+  margin-top: 8px;
+  .font-style-normal(18px; 18px; @basic-blue);
+}
+
+.level--user .level__number::after {
+  left: 25px;
+  bottom: -4px;
+  width: 51px;
+  border: 1px solid @special-grey;
+  opacity: 0.3;
+}

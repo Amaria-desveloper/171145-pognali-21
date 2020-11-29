@@ -1,12 +1,28 @@
 .tooltip {
-  display: flex;
   width: 70px;
   height: 30px;
   align-items: center;
   justify-content: center;
 
-  .font-style-normal(10px; 10px; @basic-white);
-  border-radius: 4px;
+  .font-style-normal(10px; 10px);
 
+  border-radius: 4px;
   background-color: @bg-tooltip;
+}
+
+@media (min-width: @tablet-width) {
+  .tooltip {
+    width: 120px;
+    height: 48px;
+    .font-style-normal(15px; 15px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tooltip {
+    width: 170px;
+    height: 63px;
+
+    .font-style-normal(20px; 20px);
+  }
 }

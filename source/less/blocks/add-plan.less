@@ -1,0 +1,273 @@
+.add-plan-container {
+  padding: 22px 25px 18px 25px;
+}
+
+.add-plan h2 {
+  display: inline-block;
+}
+
+.add-plan__indicator-steps {
+  display: inline-flex;
+  justify-content: space-between;
+  float: right;
+
+  width: 47px;
+  margin-right: 1px;
+  padding: 0;
+  list-style: none;
+}
+
+.add-plan__indicator-step {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: @basic-blue-light;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.add-plan__step {
+  max-width: 270px;
+  margin: 10px auto;
+  .background(10px; 10px; 10px; 10px; @basic-white);
+
+  &--three {
+    padding-bottom: 27px;
+  }
+}
+
+.add-plan__title {
+  .sub-headline-form();
+}
+
+.add-plan__text {
+  .font-style-normal(16px; 22px; @special-grey);
+}
+
+.add-plan__fieldset {
+  margin: 20px 0;
+  padding: 0;
+  border: none;
+}
+
+.add-plan__legend {
+  width: 220px;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.add-plan__legend-text {
+  .font-style-middle(16px; 16px; @basic-blue-light);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  &--measure {
+    float: right;
+    letter-spacing: 0.07em;
+    opacity: 0.3;
+  }
+}
+
+.add-plan__field {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 43px;
+  padding: 14px 14px 13px;
+  .input-regular();
+}
+
+.add-plan__input-overlay {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, transparent 50%, @basic-white 80%, @basic-white 100%);
+  }
+
+  &--off::after {
+    background: transparent;
+  }
+
+  &--small::after {
+    background: linear-gradient(to right, transparent 0%, transparent 75%, @basic-white 90%, @basic-white 100%);
+  }
+}
+
+.add-plan__input {
+  height: 14px;
+
+  text-align: center;
+  .font-style-middle(14px; 14px; @basic-blue-light);
+
+  border: none;
+}
+
+.add-plan__label-children {
+  position: relative;
+
+  padding-top: 8px;
+  padding-left: 39px;
+
+  .font-style-normal(15px; 15px; @basic-blue-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid @basic-blue-grey;
+  }
+}
+
+.add-plan__label-children + input:checked .add-plan__label-children::before {
+  background-color: @bg-base-light;
+}
+
+.add-plan__next-button {
+  display: flex;
+}
+
+.add-plan__journey-plans {
+  margin: 23px 0 0;
+  padding: 0;
+}
+
+.add-plan__journey-plan {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  &--active::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -12px;
+
+    display: block;
+    width: 10px;
+    height: 287px;
+
+    border: 2px solid @basic-blue-light;
+    border-right: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.add-plan__journey-plan-country {
+  position: relative;
+  display: flex;
+  margin-bottom: 14px;
+  padding-left: 13px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -2px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background-color: @basic-blue-light;
+  }
+}
+
+.add-plan__journey-plan-country img {
+  align-self: center;
+  width: 35px;
+  height: 24px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
+.add-plan__journey-plan-title {
+  max-width: 174px;
+  margin: 0;
+
+  .font-style-middle(18px; 18px; @basic-blue-light);
+  white-space: nowrap;
+}
+
+.add-plan__journey-desc {
+  width: 100%;
+  height: 220px;
+  padding: 10px 14px;
+
+  .regular-font-family();
+  .font-style-normal(16px; 22px; @special-grey);
+
+  .background(4px; 4px; 4px; 4px; @basic-white);
+
+  overflow-y: auto;
+  outline: none;
+  resize: none;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: @bg-base-light;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: @basic-white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: @basic-blue-grey;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: @bg-base-light;
+  }
+}
+
+.add-plan__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 40px;
+  margin: 0 auto 17px;
+
+  .font-style-bold(17px; 30px; @basic-blue-light);
+  text-transform: uppercase;
+
+  border: none;
+  .background(20px; 20px; 20px; 20px; @basic-yellow);
+}
+
+.add-plan__button {
+  display: flex;
+  margin: 0 auto 18px;
+}

@@ -1,0 +1,210 @@
+.choosebox {
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 220px;
+  margin-bottom: 20px;
+
+  &--active {
+    flex-wrap: wrap;
+  }
+
+  &--active-focus {
+    flex-wrap: wrap;
+    .background(4px; 4px; 4px; 4px; @basic-white);
+  }
+}
+
+.choosebox__field {
+  height: 42px;
+  padding: 11px 4px 11px 10px;
+
+  &--country {
+    position: relative;
+
+    width: 168px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      z-index: 2;
+
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @basic-blue-light;
+    }
+  }
+
+  &--flag {
+    padding: 9px;
+  }
+}
+
+.choosebox__input {
+  position: relative;
+
+  width: 150px;
+  padding: 0;
+  margin: 0;
+
+  .regular-font-family();
+  .font-style-middle(14px; 18px; @basic-blue-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+}
+
+.choosebox__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 15px;
+
+    width: 8px;
+    height: 8px;
+
+    border-left: 1px solid @special-black-3;
+    border-bottom: 1px solid @special-black-3;
+    rotate: -45deg;
+  }
+
+  &--plus::after {
+    top: 20px;
+
+    width: 14px;
+    height: 2px;
+
+    border: none;
+    background-color: @special-grey-tint-dark;
+    rotate: 0deg;
+  }
+
+  &--plus::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 21px;
+
+    width: 2px;
+    height: 14px;
+
+    border: none;
+    background-color: @special-grey-tint-dark;
+    rotate: 0deg;
+  }
+}
+
+.choosebox__remove-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  border: none;
+  border-radius: 50%;
+  background-color: @bg-base-light;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: @special-grey-tint;
+    rotate: 45deg;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: @special-grey-tint;
+    rotate: -45deg;
+  }
+}
+
+.choosebox--active > .choosebox__field::after {
+  right: 50px;
+  border: 1px solid @special-grey-tint;
+  background-color: transparent;
+}
+
+.choosebox--active-focus > .choosebox__field::after {
+  display: none;
+}
+
+.choosebox--active > .choosebox__field--country {
+  width: 100%;
+}
+
+.choosebox--active-focus > .choosebox__field--country {
+  width: 100%;
+  border: none;
+  .background(4px; 4px; 0; 0; @basic-blue-light);
+}
+
+.choosebox--active-focus .choosebox__input {
+  color: @basic-white;
+}
+
+.choosebox--active-focus .choosebox__button {
+  display: none;
+}
+
+.choosebox--active-focus .choosebox__remove-button {
+  top: 8px;
+  right: 15px;
+  background-color: transparent;
+
+  &::after {
+    background-color: @basic-white;
+  }
+
+  &::before {
+    background-color: @basic-white;
+  }
+}
+
+.choosebox--waiting > .choosebox__field::after {
+  right: 50px;
+  border: 1px solid @special-grey-tint;
+  background-color: transparent;
+}
+
+.choosebox--waiting > .choosebox__field--country {
+  width: 100%;
+  background-color: @bg-base-light;
+  border-color: @bg-base-light;
+}
