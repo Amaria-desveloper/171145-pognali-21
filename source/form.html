@@ -19,7 +19,7 @@
       <button class="header__toggle" type="button" aria-haspopup="true" aria-pressed="true"
         aria-label="Открыть или закрыть главное меню"></button>
 
-      <a class="header__login button-login" href="./authorization.html">Авторизация</a>
+      <a class="header__login button" href="./authorization.html">Авторизация</a>
 
       <div class="header__nav">
         <nav class="nav">
@@ -35,7 +35,7 @@
             </li>
           </ul>
 
-          <a class="nav__login button-login" href="./authorization.html">Авторизация</a>
+          <a class="nav__login button" href="./authorization.html">Авторизация</a>
         </nav>
 
         <ul class="header__contacts contacts">
@@ -134,7 +134,7 @@
     </section>
 
     <section class="profile-form__user-plans">
-      <div class="container">
+      <div class="add-plan-container">
         <h3 class="profile-form__title">Мои планы:</h3>
         <ol class="plans">
           <li class="plans__item">
@@ -159,7 +159,7 @@
     </section>
 
     <section class="profile-form__add-plan add-plan">
-      <div class="container">
+      <div class="add-plan-container">
         <h2 class="profile-form__title">Добавить план:</h2>
 
         <ol class="add-plan__indicator-steps">
@@ -174,8 +174,8 @@
 
         <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__add-plan">
 
-          <div class="add-plan__step">
-            <div class="add-plan__container">
+          <div class="add-plan__step" id="step-1">
+            <div class="add-plan-container">
               <h3 class="add-plan__title">Шаг 1. <br> Даты пребывания</h3>
 
               <p class="add-plan__text">
@@ -190,7 +190,7 @@
                     <span class="add-plan__legend-text add-plan__legend-text--measure">чел.</span>
                   </legend>
                   <div class="add-plan__field">
-                    <button class="num-button" type="button"></button>
+                    <button class="num-button num-button--minus" type="button"></button>
                     <input class="add-plan__input" type="text" name="fellows-quantity" value="2"
                       aria-label="введите количество попутчиков">
                     <button class="num-button num-button--plus" type="button"></button>
@@ -203,17 +203,17 @@
                     <span class="add-plan__legend-text add-plan__legend-text--measure">дн.</span>
                   </legend>
                   <div class="add-plan__field">
-                    <button class="num-button" type="button"></button>
+                    <button class="num-button num-button--minus" type="button"></button>
                     <input class="add-plan__input" type="text" name="duration" value="3" aria-label="введите количество дней">
-                    <button class="settings__button num-button num-button--plus" type="button"></button>
+                    <button class="num-button num-button--plus" type="button"></button>
                   </div>
                 </fieldset>
 
                 <fieldset class="add-plan__fieldset">
-                  <label class="add-plan__label add-plan__label-children add-plan__label-children--checked">
+                  <label class="add-plan__label add-plan__label-children add-plan__label-children--checked" for="children-allowed">
                     Можно с детьми
-                    <input class="is-hidden" type="checkbox" name="children-allowed" value="yes" checked>
                   </label>
+                  <input class="is-hidden" type="checkbox" name="children-allowed" id="children-allowed" value="yes" checked>
                 </fieldset>
               </div>
 
@@ -297,187 +297,193 @@
                 </div>
               </div>
 
-              <a class="add-plan__next-button button-login button-login--next-step" href="#route">Следующий шаг</a>
+              <a class="add-plan__next-button button button--next-step" href="#step-2">Следующий шаг</a>
             </div>
           </div>
 
 
-          <div class="form-plan__step form-step" id="route">
-            <h3 class="form-step__title headline headline--form-subtitle">Шаг 2. <br> Маршрут</h3>
+          <div class="add-plan__step" id="step-2">
+            <div class="add-plan-container">
+              <h3 class="add-plan__title">Шаг 2. <br> Маршрут</h3>
 
-            <p class="form-step__text">
-              Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-            </p>
+              <p class="add-plan__text">
+                Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+              </p>
 
-            <div class="route__choose-box route__choose-box--selected">
-              <button class="route__button" type="button">
-                Босния и Герцеговина
-                <span class="route__arrow-button"></span>
-              </button>
-              <div class="route__flag flag flag--bosnia-herzegovina">
-                <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
-              </div>
-              <button class="route__remove-button button-remove" type="button"></button>
-            </div>
-
-            <div class="route__choose-box route__choose-box--selected">
-              <button class="route__button" type="button">
-                Чехия
-                <span class="route__arrow-button"></span>
-              </button>
-              <div class="route__flag flag flag--czech">
-                <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
-              </div>
-              <button class="route__remove-button button-remove" type="button"></button>
-            </div>
-
-            <div class="route__choose-box route__choose-box--active">
-              <button class="route__button" type="button">
-                Выберите страну
-                <span class="route__arrow-button"></span>
-              </button>
-              <div class="route__flag route__flag--not-chosen"></div>
-              <button class="route__remove-button button-remove" type="button"></button>
-            </div>
-
-            <div class="route__dropdown select-country">
-              <div class="select-country__alphabet">
-                <fieldset class="alphabet-box">
-                  <input class="visually-hidden" type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
-                  <label class="letter letter--checked" for="letter-A">А</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-B" name="alphabet" value="letter-B">
-                  <label class="letter" for="letter-B">Б</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-V" name="alphabet" value="letter-V">
-                  <label class="letter" for="letter-V">В</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-G" name="alphabet" value="letter-G">
-                  <label class="letter" for="letter-G">Г</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-D" name="alphabet" value="letter-D">
-                  <label class="letter" for="letter-D">Д</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-E" name="alphabet" value="letter-E">
-                  <label class="letter" for="letter-E">Е</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-Z" name="alphabet" value="letter-Z">
-                  <label class="letter" for="letter-Z">З</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-I" name="alphabet" value="letter-I">
-                  <label class="letter" for="letter-I">И</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-K" name="alphabet" value="letter-K">
-                  <label class="letter" for="letter-K">К</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-L" name="alphabet" value="letter-L">
-                  <label class="letter" for="letter-L">Л</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-M" name="alphabet" value="letter-M">
-                  <label class="letter" for="letter-M">М</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-N" name="alphabet" value="letter-N">
-                  <label class="letter" for="letter-N">Н</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-O" name="alphabet" value="letter-O">
-                  <label class="letter" for="letter-O">О</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-P" name="alphabet" value="letter-P">
-                  <label class="letter" for="letter-P">П</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-R" name="alphabet" value="letter-R">
-                  <label class="letter" for="letter-R">Р</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-S" name="alphabet" value="letter-S">
-                  <label class="letter" for="letter-S">С</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-T" name="alphabet" value="letter-T">
-                  <label class="letter" for="letter-T">Т</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-U" name="alphabet" value="letter-U">
-                  <label class="letter" for="letter-U">У</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-F" name="alphabet" value="letter-F">
-                  <label class="letter" for="letter-F">Ф</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-KH" name="alphabet" value="letter-KH">
-                  <label class="letter" for="letter-KH">Х</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-TS" name="alphabet" value="letter-TS">
-                  <label class="letter" for="letter-TS">Ц</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-CH" name="alphabet" value="letter-CH">
-                  <label class="letter" for="letter-CH">Ч</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-SH" name="alphabet" value="letter-SH">
-                  <label class="letter" for="letter-SH">Ш</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-SHCH" name="alphabet" value="letter-SHCH">
-                  <label class="letter" for="letter-SHCH">Щ</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-EH" name="alphabet" value="letter-EH">
-                  <label class="letter" for="letter-EH">Э</label>
-
-                  <input class="visually-hidden" type="radio" id="letter-YU" name="alphabet" value="letter-YU">
-                  <label class="letter" for="letter-YU">Ю</label>
-                </fieldset>
+              <div class="choosebox">
+                <div class="add-plan__field choosebox__field choosebox__field--country">
+                  <div class="add-plan__input-overlay">
+                    <input class="choosebox__input" type="text" readonly value="Босния и Герцеговина" id="choose-01" name="choose-01">
+                  </div>
+                  <button class="choosebox__button" type="button"></button>
+                </div>
+                <label class="add-plan__field choosebox__field choosebox__field--flag" for="choose-01">
+                  <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+                </label>
+                <button class="choosebox__remove-button" type="button"></button>
               </div>
 
-              <div class="select-country__select-wrapper">
-                <select class="select-country__countries countries" data-dependence="letter-A" size="10" name="country">
-                  <option class="country">Австралия</option>
-                  <option class="country">Австрия</option>
-                  <option class="country">Азербайджан</option>
-                  <option class="country">Албания</option>
-                  <option class="country">Алжир</option>
-                  <option class="country">Ангола</option>
-                  <option class="country">Андорра</option>
-                  <option class="country">Антигуа и Барбуда</option>
-                  <option class="country">Аргентина</option>
-                  <option class="country">Армения</option>
-                  <option class="country">Афганистан</option>
-                </select>
+              <div class="choosebox">
+                <div class="add-plan__field choosebox__field choosebox__field--country">
+                  <div class="add-plan__input-overlay">
+                    <input class="choosebox__input" type="text" readonly value="Чехия" id="choose-02" name="choose-02">
+                  </div>
+                  <button class="choosebox__button" type="button"></button>
+                </div>
+                <label class="add-plan__field choosebox__field choosebox__field--flag" for="choose-02">
+                  <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+                </label>
+                <button class="choosebox__remove-button" type="button"></button>
               </div>
-            </div>
 
-            <div class="route__choose-box route__choose-box--button">
-              <button class="route__button" type="button">
-                Добавить страну
-                <span class="route__arrow-button"></span>
-              </button>
-              <div class="route__flag route__flag--add"></div>
-            </div>
+              <div class="choosebox choosebox--active-focus">
+                <div class="add-plan__field choosebox__field choosebox__field--country">
+                  <div class="add-plan__input-overlay add-plan__input-overlay--off">
+                    <input class="choosebox__input" type="text" readonly value="Выберите страну" id="choose-03" name="choose-03">
+                  </div>
+                  <button class="choosebox__remove-button" type="button"></button>
+                  <button class="choosebox__button" type="button"></button>
+                </div>
 
-            <a class="route__next-button form-button form-button--next" href="#leisure">Следующий шаг</a>
-            <a class="route__prev-button form-button form-button--prev" href="#new-plan">На шаг назад</a>
+                <div class="choosebox__dropdown dropdown">
+                  <fieldset class="dropdown__alphabet">
+                    <input type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
+                    <label class="letter letter--checked" for="letter-A">А</label>
+
+                    <input type="radio" id="letter-B" name="alphabet" value="letter-B">
+                    <label class="letter" for="letter-B">Б</label>
+
+                    <input type="radio" id="letter-V" name="alphabet" value="letter-V">
+                    <label class="letter" for="letter-V">В</label>
+
+                    <input type="radio" id="letter-G" name="alphabet" value="letter-G">
+                    <label class="letter" for="letter-G">Г</label>
+
+                    <input type="radio" id="letter-D" name="alphabet" value="letter-D">
+                    <label class="letter" for="letter-D">Д</label>
+
+                    <input type="radio" id="letter-E" name="alphabet" value="letter-E">
+                    <label class="letter" for="letter-E">Е</label>
+
+                    <input type="radio" id="letter-Z" name="alphabet" value="letter-Z">
+                    <label class="letter" for="letter-Z">З</label>
+
+                    <input type="radio" id="letter-I" name="alphabet" value="letter-I">
+                    <label class="letter" for="letter-I">И</label>
+
+                    <input type="radio" id="letter-K" name="alphabet" value="letter-K">
+                    <label class="letter" for="letter-K">К</label>
+
+                    <input type="radio" id="letter-L" name="alphabet" value="letter-L">
+                    <label class="letter" for="letter-L">Л</label>
+
+                    <input type="radio" id="letter-M" name="alphabet" value="letter-M">
+                    <label class="letter" for="letter-M">М</label>
+
+                    <input type="radio" id="letter-N" name="alphabet" value="letter-N">
+                    <label class="letter" for="letter-N">Н</label>
+
+                    <input type="radio" id="letter-O" name="alphabet" value="letter-O">
+                    <label class="letter" for="letter-O">О</label>
+
+                    <input type="radio" id="letter-P" name="alphabet" value="letter-P">
+                    <label class="letter" for="letter-P">П</label>
+
+                    <input type="radio" id="letter-R" name="alphabet" value="letter-R">
+                    <label class="letter" for="letter-R">Р</label>
+
+                    <input type="radio" id="letter-S" name="alphabet" value="letter-S">
+                    <label class="letter" for="letter-S">С</label>
+
+                    <input type="radio" id="letter-T" name="alphabet" value="letter-T">
+                    <label class="letter" for="letter-T">Т</label>
+
+                    <input type="radio" id="letter-U" name="alphabet" value="letter-U">
+                    <label class="letter" for="letter-U">У</label>
+
+                    <input type="radio" id="letter-F" name="alphabet" value="letter-F">
+                    <label class="letter" for="letter-F">Ф</label>
+
+                    <input type="radio" id="letter-KH" name="alphabet" value="letter-KH">
+                    <label class="letter" for="letter-KH">Х</label>
+
+                    <input type="radio" id="letter-CH" name="alphabet" value="letter-CH">
+                    <label class="letter" for="letter-CH">Ч</label>
+
+                    <input type="radio" id="letter-SH" name="alphabet" value="letter-SH">
+                    <label class="letter" for="letter-SH">Ш</label>
+
+                    <input type="radio" id="letter-EH" name="alphabet" value="letter-EH">
+                    <label class="letter" for="letter-EH">Э</label>
+
+                    <input type="radio" id="letter-YU" name="alphabet" value="letter-YU">
+                    <label class="letter" for="letter-YU">Ю</label>
+
+                    <input type="radio" id="letter-YA" name="alphabet" value="letter-YA">
+                    <label class="letter" for="letter-YU">Я</label>
+                  </fieldset>
+
+                  <select class="dropdown__countries" data-dependence="letter-A" size="10" name="country">
+                    <option class="dropdown__country">Австралия</option>
+                    <option class="dropdown__country">Австрия</option>
+                    <option class="dropdown__country">Азербайджан</option>
+                    <option class="dropdown__country">Албания</option>
+                    <option class="dropdown__country">Алжир</option>
+                    <option class="dropdown__country">Ангола</option>
+                    <option class="dropdown__country">Андорра</option>
+                    <option class="dropdown__country">Антигуа и Барбуда</option>
+                    <option class="dropdown__country">Аргентина</option>
+                    <option class="dropdown__country">Армения</option>
+                    <option class="dropdown__country">Афганистан</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="choosebox choosebox--waiting">
+                <div class="add-plan__field choosebox__field choosebox__field--country">
+                  <div class="add-plan__input-overlay add-plan__input-overlay--off">
+                    <input class="choosebox__input" type="text" readonly value="Добавить страну" id="choose-04">
+                    <label for="choose-04"></label>
+                  </div>
+                  <button class="choosebox__button choosebox__button--plus" type="button"></button>
+                </div>
+              </div>
+
+              <a class="add-plan__next-button button button--next-step" href="#step-3">Следующий шаг</a>
+              <a class="add-plan__next-button button button--prev-step" href="#step-1">На шаг назад</a>
+            </div>
           </div>
 
-          <div class="form-plan__step form-step leisure" id="leisure">
-            <h3 class="form-step__title headline headline--form-subtitle">Шаг 3. <br> Даты пребывания</h3>
+          <div class="add-plan__step add-plan__step--three" id="step-3">
+            <div class="add-plan-container">
+              <h3 class="add-plan__title">Шаг 3. <br> Развлечения</h3>
 
-            <p class="form-step__text">
-              Наконец, расскажите о своих планах времяпрепровождения.
-              Можно писать в свободной форме и ставить тэги.
-            </p>
+              <p class="add-plan__text">
+                Наконец, расскажите о своих планах времяпрепровождения.
+                Можно писать в свободной форме и ставить тэги.
+              </p>
 
-            <div class="leisure__country leisure-country" data-country="bosnia-herzegovina">
-              <p class="leisure-country__title">Босния и Герцеговина</p>
-              <div class="leisure-country__flag flag flag--bosnia-herzegovina">
-                <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
-              </div>
-              <textarea class="leisure-country__text" name="leisure-bosnia-herzegovina" placeholder="План действий"></textarea>
+              <ul class="add-plan__journey-plans">
+                <li class="add-plan__journey-plan add-plan__journey-plan--active">
+                  <label class="add-plan__journey-plan-country" for="chosen-bosnia-herzegovina">
+                    <p class="add-plan__journey-plan-title add-plan__input-overlay add-plan__input-overlay--small">Босния и Герцеговина</p>
+                    <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+                  </label>
+                  <textarea class="add-plan__journey-desc" name="plan-bosnia-herzegovina" id="chosen-bosnia-herzegovina" cols="27" rows="10" placeholder="План действий"></textarea>
+                </li>
+
+                <li class="add-plan__journey-plan">
+                  <label class="add-plan__journey-plan-country" for="chozen-czech" >
+                    <p class="add-plan__journey-plan-title">Чехия</p>
+                    <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+                  </label>
+                  <textarea class="add-plan__journey-desc" name="plan-czech" id="chozen-czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
             </div>
 
-            <div class="leisure__country leisure-country" data-country="czech">
-              <p class="leisure-country__title">Чехия</p>
-              <div class="leisure-country__flag flag flag--czech">
-                <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
-              </div>
-              <textarea class="leisure-country__text" name="leisure-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            </div>
-
-            <button class="leisure__submit form-button form-button--submit" type="submit">Отправить</button>
-            <a class="leisure__prev-button form-button form-button--prev" href="#route">На шаг назад</a>
+            <button class="add-plan__submit" type="submit">Отправить</button>
+            <a class="add-plan__button button button--prev-step" href="#step-2">На шаг назад</a>
           </div>
         </form>
       </div>

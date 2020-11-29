@@ -1,9 +1,9 @@
-.button-login {
+.button {
   align-items: center;
   justify-content: center;
   height: 50px;
 
-  .font-style-bold(17px; 30px; @text-basic-blue);
+  .font-style-bold(17px; 30px; @basic-blue);
   text-decoration: none;
   text-transform: uppercase;
 
@@ -11,13 +11,13 @@
   background-color: @basic-yellow;
 
   @media (min-width: @desktop-width) {
-    .font-style-bold(20px; 20px; @text-basic-blue);
+    .font-style-bold(20px; 20px; @basic-blue);
   }
 
   &--intro {
     width: 190px;
     height: 40px;
-    .font-style-bold(20px; 20px; @text-basic-blue);
+    .font-style-bold(20px; 20px; @basic-blue);
 
     background-color: @basic-yellow;
     text-transform: uppercase;
@@ -25,6 +25,13 @@
 
   &--next-step {
     height: 40px;
+  }
+
+  &--prev-step {
+    margin-top: 13px;
+    height: 22px;
+    letter-spacing: 0.01em;
+    background-color: transparent;
   }
 }
 
@@ -35,7 +42,7 @@
   height: 62px;
   padding-left: 23px;
 
-  .font-style-bold(18px; 18px; @text-basic-blue-light);
+  .font-style-bold(18px; 18px; @basic-blue-light);
   text-decoration: none;
 
   border-radius: 10px;
@@ -49,12 +56,12 @@
     display: block;
 
     border: 6px solid transparent;
-    border-left: 11px solid @text-basic-blue;
+    border-left: 11px solid @basic-blue;
   }
 
   @media (min-width: @tablet-width) {
     height: 80px;
-    .font-style-bold(24px; 24px; @text-basic-blue);
+    .font-style-bold(24px; 24px; @basic-blue);
   }
 
   &--like-text {
@@ -79,7 +86,7 @@
 .button-close {
   width: 100%;
   height: 59px;
-  .font-style-bold(@font-color: @text-basic-blue-light);
+  .font-style-bold(@font-color: @basic-blue-light);
   text-align: center;
   text-transform: uppercase;
 
@@ -88,7 +95,7 @@
 
   @media (min-width: @tablet-width) {
     height: 108px;
-    .font-style-bold(24px; 24px; @text-basic-blue-light);
+    .font-style-bold(24px; 24px; @basic-blue-light);
   }
 }
 
@@ -99,7 +106,7 @@
   height: 62px;
   padding-left: 36px;
 
-  .font-style-bold(24px; 24px; @text-basic-blue);
+  .font-style-bold(24px; 24px; @basic-blue);
 
   border: 0;
   .background(10px; 10px; 10px; 10px; @basic-yellow);
@@ -112,7 +119,7 @@
     display: block;
 
     border: 6px solid transparent;
-    border-left: 11px solid @text-basic-blue;
+    border-left: 11px solid @basic-blue;
   }
 }
 
@@ -122,10 +129,10 @@
 
 
 @media (min-width: @tablet-width) {
-  .button-login {
+  .button {
     width: 188px;
     min-height: 50px;
-    .font-style-bold(20px; 20px; @text-basic-blue);
+    .font-style-bold(20px; 20px; @basic-blue);
   }
 
   .button-submit {
@@ -150,16 +157,17 @@
 
   width: 14px;
   height: 14px;
+  padding: 0;
 
   border: none;
   background-color: transparent;
   outline-color: @basic-blue-grey;
 
-  &::after {
+  &--minus::after {
     position: absolute;
-    left: 0;
-
     content: "";
+    left: -6px;
+
     display: block;
     width: 14px;
     height: 2px;
@@ -167,13 +175,25 @@
   }
 
   &--plus::before {
-    position: absolute;
-    top: 0;
-
     content: "";
+    position: absolute;
+    top: 1px;
+    right: 6px;
+
     display: block;
     width: 2px;
     height: 14px;
+    background-color: @basic-grey;
+  }
+
+  &--plus::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+
+    display: block;
+    width: 14px;
+    height: 2px;
     background-color: @basic-grey;
   }
 }
