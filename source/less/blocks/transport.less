@@ -1,0 +1,25 @@
+.transport__label {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+
+  border-radius: 50%;
+  background-color: @basic-white;
+
+  cursor: pointer;
+}
+
+.transport input {
+  .is-hidden();
+}
+
+.transport__tooltip {
+  position: absolute;
+  bottom: -10px;
+  display: none;
+}
+
+.transport__label:hover > .transport__tooltip {
+  display: flex;
+}

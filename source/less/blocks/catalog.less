@@ -1,0 +1,38 @@
+.catalog {
+  background-color: @bg-base-light;
+}
+
+.catalog > .main__title {
+  position: relative;
+  z-index: 2;
+}
+
+.catalog__filter {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+}
+
+.catalog__selection {
+  margin: 54px 0 28px;
+  padding: 26px 25px 26px;
+  .background(20px; 20px; 20px; 20px; @basic-yellow);
+}
+
+.catalog__selection-title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  .font-style-bold(22px; 22px; @basic-blue-light);
+  letter-spacing: 0.02em;
+}
+
+.catalog__display h2 {
+  .is-hidden();
+}
+
+.catalog__card {
+  margin-bottom: 10px;
+}

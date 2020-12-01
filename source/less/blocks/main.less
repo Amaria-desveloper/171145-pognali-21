@@ -7,15 +7,10 @@
     display: block;
     .headline-subpage();
     .background(0; 0; 20px; 20px; @basic-blue);
-  }
 
-  &--subpage::after {
-    content: "";
-    position: relative;
-    bottom: -10px;
-    display: block;
-    width: 214px;
-    height: 5px;
-    .background(4px; 4px; 4px; 4px; @special-orange);
+    & > span {
+      padding-bottom: 8px;
+      border-bottom: 4px solid @special-orange;
+    }
   }
 }

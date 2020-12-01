@@ -21,8 +21,11 @@
     min-height: 89px;
   }
 
-  &--transports {
+  &--transport {
+    justify-content: center;
     min-height: 63px;
+    padding-top: 8px;
+    padding-bottom: 14px;
   }
 }
 
@@ -83,31 +86,4 @@
   background-color: transparent;
 
   resize: none;
-}
-
-
-.user__transports {
-  display: flex;
-  justify-content: center;
-}
-
-.user__transport {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin-top: 8px;
-  margin-bottom: 14px;
-
-  border-radius: 50%;
-  background-color: @basic-white;
-}
-
-.user__tooltip {
-  position: absolute;
-  bottom: -10px;
-  display: none;
-}
-
-.user__transport:hover > .user__tooltip {
-  display: flex;
 }

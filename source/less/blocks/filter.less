@@ -1,0 +1,159 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  .background(0; 0; 20px; 20px; @special-blue);
+
+  &--collapsed {
+    max-height: 73px;
+  }
+}
+
+.filter__header {
+  margin-top: 20px;
+}
+
+.filter__title {
+  display: inline-block;
+  margin: 0 0 15px;
+  .font-style-bold(16px; 18px; @blue-dark);
+  text-transform: uppercase;
+}
+
+.filter__button {
+  position: relative;
+  float: right;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 5px;
+
+    display: block;
+    width: 2px;
+    height: 16px;
+
+    background-color: @blue-dark;
+  }
+
+  &::before {
+    rotate: -45deg;
+  }
+
+  &::after {
+    rotate: 45deg;
+  }
+
+  &--collapsed {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 8px;
+      left: 0;
+
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      box-shadow: 4px -4px 0 0 @blue-dark, 8px -8px 0 0 @blue-dark;
+    }
+  }
+}
+
+.filter__world-parts,
+.filter__countries {
+  margin: 0 25px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter__world-parts {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.filter__world-part {
+  margin-bottom: 9px;
+}
+
+.filter__world-part-link {
+  .font-style-bold(@line-height: 18px; @font-color: @blue-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.filter__country-link {
+  .font-style-normal(16px; 22px; @special-grey);
+  text-decoration: none;
+}
+
+.filter__alphabet {
+  margin: 21px 25px 14px;
+  border: 1px solid @basic-blue-grey;
+  border-bottom: none;
+  background-color: @basic-white;
+}
+
+.filter__roll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 270px;
+  height: 39px;
+  margin: 28px auto;
+
+  background-color: @special-grey-lighter;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+}
+
+.filter__roll-button > span {
+  position: relative;
+
+  .font-style-bold(16px; 20px; @blue-dark);
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: -16px;
+
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: @blue-dark;
+  }
+
+  &::before {
+    rotate: -45deg;
+  }
+
+  &::after {
+    rotate: 45deg;
+  }
+}
+
+.filter--collapsed .filter__body {
+  display: none;
+}

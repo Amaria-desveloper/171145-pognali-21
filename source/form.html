@@ -28,7 +28,7 @@
               <a class="nav__link" href="./index.html">О сервисе</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="./form.html">Направления</a>
+              <a class="nav__link">Направления</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="./catalog.html">Попутчики</a>
@@ -77,7 +77,9 @@
   </header>
 
   <main class="main profile-form">
-    <h1 class="main__title main__title--subpage container">Направления</h1>
+    <h1 class="main__title main__title--subpage container">
+      <span>Направления</span>
+    </h1>
 
     <section class="profile-form__user">
       <h2 class="is-hidden">Мой профиль. Общая информация</h2>
@@ -107,26 +109,31 @@
 
           <fieldset class="user__fieldset user__fieldset--hashtags">
             <legend class="user__legend">Тэги</legend>
+
             <textarea class="user__hashtags" name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
 
-          <fieldset class="user__fieldset user__fieldset--transports user__transports">
+          <fieldset class="user__fieldset user__fieldset--transport transport">
             <legend class="user__legend">Транспорт</legend>
-            <label class="user__transport user__transport--checked">
-              <input class="is-hidden" type="checkbox" name="transport" value="plane" checked>
-              <span class="user__tooltip tooltip">Авиаперелёт</span>
+
+            <label class="transport__label transport__label--checked">
+              <input type="checkbox" name="transport" value="plane" checked>
+              <span class="transport__tooltip tooltip">Авиаперелёт</span>
             </label>
-            <label class="user__transport user__transport--checked">
-              <input class="is-hidden" type="checkbox" name="transport" value="bus" checked>
-              <span class="user__tooltip tooltip">Автотранспорт</span>
+
+            <label class="transport__label transport__label--checked">
+              <input type="checkbox" name="transport" value="bus" checked>
+              <span class="transport__tooltip tooltip">Автотранспорт</span>
             </label>
-            <label class="user__transport">
-              <input class="is-hidden" type="checkbox" name="transport" value="bycicle">
-              <span class="user__tooltip tooltip">Велосипед</span>
+
+            <label class="transport__label">
+              <input type="checkbox" name="transport" value="bycicle">
+              <span class="transport__tooltip tooltip">Велосипед</span>
             </label>
-            <label class="user__transport user__transport--checked">
-              <input class="is-hidden" type="checkbox" name="transport" value="walk" checked>
-              <span class="user__tooltip tooltip">Пешком</span>
+
+            <label class="transport__label transport__label--checked">
+              <input type="checkbox" name="transport" value="walk" checked>
+              <span class="transport__tooltip tooltip">Пешком</span>
             </label>
           </fieldset>
         </form>
@@ -345,83 +352,82 @@
                   <button class="choosebox__button" type="button"></button>
                 </div>
 
-                <div class="choosebox__dropdown dropdown">
-                  <fieldset class="dropdown__alphabet">
+                <fieldset class="choosebox__dropdown alphabet">
                     <input type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
-                    <label class="letter letter--checked" for="letter-A">А</label>
+                    <label class="alphabet__letter alphabet__letter--checked" for="letter-A">А</label>
 
                     <input type="radio" id="letter-B" name="alphabet" value="letter-B">
-                    <label class="letter" for="letter-B">Б</label>
+                    <label class="alphabet__letter" for="letter-B">Б</label>
 
                     <input type="radio" id="letter-V" name="alphabet" value="letter-V">
-                    <label class="letter" for="letter-V">В</label>
+                    <label class="alphabet__letter" for="letter-V">В</label>
 
                     <input type="radio" id="letter-G" name="alphabet" value="letter-G">
-                    <label class="letter" for="letter-G">Г</label>
+                    <label class="alphabet__letter" for="letter-G">Г</label>
 
                     <input type="radio" id="letter-D" name="alphabet" value="letter-D">
-                    <label class="letter" for="letter-D">Д</label>
+                    <label class="alphabet__letter" for="letter-D">Д</label>
 
                     <input type="radio" id="letter-E" name="alphabet" value="letter-E">
-                    <label class="letter" for="letter-E">Е</label>
+                    <label class="alphabet__letter" for="letter-E">Е</label>
 
                     <input type="radio" id="letter-Z" name="alphabet" value="letter-Z">
-                    <label class="letter" for="letter-Z">З</label>
+                    <label class="alphabet__letter" for="letter-Z">З</label>
 
                     <input type="radio" id="letter-I" name="alphabet" value="letter-I">
-                    <label class="letter" for="letter-I">И</label>
+                    <label class="alphabet__letter" for="letter-I">И</label>
 
                     <input type="radio" id="letter-K" name="alphabet" value="letter-K">
-                    <label class="letter" for="letter-K">К</label>
+                    <label class="alphabet__letter" for="letter-K">К</label>
 
                     <input type="radio" id="letter-L" name="alphabet" value="letter-L">
-                    <label class="letter" for="letter-L">Л</label>
+                    <label class="alphabet__letter" for="letter-L">Л</label>
 
                     <input type="radio" id="letter-M" name="alphabet" value="letter-M">
-                    <label class="letter" for="letter-M">М</label>
+                    <label class="alphabet__letter" for="letter-M">М</label>
 
                     <input type="radio" id="letter-N" name="alphabet" value="letter-N">
-                    <label class="letter" for="letter-N">Н</label>
+                    <label class="alphabet__letter" for="letter-N">Н</label>
 
                     <input type="radio" id="letter-O" name="alphabet" value="letter-O">
-                    <label class="letter" for="letter-O">О</label>
+                    <label class="alphabet__letter" for="letter-O">О</label>
 
                     <input type="radio" id="letter-P" name="alphabet" value="letter-P">
-                    <label class="letter" for="letter-P">П</label>
+                    <label class="alphabet__letter" for="letter-P">П</label>
 
                     <input type="radio" id="letter-R" name="alphabet" value="letter-R">
-                    <label class="letter" for="letter-R">Р</label>
+                    <label class="alphabet__letter" for="letter-R">Р</label>
 
                     <input type="radio" id="letter-S" name="alphabet" value="letter-S">
-                    <label class="letter" for="letter-S">С</label>
+                    <label class="alphabet__letter" for="letter-S">С</label>
 
                     <input type="radio" id="letter-T" name="alphabet" value="letter-T">
-                    <label class="letter" for="letter-T">Т</label>
+                    <label class="alphabet__letter" for="letter-T">Т</label>
 
                     <input type="radio" id="letter-U" name="alphabet" value="letter-U">
-                    <label class="letter" for="letter-U">У</label>
+                    <label class="alphabet__letter" for="letter-U">У</label>
 
                     <input type="radio" id="letter-F" name="alphabet" value="letter-F">
-                    <label class="letter" for="letter-F">Ф</label>
+                    <label class="alphabet__letter" for="letter-F">Ф</label>
 
                     <input type="radio" id="letter-KH" name="alphabet" value="letter-KH">
-                    <label class="letter" for="letter-KH">Х</label>
+                    <label class="alphabet__letter" for="letter-KH">Х</label>
 
                     <input type="radio" id="letter-CH" name="alphabet" value="letter-CH">
-                    <label class="letter" for="letter-CH">Ч</label>
+                    <label class="alphabet__letter" for="letter-CH">Ч</label>
 
                     <input type="radio" id="letter-SH" name="alphabet" value="letter-SH">
-                    <label class="letter" for="letter-SH">Ш</label>
+                    <label class="alphabet__letter" for="letter-SH">Ш</label>
 
                     <input type="radio" id="letter-EH" name="alphabet" value="letter-EH">
-                    <label class="letter" for="letter-EH">Э</label>
+                    <label class="alphabet__letter" for="letter-EH">Э</label>
 
                     <input type="radio" id="letter-YU" name="alphabet" value="letter-YU">
-                    <label class="letter" for="letter-YU">Ю</label>
+                    <label class="alphabet__letter" for="letter-YU">Ю</label>
 
                     <input type="radio" id="letter-YA" name="alphabet" value="letter-YA">
-                    <label class="letter" for="letter-YU">Я</label>
-                  </fieldset>
+                    <label class="alphabet__letter" for="letter-YU">Я</label>
+
 
                   <select class="dropdown__countries" data-dependence="letter-A" size="10" name="country">
                     <option class="dropdown__country">Австралия</option>
@@ -436,7 +442,8 @@
                     <option class="dropdown__country">Армения</option>
                     <option class="dropdown__country">Афганистан</option>
                   </select>
-                </div>
+                </fieldset>
+
               </div>
 
               <div class="choosebox choosebox--waiting">
@@ -466,7 +473,7 @@
               <ul class="add-plan__journey-plans">
                 <li class="add-plan__journey-plan add-plan__journey-plan--active">
                   <label class="add-plan__journey-plan-country" for="chosen-bosnia-herzegovina">
-                    <p class="add-plan__journey-plan-title add-plan__input-overlay add-plan__input-overlay--small">Босния и Герцеговина</p>
+                    <span class="add-plan__journey-plan-title add-plan__input-overlay add-plan__input-overlay--small">Босния и Герцеговина</span>
                     <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
                   </label>
                   <textarea class="add-plan__journey-desc" name="plan-bosnia-herzegovina" id="chosen-bosnia-herzegovina" cols="27" rows="10" placeholder="План действий"></textarea>
@@ -474,7 +481,7 @@
 
                 <li class="add-plan__journey-plan">
                   <label class="add-plan__journey-plan-country" for="chozen-czech" >
-                    <p class="add-plan__journey-plan-title">Чехия</p>
+                    <span class="add-plan__journey-plan-title">Чехия</span>
                     <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
                   </label>
                   <textarea class="add-plan__journey-desc" name="plan-czech" id="chozen-czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
