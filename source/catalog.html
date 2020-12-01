@@ -3,631 +3,768 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <title>HTML Academy: Погнали. Каталог</title>
 </head>
 
 <body class="page__body page__body--catalog">
 
-  <header class="header header--sticky header--small">
-    <a class="header__logo logo logo--invert" href="./index.html">
-      <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100" height="15">
+<header class="header">
+  <div class="container">
+    <a class="header__logo logo" href="./index.html">
+      <img src="https://via.placeholder.com/96x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="96" height="15">
     </a>
 
-    <button class="header__toggle toggle toggle--is-open" type="button" aria-haspopup="true" aria-pressed="true" aria-label="Открыть или закрыть главное меню"></button>
+    <button class="header__toggle" type="button" aria-haspopup="true" aria-pressed="true"
+      aria-label="Открыть или закрыть главное меню"></button>
 
-    <nav class="header__nav nav nav--modal">
-      <ul class="nav__menu menu menu--modal">
-        <li class="menu__item">
-          <a class="menu__link" href="./index.html">О сервисе</a>
+    <a class="header__login button" href="./authorization.html">Авторизация</a>
+
+    <div class="header__nav">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html">О сервисе</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./form.html">Направления</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link">Попутчики</a>
+          </li>
+        </ul>
+
+        <a class="nav__login button" href="./authorization.html">Авторизация</a>
+      </nav>
+
+      <ul class="header__contacts contacts">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--invert contacts__link--phone" href="tel:88005558628"
+            aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="./form.html">Направления</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link">Попутчики</a>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--invert contacts__link--email" href="mailto:mail@htmlacademy.ru"
+            aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
 
-      <a class="nav__login login login--modal" href="./authorization.html">Авторизация</a>
-    </nav>
-
-    <ul class="header__contacts contacts contacts--invert">
-      <li class="contacts__item">
-        <a class="contacts__phone" href="tel:88005558628" aria-label="Звоните нам по телефону 8-800-555-86-28">8 800 555-86-28</a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__email" href="mailto:mail@htmlacademy.ru"
-          aria-label="Пишите нам по электронному адресу: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
-
-    <ul class="header__social social social--modal">
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="" aria-label="Наша страница на Фейсбуке">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="" aria-label="Наша группа во Вконтакте">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="" aria-label="Наша страница в Инстаграм">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </header>
+      <ul class="header__social social">
+        <li class="social__item">
+          <a class="social__link" href="" aria-label="Наша страница на Фейсбуке">
+            <svg class="social__icon social__icon--fb" width="11" height="21">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="" aria-label="Наша группа во Вконтакте">
+            <svg class="social__icon social__icon--vk" width="23" height="12">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="" aria-label="Наша страница в Инстаграм">
+            <svg class="social__icon social__icon--instagram" width="18" height="18">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
 
   <main class="main catalog">
-    <h1 class="catalog__title headline headline--page">Попутчики</h1>
+    <h1 class="main__title main__title--subpage container">
+      <span>Попутчики</span>
+    </h1>
 
-    <section class="catalog__filter">
-      <h2 class="catalog__filter-title headline">Подберите идеального попутчика</h2>
+    <section class="catalog__filter filter filter--collapsed">
+      <div class="container">
+        <div class="filter__header">
+          <h2 class="filter__title">Фильтрация по странам:</h2>
+          <button class="filter__button filter__button--collapsed"></button>
+        </div>
 
-      <form class="filter" action="https://echo.htmlacademy.ru" method="POST" name="catalog__filter">
-        <fieldset class="filter__fieldset">
-          <b class="filter__title headline">Хобби</b>
+        <div class="filter__body">
+          <ul class="filter__world-parts">
+            <li class="filter__world-part">
+              <a class="filter__world-part-link filter__world-part-link--active" href="./europe">Европа</a>
+            </li>
+            <li class="filter__world-part">
+              <a class="filter__world-part-link" href="./asia">Азия</a>
+            </li>
+            <li class="filter__world-part">
+              <a class="filter__world-part-link" href="./america">Америка</a>
+            </li>
+            <li class="filter__world-part">
+              <a class="filter__world-part-link" href="./islands">Острова</a>
+            </li>
+          </ul>
 
-        </fieldset>
+          <form class="filter__alphabet" action="https://echo.htmlacademy.ru" method="POST" name="filter-letter">
+            <fieldset class="alphabet alphabet--filter">
+              <input type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
+              <label class="alphabet__letter" for="letter-A">А</label>
 
-        <fieldset class="filter__fieldset">
-          <b class="filter__title headline">Музыка</b>
+              <input type="radio" id="letter-B" name="alphabet" value="letter-B">
+              <label class="alphabet__letter" for="letter-B">Б</label>
 
-          <label class="music music--checked">
-            <input class="filter__checkbox visually-hidden" type="checkbox" name="music" value="hard-rock" checked>
-          </label>
-          <label class="music music--checked">
-            <input class="filter__checkbox visually-hidden" type="checkbox" name="music" value="russian-rap" checked>
-          </label>
-          <label class="music">
-            <input class="filter__checkbox visually-hidden" type="checkbox" name="music" value="eurodance">
-          </label>
-        </fieldset>
+              <input type="radio" id="letter-V" name="alphabet" value="letter-V">
+              <label class="alphabet__letter" for="letter-V">В</label>
 
-        <fieldset class="filter__fieldset">
-          <b class="filter__title headline">Еда</b>
-        </fieldset>
+              <input type="radio" id="letter-G" name="alphabet" value="letter-G">
+              <label class="alphabet__letter" for="letter-G">Г</label>
 
-        <fieldset class="filter__fieldset">
-          <b class="filter__title headline">Транспорт</b>
+              <input type="radio" id="letter-D" name="alphabet" value="letter-D">
+              <label class="alphabet__letter" for="letter-D">Д</label>
 
-          <label class="transport transport--plane tooltip tooltip--plane transport--checked">
-            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" checked>
-          </label>
-          <label class="transport transport--bus tooltip tooltip--bus transport--checked">
-            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" checked>
-          </label>
-          <label class="transport transport--bycicle tooltip tooltip--bycicle">
-            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bycicle">
-          </label>
-          <label class="transport transport--walk tooltip tooltip--walk transport--checked">
-            <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="walk" checked>
-          </label>
-        </fieldset>
+              <input type="radio" id="letter-E" name="alphabet" value="letter-E">
+              <label class="alphabet__letter" for="letter-E">Е</label>
 
-        <fieldset class="filter__fieldset">
-          <b class="filter__title headline">Левел</b>
+              <input type="radio" id="letter-Z" name="alphabet" value="letter-Z">
+              <label class="alphabet__letter" for="letter-Z">З</label>
 
-          <div class="filter__range range">
-            <div class="range__inputs">
-              <label class="range__level range__level--min" id="min-level"
-                aria-label="установить нижний порог (управление стрелкой вверх-вниз)">
-                <input name="min-level" type="number" value="30" step="1" min="0" max="100">
+              <input type="radio" id="letter-I" name="alphabet" value="letter-I">
+              <label class="alphabet__letter" for="letter-I">И</label>
+
+              <input type="radio" id="letter-K" name="alphabet" value="letter-K">
+              <label class="alphabet__letter" for="letter-K">К</label>
+
+              <input type="radio" id="letter-L" name="alphabet" value="letter-L">
+              <label class="alphabet__letter" for="letter-L">Л</label>
+
+              <input type="radio" id="letter-M" name="alphabet" value="letter-M">
+              <label class="alphabet__letter" for="letter-M">М</label>
+
+              <input type="radio" id="letter-N" name="alphabet" value="letter-N">
+              <label class="alphabet__letter" for="letter-N">Н</label>
+
+              <input type="radio" id="letter-O" name="alphabet" value="letter-O">
+              <label class="alphabet__letter" for="letter-O">О</label>
+
+              <input type="radio" id="letter-P" name="alphabet" value="letter-P">
+              <label class="alphabet__letter" for="letter-P">П</label>
+
+              <input type="radio" id="letter-R" name="alphabet" value="letter-R">
+              <label class="alphabet__letter" for="letter-R">Р</label>
+
+              <input type="radio" id="letter-S" name="alphabet" value="letter-S">
+              <label class="alphabet__letter" for="letter-S">С</label>
+
+              <input type="radio" id="letter-T" name="alphabet" value="letter-T">
+              <label class="alphabet__letter" for="letter-T">Т</label>
+
+              <input type="radio" id="letter-U" name="alphabet" value="letter-U">
+              <label class="alphabet__letter" for="letter-U">У</label>
+
+              <input type="radio" id="letter-F" name="alphabet" value="letter-F">
+              <label class="alphabet__letter" for="letter-F">Ф</label>
+
+              <input type="radio" id="letter-KH" name="alphabet" value="letter-KH">
+              <label class="alphabet__letter" for="letter-KH">Х</label>
+
+              <input type="radio" id="letter-CH" name="alphabet" value="letter-CH">
+              <label class="alphabet__letter" for="letter-CH">Ч</label>
+
+              <input type="radio" id="letter-SH" name="alphabet" value="letter-SH">
+              <label class="alphabet__letter" for="letter-SH">Ш</label>
+
+              <input type="radio" id="letter-EH" name="alphabet" value="letter-EH">
+              <label class="alphabet__letter" for="letter-EH">Э</label>
+
+              <input type="radio" id="letter-YU" name="alphabet" value="letter-YU">
+              <label class="alphabet__letter" for="letter-YU">Ю</label>
+
+              <input type="radio" id="letter-YA" name="alphabet" value="letter-YA">
+              <label class="alphabet__letter" for="letter-YU">Я</label>
+            </fieldset>
+          </form>
+
+          <ul class="filter__countries" data-dependence="letter-A" >
+            <li class="filter__country">
+              <a class="filter__country-link" href="">Австралия</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./europe/austria">Австрия</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./europe/azerbaijan">Азербайджан</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./europe/albany">Албания</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="">Алжир</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="">Ангола</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./europe/andorra">Андорра</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./islands/antigua">Антигуа</a
+                > и Барбуда</li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./america/argentine">Аргентина</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./europe/armenia">Армения</a>
+            </li>
+            <li class="filter__country">
+              <a class="filter__country-link" href="./asia/afghanistan">Афганистан</a>
+            </li>
+          </ul>
+
+          <button class="filter__roll-button"><span>Свернуть</span></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="catalog__selection">
+        <h2 class="catalog__selection-title">Подберите <br> идеального <br> попутчика</h2>
+
+        <form class="selection" action="https://echo.htmlacademy.ru" method="POST" name="catalog-selection">
+          <fieldset class="selection__fieldset selection__fieldset">
+            <legend>Хобби</legend>
+            <p class="selection__title" aria-hidden="true">Хобби</p>
+            <button class="selection__button selection__button--arrow-down"></button>
+
+            <div class="selection__ticks selection__ticks--close">
+              <input type="checkbox" name="hobby" id="gym" value="gym" checked>
+              <label class="selection__label selection__label--checked"  for="gym">Спортзал</label>
+
+              <input type="checkbox" name="hobby" id="hookah" value="hookah">
+              <label class="selection__label" for="hookah">Кальян</label>
+
+              <input type="checkbox" name="hobby" id="divan" value="divan" checked>
+              <label class="selection__label" for="divan">Диван</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__fieldset">
+            <legend>Музыка</legend>
+            <p class="selection__title" aria-hidden="true">Музыка</p>
+            <button class="selection__button selection__button--arrow-up"></button>
+
+            <div class="selection__ticks">
+              <input type="checkbox" name="music" id="hard-rock" value="hard-rock" checked >
+              <label class="selection__label selection__label--checked" for="hard-rock">Тяжёлый рок</label>
+
+              <input type="checkbox" name="music" id="russian-rap" value="russian-rap" checked>
+              <label class="selection__label selection__label--checked" for="russian-rap">Русский рэп</label>
+
+              <input type="checkbox" name="music" id="eurodance" value="eurodance">
+              <label class="selection__label" for="eurodance">Евроденс</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__fieldset">
+            <legend>Еда</legend>
+            <p class="selection__title" aria-hidden="true">Еда</p>
+            <button class="selection__button selection__button--arrow-down"></button>
+
+            <div class="selection__ticks selection__ticks--close">
+              <input type="checkbox" name="music" id="meat-eater" value="meat-eater" checked>
+              <label class="selection__label selection__label--checked" for="meat-eater">Мясоед</label>
+
+              <input type="checkbox" name="music" id="diet" value="diet" >
+              <label class="selection__label" for="diet">Сидит на ПП</label>
+
+              <input type="checkbox" name="music" id="vegan-raw" value="vegan-raw">
+              <label class="selection__label" for="vegan-raw">Веган-сыроед</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="selection__fieldset">
+            <legend>Транспорт</legend>
+            <p class="selection__title" aria-hidden="true">Транспорт</p>
+            <button class="selection__button selection__button--arrow-up"></button>
+
+            <div class="selection__ticks selection__ticks--transport transport">
+              <label class="transport__label transport__label--checked">
+                <input type="checkbox" name="transport" value="plane" checked>
+                <span class="transport__tooltip tooltip">Авиаперелёт</span>
               </label>
 
-              <label class="range__level range__level--max" id="max-level"
-                aria-label="установить верхний порог (управление стрелкой вверх-вниз)">
-                <input name="max-level" type="number" value="100" step="1" min="0" max="100">
+              <label class="transport__label transport__label--checked">
+                <input type="checkbox" name="transport" value="bus" checked>
+                <span class="transport__tooltip tooltip">Автотранспорт</span>
+              </label>
+
+              <label class="transport__label">
+                <input type="checkbox" name="transport" value="bycicle">
+                <span class="transport__tooltip tooltip">Велосипед</span>
+              </label>
+
+              <label class="transport__label transport__label--checked">
+                <input type="checkbox" name="transport" value="walk" checked>
+                <span class="transport__tooltip tooltip">Пешком</span>
               </label>
             </div>
+          </fieldset>
 
-            <div class="range__scale">
-              <div class="range__bar"></div>
-              <button class="range__button range__button--min" id="button-min-level" type="button"
-                aria-label="установить нижний порог (управление стрелкой вправо-влево)"></button>
-              <button class="range__button range__button--max" id="button-max-level" type="button"
-                aria-label="установить верхний порог (управление стрелкой вправо-влево)"></button>
+          <fieldset class="selection__fieldset">
+            <legend>Левел</legend>
+            <p class="selection__title" aria-hidden="true">Левел</p>
+            <button class="selection__button selection__button--arrow-up"></button>
+
+            <div class="selection__ticks range">
+              <div class="range__inputs">
+                <label class="range__level range__level--min" id="min-level"
+                  aria-label="введите нижний порог">
+                  <input name="min-level" type="text" maxlength="3" value="30" placeholder="0">
+                </label>
+
+                <label class="range__level range__level--max" id="max-level"
+                  aria-label="введите верхний порог">
+                  <input name="max-level" type="text" maxlength="3" value="100" placeholder="100">
+                </label>
+              </div>
+
+              <div class="range__scale">
+                <div class="range__bar"></div>
+                <button class="range__button range__button--min" id="button-min-level" type="button"
+                  aria-label="установить нижний порог (управление стрелкой вправо-влево)"></button>
+                <button class="range__button range__button--max" id="button-max-level" type="button"
+                  aria-label="установить верхний порог (управление стрелкой вправо-влево)"></button>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="selection__submit" type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section class="catalog__display">
+        <h2>Профили пользователей</h2>
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
+            <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
+          </div>
+
+          <a class="profile__title profile__status profile__status--offline" href="">
+            <h3 class="profile__name">Таня <br> Фирсова</h3>
+          </a>
+
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#ЗОЖ</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#ПП</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#Фитнес</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#пляж</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#авокадо</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#смузи</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Шри-Ланки" width="26" height="18">
+                <span>Шри-Ланка</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Таиланда" width="26" height="18">
+                <span>Таиланд</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Сейшельских островов" width="26"
+                  height="18">
+                <span>Сейшелы</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s99" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">99</p>
             </div>
           </div>
-        </fieldset>
 
-        <button class="filter__submit filter-button filter-button--submit" type="submit">Показать</button>
-      </form>
-    </section>
+          <div class="profile__hearts">
+            <button class="profile__heart profile__heart--add"></button>
+            <p class="profile__likes">1,5 M</p>
+          </div>
 
-    <section class="catalog__display">
-      <h2 class="visually-hidden">Профили пользователей</h2>
-      <article class="catalog__profile profile profile--small">
-        <div class="profile__photo">
-          <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
+          <a class="profile__button button button--call" href="">Позвать!</a>
+        </article>
+
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
+            <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
+          </div>
+
+          <a class="profile__title profile__status profile__status--offline" href="">
+            <h3 class="profile__name">Петя <br> Демин</h3>
+          </a>
+
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#бургер</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#бар</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#футбол</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#концерт</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#крафт</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Бельгии"
+                  width="26" height="18">
+                <span>Бельгия</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Чехии"
+                  width="26" height="18">
+                <span>Чехия</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s80" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">80</p>
+            </div>
+          </div>
+
+          <div class="profile__hearts">
+            <button class="profile__heart"></button>
+            <p class="profile__likes">1500</p>
+          </div>
+
+          <a class="profile__button button button--call" href="">Позвать!</a>
+        </article>
+
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
+            <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
+          </div>
+
+          <a class="profile__title profile__status profile__status--offline" href="">
+            <h3 class="profile__name">Марк <br> Смолов </h3>
+          </a>
+
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#рэп</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#тату</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#хайпбист</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#кроссовки</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#суприм</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг США"
+                  width="26" height="18">
+                <span>США</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Австралии"
+                  width="26" height="18">
+                <span>Австралия</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Доминики" width="26"
+                  height="18">
+                <span>Доминика</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s25" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">25</p>
+            </div>
+          </div>
+
+          <div class="profile__hearts">
+            <button class="profile__heart"></button>
+            <p class="profile__likes">1500</p>
+          </div>
+
+          <a class="profile__button button button--call" href="">Позвать!</a>
+        </article>
+
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
+            <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
+          </div>
+
+          <a class="profile__title profile__status profile__status--online" href="">
+            <h3 class="profile__name">Лариса <br> Роговая </h3>
+          </a>
+
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#образование</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#карьера</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#учеба</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#линкедин</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Великобритании" width="26"
+                  height="18">
+                <span>Великобритания</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Германии"
+                  width="26" height="18">
+                <span>Германия</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle profile__subtitle--level">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s50" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">50</p>
+            </div>
+          </div>
+
+          <div class="profile__hearts">
+            <button class="profile__heart"></button>
+            <p class="profile__likes">23</p>
+          </div>
+
+          <a class="profile__button button button--call" href="">Позвать!</a>
+        </article>
+
+        <div class="catalog__show-more">
+          <a class="catalog__show-more" href="">Показать ещё</a>
         </div>
 
-        <a class="profile__title profile__status status status--offline" href="">
-          <h3 class="profile__name">Таня Фирсова</h3>
-        </a>
-
-        <div class="profile__hearts">
-          <button class="heart heart--added"></button>
-          <p class="profile__likes">1,5 М</p>
-        </div>
-
-        <ul class="profile__hashtags hashtags">
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#ЗОЖ</a>
+        <ul class="catalog__pagination">
+          <li class="catalog__page catalog__page--prev">
+            <a class="catalog__page-link catalog__page-link--prev" href="" aria-label="Предыдущая страница каталога"></a>
           </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#ПП</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#Фитнес</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#пляж</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#авокадо</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#смузи</a>
+          <li class="catalog__page catalog__page--next">
+            <a class="catalog__page-link catalog__page-link--next" href="" aria-label="Следующая страница каталога"></a>
           </li>
         </ul>
-
-        <div class="profile__favorites-countries-block">
-          <p class="profile__subtitle">Хочет посетить</p>
-          <ul class="profile__favorites-countries">
-            <li class="profile__favorites-country">
-              <img class="profile__flag flag flag--sri-lanka" src="http://via.placeholder.com/26x18"
-                alt="Флаг Шри-Ланки" width="26" height="18">
-              <span class="country-name">Шри-Ланка</span>
-            </li>
-            <li class="profile__favorites-country flag">
-              <img class="profile__flag flag flag--thailand" src="http://via.placeholder.com/26x18" alt="Флаг Таиланда" width="26" height="18">
-              <span class="country-name">Таиланд</span>
-            </li>
-            <li class="profile__favorites-country flag">
-              <img class="profile__flag flag flag--seychelles" src="http://via.placeholder.com/26x18" alt="Флаг Сейшельских островов" width="26" height="18">
-              <span class="country-name">Сейшелы</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__transports-block">
-          <p class="profile__subtitle">Транспорт</p>
-          <ul class="profile__transports">
-            <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-            </li>
-            <li class="transport transport--bus tooltip tooltip--bus">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--bycicle tooltip tooltip--bycicle">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--walk tooltip tooltip--walk">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__level level-tag">
-          <p class="level-tag__number">99</p>
-          <p class="level-tag__text level-tag__text--hidden">level</p>
-        </div>
-
-        <a class="profile__button button-call" href="">Позвать!</a>
-      </article>
-
-      <article class="catalog__profile profile profile--small">
-        <div class="profile__photo">
-          <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
-        </div>
-
-        <a class="profile__title profile__status status status--offline" href="">
-          <h3 class="profile__name">Петя Демин</h3>
-        </a>
-
-        <div class="profile__hearts">
-          <button class="heart"></button>
-          <p class="profile__likes">1500</p>
-        </div>
-
-        <ul class="profile__hashtags hashtags">
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#бургер</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#бар</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#футбол</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#концерт</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#крафт</a>
-          </li>
-        </ul>
-
-        <div class="profile__favorites-countries-block">
-          <p class="profile__subtitle">Хочет посетить</p>
-          <ul class="profile__favorites-countries">
-            <li class="profile__favorites-country">
-              <img class="profile__flag flag flag--belgium" src="http://via.placeholder.com/26x18" alt="Флаг Бельгии" width="26" height="18">
-              <span class="country-name">Бельгия</span>
-            </li>
-            <li class="profile__favorites-country ">
-              <img class="profile__flag flag flag--czech" src="http://via.placeholder.com/26x18" alt="Флаг Чехии" width="26" height="18">
-              <span class="country-name">Чехия</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__transports-block">
-          <p class="profile__subtitle">Транспорт</p>
-          <ul class="profile__transports">
-            <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-            </li>
-            <li class="transport transport--bus tooltip tooltip--bus transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--bycicle tooltip tooltip--bycicle">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--walk tooltip tooltip--walk transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__level level-tag">
-          <p class="level-tag__number">80</p>
-          <p class="level-tag__text level-tag__text--hidden">level</p>
-        </div>
-
-        <a class="profile__button button-call" href="">Позвать!</a>
-      </article>
-
-      <article class="catalog__profile profile profile--small">
-        <div class="profile__photo">
-          <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
-        </div>
-
-        <a class="profile__title profile__status status status--offline" href="">
-          <h3 class="profile__name">Марк Смолов</h3>
-        </a>
-
-        <div class="profile__hearts">
-          <button class="heart"></button>
-          <p class="profile__likes">170</p>
-        </div>
-
-        <ul class="profile__hashtags hashtags">
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#рэп</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#тату</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#хайпбист</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#кроссовки</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#суприм</a>
-          </li>
-        </ul>
-
-        <div class="profile__favorites-countries-block">
-          <p class="profile__subtitle">Хочет посетить</p>
-          <ul class="profile__favorites-countries">
-            <li class="profile__favorites-country">
-              <img class="profile__flag flag flag--usa" src="http://via.placeholder.com/26x18" alt="Флаг США" width="26" height="18">
-              <span class="country-name">США</span>
-            </li>
-            <li class="profile__favorites-country ">
-              <img class="profile__flag flag flag--australia" src="http://via.placeholder.com/26x18" alt="Флаг Австралия" width="26" height="18">
-              <span class="country-name">Австралия</span>
-            </li>
-            <li class="profile__favorites-country ">
-              <img class="profile__flag flag flag--dominica" src="http://via.placeholder.com/26x18" alt="Флаг Доминики" width="26" height="18">
-              <span class="country-name">Доминика</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__transports-block">
-          <p class="profile__subtitle">Транспорт</p>
-          <ul class="profile__transports">
-            <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-            </li>
-            <li class="transport transport--bus tooltip tooltip--bus">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--bycicle tooltip tooltip--bycicle transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--walk tooltip tooltip--walk">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__level level-tag">
-          <p class="level-tag__number">25</p>
-          <p class="level-tag__text level-tag__text--hidden">level</p>
-        </div>
-
-        <a class="profile__button button-call" href="">Позвать!</a>
-      </article>
-
-      <article class="catalog__profile profile profile--small">
-        <div class="profile__photo">
-          <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
-        </div>
-
-        <a class="profile__title profile__status status status--online" href="">
-          <h3 class="profile__name">Лариса Роговая</h3>
-        </a>
-
-        <div class="profile__hearts">
-          <button class="heart"></button>
-          <p class="profile__likes">23</p>
-        </div>
-
-        <ul class="profile__hashtags hashtags">
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#образование</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#карьера</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#учеба</a>
-          </li>
-          <li class="hashtags__item">
-            <a class="hashtags__link" href="">#линкедин</a>
-          </li>
-        </ul>
-
-        <div class="profile__favorites-countries-block">
-          <p class="profile__subtitle">Хочет посетить</p>
-          <ul class="profile__favorites-countries">
-            <li class="profile__favorites-country">
-              <img class="profile__flag flag flag--great-britain" src="http://via.placeholder.com/26x18" alt="Флаг Великобритании" width="26"
-                height="18">
-              <span class="country-name">Великобритания</span>
-            </li>
-            <li class="profile__favorites-country ">
-              <img class="profile__flag flag flag--germany" src="http://via.placeholder.com/26x18" alt="Флаг Германии"
-                width="26" height="18">
-              <span class="country-name">Германия</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__transports-block">
-          <p class="profile__subtitle">Транспорт</p>
-          <ul class="profile__transports">
-            <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-            </li>
-            <li class="transport transport--bus tooltip tooltip--bus transport--checked">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--bycicle tooltip tooltip--bycicle">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-            <li class="transport transport--walk tooltip tooltip--walk">
-              <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-            </li>
-          </ul>
-        </div>
-
-        <div class="profile__level level-tag">
-          <p class="level-tag__number">50</p>
-          <p class="level-tag__text level-tag__text--hidden">level</p>
-        </div>
-
-        <a class="profile__button button-call" href="">Позвать!</a>
-      </article>
-
-      <div class="catalog__show-more">
-        <a class="link-more" href="">Показать ещё</a>
-      </div>
-
-      <div class="catalog__pagination">
-        <ul class="pagination">
-          <li class="pagination__item pagination__item--prev">
-            <a class="pagination__link pagination__link--prev" href="" aria-label="Предыдущая страница каталога"></a>
-          </li>
-          <li class="pagination__item pagination__item--next">
-            <a class="pagination__link pagination__link--next" href="" aria-label="Следующая страница каталога"></a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
 
   <footer class="footer">
-    <a class="footer__logo logo" href="./index.html">
-      <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100"
-        height="15">
-    </a>
-
-    <ul class="footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="" aria-label="Наша страница на Фейсбуке">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="" aria-label="Наша группа во Вконтакте">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="" aria-label="Наша страница в Инстаграм">
-          <svg width="45" height="45">
-            <rect width="100%" height="100%" fill="#cccccc" />
-          </svg>
-        </a>
-      </li>
-    </ul>
-
-    <div class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__logo" src="http://via.placeholder.com/27x34" alt="Логотип «Html Academy»" width="27"
-          height="34">
+    <div class="container">
+      <a class="footer__logo logo" href="./index.html">
+        <img src="https://via.placeholder.com/100x15?text=Pognali" alt="Логотип сервиса «Погнали?»" width="100"
+          height="15">
       </a>
+
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--has-bg" href="" aria-label="Наша страница на Фейсбуке">
+            <svg class="social__icon social__icon--fb" width="11" height="21">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--has-bg" href="" aria-label="Наша группа во Вконтакте">
+            <svg class="social__icon social__icon--vk" width="23" height="12">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--has-bg" href="" aria-label="Наша страница в Инстаграм">
+            <svg class="social__icon social__icon--instagram" width="18" height="18">
+              <rect width="100%" height="100%" fill="#cccccc" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">Разработано</p>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="footer__copyright-logo" src="http://via.placeholder.com/27x34" alt="Логотип «Html Academy»"
+            width="27" height="34">
+        </a>
+      </div>
     </div>
   </footer>
 
 
-  <section class="country-filter country-filter--collapsed">
-    <div class="country-filter__header">
-      <h2 class="country-filter__title headline">Фильтрация по странам</h2>
-      <button class="country-filter__button country-filter-button country-filter-button--make-expand"></button>
-    </div>
 
-    <div class="country-filter__body country-filter-body country-filter-body--hidden">
-      <ul class="country-filter__world-parts">
-        <li class="country-filter__world-part">
-          <a class="country-filter__world-part-link" href="/europe/france">Европа</a>
-        </li>
-        <li class="country-filter__world-part">
-          <a class="country-filter__world-part-link" href="/europe/france">Азия</a>
-        </li>
-        <li class="country-filter__world-part">
-          <a class="country-filter__world-part-link" href="/europe/france">Америка</a>
-        </li>
-        <li class="country-filter__world-part">
-          <a class="country-filter__world-part-link" href="/europe/france">Острова</a>
-        </li>
-      </ul>
-
-      <form class="country-filter-body__select-country select-country">
-        <div class="select-country__alphabet">
-          <fieldset class="alphabet-box">
-            <input class="visually-hidden" type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
-            <label class="letter letter--checked" for="letter-A">А</label>
-
-            <input class="visually-hidden" type="radio" id="letter-B" name="alphabet" value="letter-B">
-            <label class="letter" for="letter-B">Б</label>
-
-            <input class="visually-hidden" type="radio" id="letter-V" name="alphabet" value="letter-V">
-            <label class="letter" for="letter-V">В</label>
-
-            <input class="visually-hidden" type="radio" id="letter-G" name="alphabet" value="letter-G">
-            <label class="letter" for="letter-G">Г</label>
-
-            <input class="visually-hidden" type="radio" id="letter-D" name="alphabet" value="letter-D">
-            <label class="letter" for="letter-D">Д</label>
-
-            <input class="visually-hidden" type="radio" id="letter-E" name="alphabet" value="letter-E">
-            <label class="letter" for="letter-E">Е</label>
-
-            <input class="visually-hidden" type="radio" id="letter-Z" name="alphabet" value="letter-Z">
-            <label class="letter" for="letter-Z">З</label>
-
-            <input class="visually-hidden" type="radio" id="letter-I" name="alphabet" value="letter-I">
-            <label class="letter" for="letter-I">И</label>
-
-            <input class="visually-hidden" type="radio" id="letter-K" name="alphabet" value="letter-K">
-            <label class="letter" for="letter-K">К</label>
-
-            <input class="visually-hidden" type="radio" id="letter-L" name="alphabet" value="letter-L">
-            <label class="letter" for="letter-L">Л</label>
-
-            <input class="visually-hidden" type="radio" id="letter-M" name="alphabet" value="letter-M">
-            <label class="letter" for="letter-M">М</label>
-
-            <input class="visually-hidden" type="radio" id="letter-N" name="alphabet" value="letter-N">
-            <label class="letter" for="letter-N">Н</label>
-
-            <input class="visually-hidden" type="radio" id="letter-O" name="alphabet" value="letter-O">
-            <label class="letter" for="letter-O">О</label>
-
-            <input class="visually-hidden" type="radio" id="letter-P" name="alphabet" value="letter-P">
-            <label class="letter" for="letter-P">П</label>
-
-            <input class="visually-hidden" type="radio" id="letter-R" name="alphabet" value="letter-R">
-            <label class="letter" for="letter-R">Р</label>
-
-            <input class="visually-hidden" type="radio" id="letter-S" name="alphabet" value="letter-S">
-            <label class="letter" for="letter-S">С</label>
-
-            <input class="visually-hidden" type="radio" id="letter-T" name="alphabet" value="letter-T">
-            <label class="letter" for="letter-T">Т</label>
-
-            <input class="visually-hidden" type="radio" id="letter-U" name="alphabet" value="letter-U">
-            <label class="letter" for="letter-U">У</label>
-
-            <input class="visually-hidden" type="radio" id="letter-F" name="alphabet" value="letter-F">
-            <label class="letter" for="letter-F">Ф</label>
-
-            <input class="visually-hidden" type="radio" id="letter-KH" name="alphabet" value="letter-KH">
-            <label class="letter" for="letter-KH">Х</label>
-
-            <input class="visually-hidden" type="radio" id="letter-TS" name="alphabet" value="letter-TS">
-            <label class="letter" for="letter-TS">Ц</label>
-
-            <input class="visually-hidden" type="radio" id="letter-CH" name="alphabet" value="letter-CH">
-            <label class="letter" for="letter-CH">Ч</label>
-
-            <input class="visually-hidden" type="radio" id="letter-SH" name="alphabet" value="letter-SH">
-            <label class="letter" for="letter-SH">Ш</label>
-
-
-            <input class="visually-hidden" type="radio" id="letter-EH" name="alphabet" value="letter-EH">
-            <label class="letter" for="letter-EH">Э</label>
-
-            <input class="visually-hidden" type="radio" id="letter-YU" name="alphabet" value="letter-YU">
-            <label class="letter" for="letter-YU">Ю</label>
-
-            <input class="visually-hidden" type="radio" id="letter-YA" name="alphabet" value="letter-YA">
-            <label class="letter" for="letter-YA">Я</label>
-          </fieldset>
-        </div>
-
-        <div class="select-country__select-wrapper">
-          <select class="select-country__countries countries" data-dependence="letter-A" size="10" name="country">
-            <option class="country">Австралия</option>
-            <option class="country">Австрия</option>
-            <option class="country">Азербайджан</option>
-            <option class="country">Албания</option>
-            <option class="country">Алжир</option>
-            <option class="country">Ангола</option>
-            <option class="country">Андорра</option>
-            <option class="country">Антигуа и Барбуда</option>
-            <option class="country">Аргентина</option>
-            <option class="country">Армения</option>
-            <option class="country">Афганистан</option>
-          </select>
-        </div>
-      </form>
-    </div>
-
-    <button class="country-filter__roll-button button-roll">Свернуть</button>
-  </section>
 </body>
 </html>

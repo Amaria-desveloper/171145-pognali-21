@@ -12,6 +12,12 @@
     height: 100px;
     background-color: transparent;
   }
+
+  &--small {
+    width: 45px;
+    height: 45px;
+    background-color: @basic-white;
+  }
 }
 
 .level__progressbar {
@@ -21,17 +27,34 @@
   rotate: -90deg;
   stroke: @special-orange;
   stroke-width: 3;
+  stroke-linecap: round;
 
   &--80 {
     stroke-dasharray: 250 50;
   }
 
-  &--s80 {
+  &--m80 {
     stroke-dasharray: 150 30;
   }
 
-  &--s99 {
+  &--s80 {
+    stroke-dasharray: 105 25;
+  }
+
+  &--m99 {
     stroke-dasharray: 170 10;
+  }
+
+  &--s99 {
+    stroke-dasharray: 128 5;
+  }
+
+  &--s25 {
+    stroke-dasharray: 30 100;
+  }
+
+  &--s50 {
+    stroke-dasharray: 65 65;
   }
 }
 
@@ -42,17 +65,28 @@
   margin-bottom: 0;
 
   .font-style-bold(24px; 24px; @basic-white);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    display: block;
+    width: 30px;
+    border: 1px solid @basic-white;
+    opacity: 0.3;
+  }
 }
 
-.level__number::after {
-  content: "";
+.level--small .level__number {
   position: absolute;
-  left: 15px;
-  bottom: 0;
-  display: block;
-  width: 30px;
-  border: 1px solid @basic-white;
-  opacity: 0.3;
+  top: 0;
+  left: 9px;
+  color: @basic-blue-light;
+
+  &::after {
+    display: none;
+  }
 }
 
 .level__text {
