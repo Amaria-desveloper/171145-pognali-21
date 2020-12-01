@@ -19,11 +19,20 @@
   width: 270px;
   height: 270px;
 
-  .background(10px; 10px; 0; 0);
-
   & > img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+  &--small {
+    grid-area: photo;
+
+    width: 70px;
+    height: 70px;
+
+    & > img {
+      border-radius: 50%;
+    }
   }
 }
 
@@ -102,6 +111,10 @@
   text-decoration: none;
 }
 
+.profile__transport-wrapper {
+  grid-area: transport;
+}
+
 .profile__transports {
   position: relative;
 
@@ -140,19 +153,7 @@
     "transport transport transport level level"
     ". button button button .";
 
-
   padding-top: 15px;
-}
-
-.catalog__card.profile .profile__photo {
-  grid-area: photo;
-
-  width: 70px;
-  height: 70px;
-
-  & > img {
-    border-radius: 50%;
-  }
 }
 
 .catalog__card.profile .profile__title {
@@ -185,11 +186,11 @@
   list-style: none;
 }
 
-.catalog__card-countries {
+.profile__countries-wrapper {
   grid-area: countries;
 }
 
-.catalog__card-subtitle span {
+.profile__subtitle span {
   position: relative;
   z-index: 2;
 
@@ -201,7 +202,7 @@
   background-color: @basic-white;
 }
 
-.catalog__card-subtitle {
+.profile__subtitle {
   position: relative;
 
   margin: 0 0 18px;
@@ -223,12 +224,12 @@
   }
 }
 
-.catalog__card-level span {
+.profile__level-wrapper span {
   margin: 0;
   padding-left: 4px;
 }
 
-.catalog__card.profile .profile__favorites-countries {
+.profile__countries-wrapper .profile__favorites-countries {
   flex-flow: column wrap;
   gap: 10px;
   margin: 18px auto 12px 25px;
@@ -237,7 +238,7 @@
   list-style: none;
 }
 
-.catalog__card.profile .profile__favorites-country {
+.profile__countries-wrapper .profile__favorites-country {
   display: flex;
   align-items: center;
   width: 100%;
@@ -251,20 +252,51 @@
   }
 }
 
-.catalog__card-transport {
-  grid-area: transport;
-}
-
-.catalog__card-level {
+.profile__level-wrapper {
   grid-area: level;
 
   padding-left: 2px;
 }
 
-.catalog__card.profile .profile__level {
+.profile__level-wrapper .profile__level {
   position: relative;
-  top: 0;
+  top: -10px;
   left: 0;
+}
+
+.profile__hearts {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 55px;
+  left: 70px;
+
+  min-width: 75px;
+  height: 31px;
+}
+
+.profile__heart {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background-color: @special-blue;
+
+  &--add {
+    background-color: @basic-pink;
+  }
+}
+
+.profile__likes {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  .font-style-bold(14px; 16px; @basic-blue);
 }
 
 .profile__button {
@@ -274,16 +306,25 @@
   margin: 13px 0 23px;
 }
 
+
 @media (min-width: @tablet-width) {
   .profile {
     min-width: 285px;
     min-height: 483px;
   }
 
-  .profile__photo > img {
-    width: 285px;
-    height: 286px;
+  .profile__photo {
+    & > img {
+      width: 285px;
+      height: 286px;
+    }
+
+    &--small > img {
+      width: 70px;
+      height: 70px;
+    }
   }
+
 
   .profile__name {
     .font-style-bold(24px; 24px; @basic-blue-light);

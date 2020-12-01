@@ -242,7 +242,7 @@
               <label class="selection__label" for="hookah">Кальян</label>
 
               <input type="checkbox" name="hobby" id="divan" value="divan" checked>
-              <label class="selection__label" for="divan">Ди ван</label>
+              <label class="selection__label" for="divan">Диван</label>
             </div>
           </fieldset>
 
@@ -343,7 +343,7 @@
       <section class="catalog__display">
         <h2>Профили пользователей</h2>
         <article class="catalog__card profile">
-          <div class="profile__photo">
+          <div class="profile__photo profile__photo--small">
             <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
           </div>
 
@@ -372,29 +372,29 @@
             </li>
           </ul>
 
-          <div class="catalog__card-countries">
-            <p class="catalog__card-subtitle">
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
               <span>хочет посетить:</span>
             </p>
             <ul class="profile__favorites-countries">
               <li class="profile__favorites-country">
-                <img class="profile__flag" src="http://via.placeholder.com/35x25" alt="Флаг Шри-Ланки" width="35" height="25">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Шри-Ланки" width="26" height="18">
                 <span>Шри-Ланка</span>
               </li>
               <li class="profile__favorites-country">
-                <img class="profile__flag" src="http://via.placeholder.com/35x25" alt="Флаг Таиланда" width="35" height="25">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Таиланда" width="26" height="18">
                 <span>Таиланд</span>
               </li>
               <li class="profile__favorites-country">
-                <img class="profile__flag" src="http://via.placeholder.com/35x25" alt="Флаг Сейшельских островов" width="35"
-                  height="25">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Сейшельских островов" width="26"
+                  height="18">
                 <span>Сейшелы</span>
               </li>
             </ul>
           </div>
 
-          <div class="catalog__card-transport">
-            <p class="catalog__card-subtitle">
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
               <span>транспорт:</span>
             </p>
             <ul class="profile__transports">
@@ -417,8 +417,8 @@
             </ul>
           </div>
 
-          <div class="catalog__card-level">
-            <p class="catalog__card-subtitle">
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
               <span>левел:</span>
             </p>
             <div class="profile__level level level--small">
@@ -429,242 +429,295 @@
             </div>
           </div>
 
-          <a class="profile__button button button--call" href="">Позвать</a>
+          <div class="profile__hearts">
+            <button class="profile__heart profile__heart--add"></button>
+            <p class="profile__likes">1,5 M</p>
+          </div>
+
+          <a class="profile__button button button--call" href="">Позвать!</a>
         </article>
 
-        <article class="catalog__profile profile profile--small">
-          <div class="profile__photo">
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
             <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
           </div>
 
-          <a class="profile__title profile__status status status--offline" href="">
-            <h3 class="profile__name">Петя Демин</h3>
+          <a class="profile__title profile__status profile__status--offline" href="">
+            <h3 class="profile__name">Петя <br> Демин</h3>
           </a>
 
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#бургер</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#бар</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#футбол</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#концерт</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#крафт</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Бельгии"
+                  width="26" height="18">
+                <span>Бельгия</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Чехии"
+                  width="26" height="18">
+                <span>Чехия</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s80" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">80</p>
+            </div>
+          </div>
+
           <div class="profile__hearts">
-            <button class="heart"></button>
+            <button class="profile__heart"></button>
             <p class="profile__likes">1500</p>
           </div>
 
-          <ul class="profile__hashtags hashtags">
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#бургер</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#бар</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#футбол</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#концерт</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#крафт</a>
-            </li>
-          </ul>
-
-          <div class="profile__favorites-countries-block">
-            <p class="profile__subtitle">Хочет посетить</p>
-            <ul class="profile__favorites-countries">
-              <li class="profile__favorites-country">
-                <img class="profile__flag flag flag--belgium" src="http://via.placeholder.com/26x18" alt="Флаг Бельгии" width="26" height="18">
-                <span class="country-name">Бельгия</span>
-              </li>
-              <li class="profile__favorites-country ">
-                <img class="profile__flag flag flag--czech" src="http://via.placeholder.com/26x18" alt="Флаг Чехии" width="26" height="18">
-                <span class="country-name">Чехия</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="profile__transports-block">
-            <p class="profile__subtitle">Транспорт</p>
-            <ul class="profile__transports">
-              <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-              </li>
-              <li class="transport transport--bus tooltip tooltip--bus transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-              <li class="transport transport--bycicle tooltip tooltip--bycicle">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-              <li class="transport transport--walk tooltip tooltip--walk transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-            </ul>
-          </div>
-
-          <div class="profile__level level-tag">
-            <p class="level-tag__number">80</p>
-            <p class="level-tag__text level-tag__text--hidden">level</p>
-          </div>
-
-          <a class="profile__button button-call" href="">Позвать!</a>
+          <a class="profile__button button button--call" href="">Позвать!</a>
         </article>
 
-        <article class="catalog__profile profile profile--small">
-          <div class="profile__photo">
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
             <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
           </div>
 
-          <a class="profile__title profile__status status status--offline" href="">
-            <h3 class="profile__name">Марк Смолов</h3>
+          <a class="profile__title profile__status profile__status--offline" href="">
+            <h3 class="profile__name">Марк <br> Смолов </h3>
           </a>
 
-          <div class="profile__hearts">
-            <button class="heart"></button>
-            <p class="profile__likes">170</p>
-          </div>
-
-          <ul class="profile__hashtags hashtags">
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#рэп</a>
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#рэп</a>
             </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#тату</a>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#тату</a>
             </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#хайпбист</a>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#хайпбист</a>
             </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#кроссовки</a>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#кроссовки</a>
             </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#суприм</a>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#суприм</a>
             </li>
           </ul>
 
-          <div class="profile__favorites-countries-block">
-            <p class="profile__subtitle">Хочет посетить</p>
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
             <ul class="profile__favorites-countries">
               <li class="profile__favorites-country">
-                <img class="profile__flag flag flag--usa" src="http://via.placeholder.com/26x18" alt="Флаг США" width="26" height="18">
-                <span class="country-name">США</span>
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг США"
+                  width="26" height="18">
+                <span>США</span>
               </li>
-              <li class="profile__favorites-country ">
-                <img class="profile__flag flag flag--australia" src="http://via.placeholder.com/26x18" alt="Флаг Австралия" width="26" height="18">
-                <span class="country-name">Австралия</span>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Австралии"
+                  width="26" height="18">
+                <span>Австралия</span>
               </li>
-              <li class="profile__favorites-country ">
-                <img class="profile__flag flag flag--dominica" src="http://via.placeholder.com/26x18" alt="Флаг Доминики" width="26" height="18">
-                <span class="country-name">Доминика</span>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Доминики" width="26"
+                  height="18">
+                <span>Доминика</span>
               </li>
             </ul>
           </div>
 
-          <div class="profile__transports-block">
-            <p class="profile__subtitle">Транспорт</p>
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
             <ul class="profile__transports">
-              <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
               </li>
-              <li class="transport transport--bus tooltip tooltip--bus">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
               </li>
-              <li class="transport transport--bycicle tooltip tooltip--bycicle transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
               </li>
-              <li class="transport transport--walk tooltip tooltip--walk">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
               </li>
             </ul>
           </div>
 
-          <div class="profile__level level-tag">
-            <p class="level-tag__number">25</p>
-            <p class="level-tag__text level-tag__text--hidden">level</p>
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s25" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">25</p>
+            </div>
           </div>
 
-          <a class="profile__button button-call" href="">Позвать!</a>
+          <div class="profile__hearts">
+            <button class="profile__heart"></button>
+            <p class="profile__likes">1500</p>
+          </div>
+
+          <a class="profile__button button button--call" href="">Позвать!</a>
         </article>
 
-        <article class="catalog__profile profile profile--small">
-          <div class="profile__photo">
+        <article class="catalog__card profile">
+          <div class="profile__photo profile__photo--small">
             <img src="http://via.placeholder.com/70x70" alt="Фотография пользователя" width="70" height="70">
           </div>
 
-          <a class="profile__title profile__status status status--online" href="">
-            <h3 class="profile__name">Лариса Роговая</h3>
+          <a class="profile__title profile__status profile__status--online" href="">
+            <h3 class="profile__name">Лариса <br> Роговая </h3>
           </a>
 
+          <ul class="profile__hashtags">
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#образование</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#карьера</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#учеба</a>
+            </li>
+            <li class="profile__hashtags-item">
+              <a class="profile__hashtags-link" href="">#линкедин</a>
+            </li>
+          </ul>
+
+          <div class="profile__countries-wrapper">
+            <p class="profile__subtitle">
+              <span>хочет посетить:</span>
+            </p>
+            <ul class="profile__favorites-countries">
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Великобритании" width="26"
+                  height="18">
+                <span>Великобритания</span>
+              </li>
+              <li class="profile__favorites-country">
+                <img class="profile__flag profile__flag--small" src="http://via.placeholder.com/26x18" alt="Флаг Германии"
+                  width="26" height="18">
+                <span>Германия</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <p class="profile__subtitle">
+              <span>транспорт:</span>
+            </p>
+            <ul class="profile__transports">
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="Путешествие на самолёте" width="25" height="25">
+                <span class="profile__tooltip tooltip">Авиаперелёт</span>
+              </li>
+              <li class="profile__transport profile__transport--checked">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Автотранспорт</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Велосипед</span>
+              </li>
+              <li class="profile__transport">
+                <img src="http://via.placeholder.com/25x25" alt="" width="25" height="25">
+                <span class="profile__tooltip tooltip">Пешком</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile__level-wrapper">
+            <p class="profile__subtitle profile__subtitle--level">
+              <span>левел:</span>
+            </p>
+            <div class="profile__level level level--small">
+              <svg class="level__progressbar level__progressbar--s50" width="45" height="45" viewBox="0 0 45 45">
+                <circle cx="22.5" cy="22.5" r="21" fill="transparent" />
+              </svg>
+              <p class="level__number">50</p>
+            </div>
+          </div>
+
           <div class="profile__hearts">
-            <button class="heart"></button>
+            <button class="profile__heart"></button>
             <p class="profile__likes">23</p>
           </div>
 
-          <ul class="profile__hashtags hashtags">
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#образование</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#карьера</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#учеба</a>
-            </li>
-            <li class="hashtags__item">
-              <a class="hashtags__link" href="">#линкедин</a>
-            </li>
-          </ul>
-
-          <div class="profile__favorites-countries-block">
-            <p class="profile__subtitle">Хочет посетить</p>
-            <ul class="profile__favorites-countries">
-              <li class="profile__favorites-country">
-                <img class="profile__flag flag flag--great-britain" src="http://via.placeholder.com/26x18" alt="Флаг Великобритании" width="26"
-                  height="18">
-                <span class="country-name">Великобритания</span>
-              </li>
-              <li class="profile__favorites-country ">
-                <img class="profile__flag flag flag--germany" src="http://via.placeholder.com/26x18" alt="Флаг Германии"
-                  width="26" height="18">
-                <span class="country-name">Германия</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="profile__transports-block">
-            <p class="profile__subtitle">Транспорт</p>
-            <ul class="profile__transports">
-              <li class="transport transport--plane tooltip tooltip--plane transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="Путешествие на самолёте" width="32" height="32">
-              </li>
-              <li class="transport transport--bus tooltip tooltip--bus transport--checked">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-              <li class="transport transport--bycicle tooltip tooltip--bycicle">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-              <li class="transport transport--walk tooltip tooltip--walk">
-                <img src="http://via.placeholder.com/32x32" alt="" width="32" height="32">
-              </li>
-            </ul>
-          </div>
-
-          <div class="profile__level level-tag">
-            <p class="level-tag__number">50</p>
-            <p class="level-tag__text level-tag__text--hidden">level</p>
-          </div>
-
-          <a class="profile__button button-call" href="">Позвать!</a>
+          <a class="profile__button button button--call" href="">Позвать!</a>
         </article>
 
         <div class="catalog__show-more">
-          <a class="link-more" href="">Показать ещё</a>
+          <a class="catalog__show-more" href="">Показать ещё</a>
         </div>
 
-        <div class="catalog__pagination">
-          <ul class="pagination">
-            <li class="pagination__item pagination__item--prev">
-              <a class="pagination__link pagination__link--prev" href="" aria-label="Предыдущая страница каталога"></a>
-            </li>
-            <li class="pagination__item pagination__item--next">
-              <a class="pagination__link pagination__link--next" href="" aria-label="Следующая страница каталога"></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="catalog__pagination">
+          <li class="catalog__page catalog__page--prev">
+            <a class="catalog__page-link catalog__page-link--prev" href="" aria-label="Предыдущая страница каталога"></a>
+          </li>
+          <li class="catalog__page catalog__page--next">
+            <a class="catalog__page-link catalog__page-link--next" href="" aria-label="Следующая страница каталога"></a>
+          </li>
+        </ul>
       </section>
     </div>
   </main>
