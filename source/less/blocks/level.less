@@ -24,6 +24,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   rotate: -90deg;
   stroke: @special-orange;
   stroke-width: 3;
@@ -110,4 +112,28 @@
   width: 51px;
   border: 1px solid @special-grey;
   opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .level {
+    &--user {
+      width: 94px;
+      height: 94px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .level {
+    &--user {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  .level--user .level__number,
+  .level--user .level__text {
+    color: @basic-white;
+  }
 }

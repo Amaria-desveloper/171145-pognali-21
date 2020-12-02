@@ -5,12 +5,50 @@
 .main__title {
   &--subpage {
     display: block;
-    .headline-subpage();
-    .background(0; 0; 20px; 20px; @basic-blue);
 
-    & > span {
-      padding-bottom: 8px;
-      border-bottom: 4px solid @special-orange;
+    .headline-subpage();
+
+    .background(0; 0; 20px; 20px; @basic-blue);
+  }
+}
+
+.main__title--subpage > span {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+
+    display: block;
+    width: 214px;
+    height: 4px;
+
+    .background(4px; 4px; 4px; 4px; @special-orange);
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .main__title--subpage {
+    min-height: 218px;
+
+    .background(0; 0; 60px; 60px; @basic-blue);
+  }
+
+  .main__title--subpage > span {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -68px;
+
+      display: block;
+      width: 358px;
+      height: 8px;
+
+      .background(4px; 4px; 4px; 4px; @special-orange);
     }
   }
 }

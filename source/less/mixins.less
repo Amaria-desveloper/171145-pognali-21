@@ -78,8 +78,14 @@
   display: block;
   min-height: 70px;
   margin: 0;
-  padding-bottom: 9px;
+  padding: 20px 25px 12px;
   .font-style-bold(36px; 36px);
+
+  @media (min-width: @tablet-width) {
+    padding: 88px 75px 66px;
+
+    .font-style-bold(60px; 60px);
+  }
 }
 
 .headline-form() {

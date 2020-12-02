@@ -1,6 +1,10 @@
 .header {
   position: relative;
+
   min-height: 73px;
+  padding-top: 28px;
+  padding-bottom: 32px;
+
   background-color: @basic-blue;
 
   &--sticky {
@@ -18,8 +22,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 28px;
-  padding-bottom: 32px;
+  height: 100%;
+}
+
+.header--subpage > .container {
+  padding-top: 19px;
 }
 
 .header__toggle {
@@ -58,9 +65,6 @@
 @media (min-width: @tablet-width) {
   .header {
     min-height: 132px;
-  }
-
-  .header > .container {
     padding-top: 40px;
     padding-bottom: 42px;
   }
@@ -83,10 +87,16 @@
 
 @media (min-width: @desktop-width) {
   .header {
+    padding: 46px 0 0;
+
     &--sticky {
       top: calc(100vh - 90px);
       min-height: 90px;
     }
+  }
+
+  .header > .container {
+    padding: 0;
   }
 
   .header__logo {

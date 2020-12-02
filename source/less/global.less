@@ -22,15 +22,20 @@
   .box-sizing();
 }
 
+* {
+  outline: 1px solid green;
+}
+
 .container {
   min-width: 320px;
   margin: 0 auto;
-  padding: 20px 25px 18px;
+  padding: 0 25px;
 }
 
 .modal-overlay {
   overflow-y: hidden;
   z-index: 10;
+
   background-color: @special-black-6;
 }
 
@@ -46,13 +51,13 @@ img {
 @media (min-width: @tablet-width) {
   .container {
     min-width: 688px;
-    padding: 28px 40px 32px;
+    padding: 0 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
     width: 1320px;
-    padding: 46px 60px 11px;
+    padding: 0;
   }
 }
