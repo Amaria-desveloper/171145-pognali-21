@@ -141,24 +141,20 @@
     </section>
 
     <section class="profile-form__user-plans">
-      <div class="add-plan-container">
+      <div class="container">
         <h3 class="profile-form__title">Мои планы:</h3>
         <ol class="plans">
           <li class="plans__item">
-            <b class="plans__title">Франция, Италия</b>
-            <div class="plans__text">
-              <p class="plans__fellow-quantity">3 попутчика</p>
-              <p class="plans__dates">26 мар — 29 мар</p>
-            </div>
-            <a class="plans__change-button form-button form-button--change" href="">Изменить</a>
+            <span class="plans__title">Франция, Италия</span>
+            <span class="plans__text plans__fellow-quantity">3 попутчика</span>
+            <span class="plans__text plans__dates">26 мар — 29 мар</span>
+            <a class="plans__change-button" href="">Изменить</a>
           </li>
 
           <li class="plans__item">
-            <b class="plans__title">Таиланд, Индонезия</b>
-            <div class="plans__text">
-              <p class="plans__fellow-quantity">1 попутчик</p>
-              <p class="plans__dates">1 июл — 15 июл</p>
-            </div>
+            <span class="plans__title">Таиланд, Индонезия</span>
+            <span class="plans__text plans__fellow-quantity">1 попутчик</span>
+            <span class="plans__text plans__dates">1 июл — 15 июл</span>
             <a class="plans__change-button" href="">Изменить</a>
           </li>
         </ol>
@@ -166,24 +162,29 @@
     </section>
 
     <section class="profile-form__add-plan add-plan">
-      <div class="add-plan-container">
-        <h2 class="profile-form__title">Добавить план:</h2>
+      <div class="container">
+        <div class="profile-form__header">
+          <h2 class="profile-form__title">Добавить план:</h2>
 
-        <ol class="add-plan__indicator-steps">
-          <li class="add-plan__indicator-step add-plan__indicator-step--current"><span class="is-hidden">Индикатор активности -  шаг первый.</span></li>
-          <li class="add-plan__indicator-step">
-            <span class="is-hidden">Индикатор активности - шаг второй.</span>
-          </li>
-          <li class="add-plan__indicator-step">
-            <span class="is-hidden">Индикатор активности - шаг третий.</span>
-          </li>
-        </ol>
+          <ol class="add-plan__indicator-markers">
+            <li class="add-plan__indicator-marker add-plan__indicator-marker--current"><span>Даты</span></li>
+            <li class="add-plan__indicator-marker">
+              <span>Маршрут</span>
+            </li>
+            <li class="add-plan__indicator-marker">
+              <span>Развлечения</span>
+            </li>
+          </ol>
+        </div>
 
         <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST" name="profile-form__add-plan">
 
           <div class="add-plan__step" id="step-1">
             <div class="add-plan-container">
-              <h3 class="add-plan__title">Шаг 1. <br> Даты пребывания</h3>
+              <div class="add-plan__header">
+                <h3 class="add-plan__step-number">Шаг 1.</h3>
+                <h3 class="add-plan__title">Даты пребывания</h3>
+              </div>
 
               <p class="add-plan__text">
                 Укажите предпочтительное количество попутчиков, которых
@@ -197,37 +198,34 @@
                     <span class="add-plan__legend-text add-plan__legend-text--measure">чел.</span>
                   </legend>
                   <div class="add-plan__field">
-                    <button class="num-button num-button--minus" type="button"></button>
-                    <input class="add-plan__input" type="text" name="fellows-quantity" value="2"
-                      aria-label="введите количество попутчиков">
-                    <button class="num-button num-button--plus" type="button"></button>
+                    <button class="add-plan__num-button add-plan__num-button--minus" type="button"></button>
+                    <input class="add-plan__input" type="text" name="fellows-quantity" value="2" aria-label="введите количество попутчиков" maxlength="3">
+                    <button class="add-plan__num-button add-plan__num-button--plus" type="button"></button>
                   </div>
                 </fieldset>
 
-                <fieldset class="add-plan__fieldset">
+                <fieldset class="add-plan__fieldset add-plan__fieldset--duration">
                   <legend class="add-plan__legend">
                     <span class="add-plan__legend-text">Длительность:</span>
                     <span class="add-plan__legend-text add-plan__legend-text--measure">дн.</span>
                   </legend>
                   <div class="add-plan__field">
-                    <button class="num-button num-button--minus" type="button"></button>
-                    <input class="add-plan__input" type="text" name="duration" value="3" aria-label="введите количество дней">
-                    <button class="num-button num-button--plus" type="button"></button>
+                    <button class="add-plan__num-button add-plan__num-button--minus" type="button"></button>
+                    <input class="add-plan__input" type="text" name="duration" value="3" aria-label="введите количество дней" maxlength="3">
+                    <button class="add-plan__num-button add-plan__num-button--plus" type="button"></button>
                   </div>
                 </fieldset>
 
-                <fieldset class="add-plan__fieldset">
-                  <label class="add-plan__label add-plan__label-children add-plan__label-children--checked" for="children-allowed">
+                <fieldset class="add-plan__fieldset add-plan__fieldset--children">
+                  <input type="checkbox" name="children-allowed" id="children-allowed" value="yes" checked>
+                  <label class="add-plan__label-children add-plan__label-children--checked" for="children-allowed" tabindex="0">
                     Можно с детьми
                   </label>
-                  <input class="is-hidden" type="checkbox" name="children-allowed" id="children-allowed" value="yes" checked>
                 </fieldset>
               </div>
 
               <div class="add-plan__calendar calendar">
-                <div class="is-hidden">
-                  <input type="text" name="dates" value="2019-03: 26, 27, 28">
-                </div>
+                <input class="is-hidden" type="text" name="dates" value="2019-03: 26, 27, 28">
 
                 <div class="calendar__caption">
                   <button class="calendar__caption-button calendar__caption-button--prev"></button>
@@ -238,13 +236,13 @@
                 <div class="calendar__body">
                   <ul class="calendar__table">
                     <li class="calendar__row calendar__row--header">
-                      <span class="calendar__weekday">П</span>
-                      <span class="calendar__weekday">В</span>
-                      <span class="calendar__weekday">С</span>
-                      <span class="calendar__weekday">Ч</span>
-                      <span class="calendar__weekday">П</span>
-                      <span class="calendar__weekday calendar__weekday--holiday">С</span>
-                      <span class="calendar__weekday calendar__weekday--holiday">В</span>
+                      <span class="calendar__weekday">П<span>н</span></span>
+                      <span class="calendar__weekday">В<span>т</span></span>
+                      <span class="calendar__weekday">С<span>р</span></span>
+                      <span class="calendar__weekday">Ч<span>т</span></span>
+                      <span class="calendar__weekday">П<span>т</span></span>
+                      <span class="calendar__weekday calendar__weekday--holiday">С<span>б</span></span>
+                      <span class="calendar__weekday calendar__weekday--holiday">В<span>с</span></span>
                     </li>
                     <li class="calendar__row">
                       <button class="calendar__button calendar__button--disabled" type="button">23</button>
@@ -318,33 +316,33 @@
               </p>
 
               <div class="choosebox">
-                <div class="add-plan__field choosebox__field choosebox__field--country">
+                <div class="choosebox__field choosebox__field--country">
                   <div class="add-plan__input-overlay">
                     <input class="choosebox__input" type="text" readonly value="Босния и Герцеговина" id="choose-01" name="choose-01">
                   </div>
                   <button class="choosebox__button" type="button"></button>
                 </div>
-                <label class="add-plan__field choosebox__field choosebox__field--flag" for="choose-01">
+                <label class="choosebox__field choosebox__field--flag" for="choose-01">
                   <img src="http://via.placeholder.com/35x24" alt="Флаг Боснии и Герцеговины" width="35" height="24">
                 </label>
                 <button class="choosebox__remove-button" type="button"></button>
               </div>
 
               <div class="choosebox">
-                <div class="add-plan__field choosebox__field choosebox__field--country">
+                <div class="choosebox__field choosebox__field--country">
                   <div class="add-plan__input-overlay">
                     <input class="choosebox__input" type="text" readonly value="Чехия" id="choose-02" name="choose-02">
                   </div>
                   <button class="choosebox__button" type="button"></button>
                 </div>
-                <label class="add-plan__field choosebox__field choosebox__field--flag" for="choose-02">
+                <label class="choosebox__field choosebox__field--flag" for="choose-02">
                   <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
                 </label>
                 <button class="choosebox__remove-button" type="button"></button>
               </div>
 
               <div class="choosebox choosebox--active-focus">
-                <div class="add-plan__field choosebox__field choosebox__field--country">
+                <div class="choosebox__field choosebox__field--country">
                   <div class="add-plan__input-overlay add-plan__input-overlay--off">
                     <input class="choosebox__input" type="text" readonly value="Выберите страну" id="choose-03" name="choose-03">
                   </div>
@@ -447,7 +445,7 @@
               </div>
 
               <div class="choosebox choosebox--waiting">
-                <div class="add-plan__field choosebox__field choosebox__field--country">
+                <div class="choosebox__field choosebox__field--country">
                   <div class="add-plan__input-overlay add-plan__input-overlay--off">
                     <input class="choosebox__input" type="text" readonly value="Добавить страну" id="choose-04">
                     <label for="choose-04"></label>

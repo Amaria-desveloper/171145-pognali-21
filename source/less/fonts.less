@@ -1,0 +1,58 @@
+.font(@font-name; @url-font: @font-name; @weight: 400) {
+  font-family: "@{font-name}";
+  src: url("../fonts/@{url-font}.woff2") format("woff2"),
+    url("../fonts/@{url-font}.woff") format("woff");
+  font-weight: @weight;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  .font(@font-regular);
+}
+
+@font-face {
+  .font(@font-regular, @font-light, 300);
+}
+
+@font-face {
+  .font(@font-regular, @font-medium, 500);
+}
+
+@font-face {
+  .font(@font-regular, @font-bold, 700);
+}
+
+.regular-font-family() {
+  font-family: @font-regular, "Arial", sans-serif;
+  font-style: normal;
+}
+
+.font-style-regular(@font-size: 16px; @line-height: 22px; @font-color: @basic-white) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 300;
+  color: @font-color;
+}
+
+.font-style-normal(@font-size: 14px; @line-height: 14px; @font-color: @basic-white) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 400;
+  color: @font-color;
+}
+
+.font-style-middle(@font-size: 16px; @line-height: 22px; @font-color: @basic-white) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 500;
+  color: @font-color;
+}
+
+.font-style-bold(@font-size: 16px; @line-height: 22px; @font-color: @basic-white) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 700;
+  color: @font-color;
+}
+

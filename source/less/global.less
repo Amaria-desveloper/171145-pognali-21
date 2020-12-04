@@ -1,29 +1,8 @@
-/* fonts */
-@font-face {
-  .font(@font-regular);
-}
-
-@font-face {
-  .font(@font-regular, @font-light, 300);
-}
-
-@font-face {
-  .font(@font-regular, @font-medium, 500);
-}
-
-@font-face {
-  .font(@font-regular, @font-bold, 700);
-}
-
 /* common */
 *,
 *::before,
 *::after {
   .box-sizing();
-}
-
-* {
-  outline: 1px solid green;
 }
 
 .container {
@@ -53,11 +32,20 @@ img {
     min-width: 688px;
     padding: 0 40px;
   }
+
+  .page__body--form .container {
+    padding: 0 72px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    width: 1320px;
+    //min-width: 1320px;
+    max-width: 1460px;
     padding: 0;
+  }
+
+  .page__body--form .container {
+    padding: 0 60px;
   }
 }
