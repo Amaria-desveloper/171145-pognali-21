@@ -3,12 +3,9 @@
 
   display: flex;
   flex-flow: column wrap;
-
 }
 
 .user__fieldset {
-  position: relative;
-
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -113,14 +110,13 @@
 
 @media (min-width: @tablet-width) {
   .user {
-    margin-top: 62px;
+    padding: 62px 0 0;
   }
 
   .user__fieldset {
     margin-bottom: 52px;
 
     &--hashtags {
-      margin-bottom: 48px;
       padding: 26px 40px 35px;
       rotate: 180deg;
     }
@@ -129,11 +125,10 @@
       position: absolute;
       left: 50%;
       transform: translate(50%, 0);
+      margin-bottom: 0;
 
       flex-wrap: nowrap;
-      max-width: 308px;
       padding: 16px 67px 25px;
-
       rotate: 180deg;
     }
   }
@@ -143,6 +138,7 @@
   }
 
   .user__fieldset--hashtags .user__legend {
+    width: auto;
     padding: 0 17px;
     rotate: 180deg;
   }
@@ -195,6 +191,10 @@
 
     .font-style-normal(20px; 22px; @special-grey);
 
+    rotate: 180deg;
+  }
+
+  .user__fieldset--transport .transport {
     rotate: 180deg;
   }
 }
