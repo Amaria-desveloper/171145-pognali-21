@@ -31,7 +31,7 @@
   }
 
   & > span {
-    .hide();//без js, без доступности
+    .hide();//без js
   }
 }
 
@@ -47,16 +47,18 @@
 
 .add-plan__header {
   margin-bottom: 20px;
+}
+
+.add-plan__step-number {
+  margin: 0;
 
   .font-style-bold(20px; 20px; @basic-blue-light);
 }
 
-.add-plan__step-number {
-  margin: 0 0 6px;
-}
-
 .add-plan__title {
   margin: 0;
+
+  .font-style-bold(20px; 20px; @basic-blue-light);
 }
 
 .add-plan__text {
@@ -131,32 +133,6 @@
 
   border: none;
 }
-
-/* .choosebox__input-overlay {
-  position: relative;
-
-  width: 100%;
-  height: 100%;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, transparent 0%, transparent 50%, @basic-white 80%, @basic-white 100%);
-  }
-
-  &--off::after {
-    background: transparent;
-  }
-
-  &--small::after {
-    background: linear-gradient(to right, transparent 0%, transparent 75%, @basic-white 90%, @basic-white 100%);
-  }
-} */
 
 .add-plan__fieldset--children input {
   .visually-hidden();
@@ -312,15 +288,22 @@
   .background(20px; 20px; 20px; 20px; @basic-yellow);
 }
 
+.add-plan__buttons-wrapper {
+  margin: 22px 0 0;
+}
+
 .add-plan__button {
   display: flex;
-  margin: 22px auto 6px;
+}
+
+.add-plan__button.button-step--prev {
+  margin: 0;
 }
 
 
 @media (min-width: @tablet-width) {
   .add-plan-container {
-    padding: 48px 43px 56px;
+    padding: 48px 40px 56px;
   }
 
   .add-plan__indicator-markers {
@@ -345,8 +328,6 @@
 
   .add-plan__header {
     margin-bottom: 38px;
-
-    .font-style-bold(36px; 36px; @basic-blue-light);
   }
 
   .add-plan__step--two .add-plan__header {
@@ -354,7 +335,11 @@
   }
 
   .add-plan__step-number {
-    margin: 0 0 10px;
+    .font-style-bold(36px; 36px; @basic-blue-light);
+  }
+
+  .add-plan__title {
+    .font-style-bold(36px; 36px; @basic-blue-light);
   }
 
   .add-plan__text {
@@ -444,8 +429,18 @@
     border-top: 1px solid @special-grey-light;
   }
 
-  .add-plan__button {
-    margin: 47px 0 0;
+  .add-plan__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+  }
+
+  .add-plan__button.button-step--next {
+    width: 286px;
+  }
+
+  .add-plan__button.button-step--prev {
+    width: 186px;
   }
 }
 
@@ -600,5 +595,14 @@
 
   .add-plan__button {
     width: 286px;
+  }
+
+  .add-plan__button.button-step--next {
+    width: 286px;
+    margin-top: 8px;
+  }
+
+  .add-plan__button.button-step--prev {
+    width: 186px;
   }
 }

@@ -308,7 +308,6 @@
             </div>
           </div>
 
-
           <div class="add-plan__step add-plan__step--two" id="step-2">
             <div class="add-plan-container">
               <div class="add-plan__header">
@@ -321,11 +320,9 @@
 
               <div class="add-plan__chooseboxes">
                 <div class="choosebox">
-                  <div class="choosebox__field choosebox__field--country">
-                    <div class="input-overlay">
+                  <div class="choosebox__field choosebox__field--country input-overlay">
                       <input class="choosebox__input" type="text" readonly value="Босния и Герцеговина" id="choose-01" name="choose-01">
-                    </div>
-                    <button class="choosebox__button" type="button"></button>
+                      <button class="choosebox__button" type="button"></button>
                   </div>
                   <div class="choosebox__field-point"></div>
                   <label class="choosebox__field choosebox__field--label" for="choose-01">
@@ -335,10 +332,8 @@
                 </div>
 
                 <div class="choosebox">
-                  <div class="choosebox__field choosebox__field--country">
-                    <div class="input-overlay">
-                      <input class="choosebox__input" type="text" readonly value="Чехия" id="choose-02" name="choose-02">
-                    </div>
+                  <div class="choosebox__field choosebox__field--country input-overlay">
+                    <input class="choosebox__input" type="text" readonly value="Чехия" id="choose-02" name="choose-02">
                     <button class="choosebox__button" type="button"></button>
                   </div>
                   <div class="choosebox__field-point"></div>
@@ -348,19 +343,21 @@
                   <button class="choosebox__remove-button" type="button"></button>
                 </div>
 
-                <div class="choosebox choosebox--active">
-                  <div class="choosebox__field choosebox__field--country">
-                    <div class="input-overlay input-overlay--off">
-                      <input class="choosebox__input" type="text" readonly value="Выберите страну" id="choose-03" name="choose-03">
-                    </div>
-                    <button class="choosebox__remove-button" type="button"></button>
+                <div class="choosebox choosebox--add">
+                  <div class="choosebox__field choosebox__field--country input-overlay input-overlay">
+                    <input class="choosebox__input" type="text" readonly value="Выберите страну" id="choose-03" name="choose-03">
                     <button class="choosebox__button" type="button"></button>
                   </div>
-                  <label class="choosebox__field choosebox__field--label" for="choose-03">
-                    <svg width="16" height="12">-></svg>
+                  <div class="choosebox__field-point choosebox__field-point--add"></div>
+                  <label class="choosebox__field is-hidden" for="choose-03">
+                    Выберите страну
                   </label>
+                  <button class="choosebox__remove-button" type="button"></button>
+                </div>
 
-                  <fieldset class="choosebox__dropdown alphabet">
+                <fieldset class="choosebox__dropdown">
+                  <div class="alphabet">
+                    <div class="alphabet__letters">
                       <input type="radio" id="letter-A" name="alphabet" value="letter-A" checked>
                       <label class="alphabet__letter alphabet__letter--checked" for="letter-A">А</label>
 
@@ -435,42 +432,40 @@
 
                       <input type="radio" id="letter-YA" name="alphabet" value="letter-YA">
                       <label class="alphabet__letter" for="letter-YU">Я</label>
-
-
-                    <select class="dropdown__countries" data-dependence="letter-A" size="10" name="country">
-                      <option class="dropdown__country">Австралия</option>
-                      <option class="dropdown__country">Австрия</option>
-                      <option class="dropdown__country">Азербайджан</option>
-                      <option class="dropdown__country">Албания</option>
-                      <option class="dropdown__country">Алжир</option>
-                      <option class="dropdown__country">Ангола</option>
-                      <option class="dropdown__country">Андорра</option>
-                      <option class="dropdown__country">Антигуа и Барбуда</option>
-                      <option class="dropdown__country">Аргентина</option>
-                      <option class="dropdown__country">Армения</option>
-                      <option class="dropdown__country">Афганистан</option>
-                    </select>
-                  </fieldset>
-
-                </div>
-
-                <div class="choosebox choosebox--wainting">
-                  <div class="choosebox__field choosebox__field--country">
-                    <div class="input-overlay">
-                      <input class="choosebox__input" type="text" readonly value="Добавить страну" id="choose-04" name="choose-04">
                     </div>
-                    <button class="choosebox__button" type="button"></button>
+
+                    <select class="alphabet__countries" data-dependence="letter-A" size="10" name="country">
+                      <option class="alphabet__country">Австралия</option>
+                      <option class="alphabet__country">Австрия</option>
+                      <option class="alphabet__country">Азербайджан</option>
+                      <option class="alphabet__country">Албания</option>
+                      <option class="alphabet__country">Алжир</option>
+                      <option class="alphabet__country">Ангола</option>
+                      <option class="alphabet__country">Андорра</option>
+                      <option class="alphabet__country">Антигуа и Барбуда</option>
+                      <option class="alphabet__country">Аргентина</option>
+                      <option class="alphabet__country">Армения</option>
+                      <option class="alphabet__country">Афганистан</option>
+                    </select>
                   </div>
-                  <div class="choosebox__field-point"></div>
-                  <label class="choosebox__field choosebox__field--label" for="choose-04">
-                    <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+                </fieldset>
+
+                <div class="choosebox choosebox--pending">
+                  <div class="choosebox__field choosebox__field--country">
+                    <input class="choosebox__input" type="text" readonly value="Добавить страну" id="choose-04" name="choose-04">
+                    <button class="choosebox__button choosebox__button--plus" type="button"></button>
+                  </div>
+                  <div class="choosebox__field-point choosebox__field-point--pending"></div>
+                  <label class="choosebox__field is-hidden" for="choose-04">
+                    Выберите страну
                   </label>
-                  <button class="choosebox__remove-button" type="button"></button>
                 </div>
               </div>
 
-              <a class="add-plan__next-button button-step button-step--next" href="#step-3">Следующий шаг</a>
-              <a class="add-plan__next-button button-step button-step--prev" href="#step-1">На шаг назад</a>
+              <div class="add-plan__buttons-wrapper">
+                <a class="add-plan__button button-step button-step--next" href="#step-3"><span>Следующий шаг</span></a>
+                <a class="add-plan__button button-step button-step--prev" href="#step-1"><span>На шаг назад</span></a>
+              </div>
             </div>
           </div>
 
@@ -553,5 +548,20 @@
       </div>
     </div>
   </footer>
-  </body>
+
+  <!-- Генерируемые поля при выборе страны в Добавлении плана -->
+  <template id="choosebox-input">
+    <div class="choosebox">
+      <div class="choosebox__field choosebox__field--country input-overlay">
+        <input class="choosebox__input" type="text" readonly value="Чехия" id="choose-$$" name="choose-$$">
+      </div>
+      <div class="choosebox__field-point"></div>
+      <label class="choosebox__field choosebox__field--label" for="choose-$$">
+        <img src="http://via.placeholder.com/35x24" alt="Флаг Чехии" width="35" height="24">
+      </label>
+      <button class="choosebox__button" type="button"></button>
+      <button class="choosebox__remove-button" type="button"></button>
+    </div>
+  </template>
+</body>
 </html>
