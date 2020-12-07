@@ -474,12 +474,11 @@
               <div class="add-plan__header">
                 <h3 class="add-plan__step-number">Шаг 3.</h3>
                 <h3 class="add-plan__title">Развлечения</h3>
+                <p class="add-plan__text">
+                  Наконец, расскажите о своих планах времяпрепровождения.
+                  Можно писать в свободной форме и ставить тэги.
+                </p>
               </div>
-
-              <p class="add-plan__text">
-                Наконец, расскажите о своих планах времяпрепровождения.
-                Можно писать в свободной форме и ставить тэги.
-              </p>
 
               <ul class="add-plan__journey-plans">
                 <li class="add-plan__journey-plan add-plan__journey-plan--active">
@@ -498,10 +497,12 @@
                   <textarea class="add-plan__journey-desc" name="plan-czech" id="chozen-czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-            </div>
 
-            <button class="add-plan__submit" type="submit">Отправить</button>
-            <a class="add-plan__button button-step button-step--prev" href="#step-2">На шаг назад</a>
+              <div class="add-plan__buttons-wrapper">
+                <button class="add-plan__button add-plan__button--submit button-step button-step--next" type="submit"><span>Отправить</span></button>
+                <a class="add-plan__button button-step button-step--prev" href="#step-2"><span>На шаг назад</span></a>
+              </div>
+            </div>
           </div>
         </form>
       </div>

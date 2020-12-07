@@ -39,10 +39,6 @@
   max-width: 270px;
   margin: 0 auto 10px;
   .background(10px; 10px; 10px; 10px; @basic-white);
-
-  &:last-child {
-    padding-bottom: 27px;
-  }
 }
 
 .add-plan__header {
@@ -162,12 +158,8 @@
   }
 }
 
-.add-plan__next-button {
-  display: flex;
-}
-
 .add-plan__journey-plans {
-  margin: 23px 0 0;
+  margin-top: 23px;
   padding: 0;
 }
 
@@ -180,7 +172,7 @@
     content: "";
     position: absolute;
     top: 9px;
-    left: -12px;
+    left: -10px;
 
     display: block;
     width: 10px;
@@ -204,14 +196,15 @@
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
-    left: -2px;
+    top: 50%;
+    left: 0;
 
     width: 6px;
     height: 6px;
 
     border-radius: 50%;
     background-color: @basic-blue-light;
+    transform: translate(0, -100%);
   }
 }
 
@@ -273,27 +266,27 @@
   }
 }
 
-.add-plan__submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 40px;
-  margin: 0 auto 17px;
-
-  .font-style-bold(17px; 30px; @basic-blue-light);
-  text-transform: uppercase;
-
-  border: none;
-  .background(20px; 20px; 20px; 20px; @basic-yellow);
-}
-
 .add-plan__buttons-wrapper {
   margin: 22px 0 0;
 }
 
 .add-plan__button {
   display: flex;
+  margin-top: 22px;
+
+  &--submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+
+    .font-style-bold(17px; 30px; @basic-blue-light);
+    text-transform: uppercase;
+
+    border: none;
+    .background(20px; 20px; 20px; 20px; @basic-yellow);
+  }
 }
 
 .add-plan__button.button-step--prev {
@@ -303,7 +296,7 @@
 
 @media (min-width: @tablet-width) {
   .add-plan-container {
-    padding: 48px 40px 56px;
+    padding: 48px 38px 56px;
   }
 
   .add-plan__indicator-markers {
@@ -425,14 +418,87 @@
   }
 
   .add-plan__chooseboxes {
-    padding: 42px 0;
+    padding: 42px 0 0;
     border-top: 1px solid @special-grey-light;
+  }
+
+  .add-plan__journey-plans {
+    padding-top: 36px;
+    border-top: 1px solid @special-grey-light;
+  }
+
+  .add-plan__journey-plan {
+    margin-bottom: 44px;
+    padding-left: 4px;
+    max-width: 500px;
+
+    &--active::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: calc(100% + 25px);
+
+      display: block;
+      width: 2px;
+      height: 260px;
+
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+  .add-plan__journey-plan-country {
+    margin-bottom: 30px;
+    padding-left: 0;
+
+    &::before {
+      top: 30px;
+      left: calc(100% + 19px);
+
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .add-plan__journey-plan-country img {
+    width: 70px;
+    height: 47px;
+    .outline(blue);
+  }
+
+  .add-plan__journey-plan-title {
+    max-width: 174px;
+
+    .font-style-middle(30px; 30px; @basic-blue-light);
+  }
+
+  .add-plan__journey-desc {
+    height: 140px;
+    padding: 19px 18px;
+
+    .font-style-normal(16px; 22px; @special-grey);
+
+    .background(4px; 4px; 4px; 4px; @basic-white);
   }
 
   .add-plan__buttons-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .add-plan__button {
     margin-top: 47px;
+
+    &--submit {
+      position: relative;
+      justify-content: flex-start;
+      width: 280px;
+      height: 80px;
+      padding-left: 34px;
+
+      .font-style-bold(24px; 24px; @basic-blue-light);
+      text-transform: none;
+    }
   }
 
   .add-plan__button.button-step--next {
@@ -441,6 +507,7 @@
 
   .add-plan__button.button-step--prev {
     width: 186px;
+    margin-top: auto;
   }
 }
 
@@ -593,16 +660,47 @@
     .font-style-middle(20px; 20px; @basic-blue-light);
   }
 
+  .add-plan__journey-plans {
+    padding-top: 75px;
+  }
+
+  .add-plan__journey-plan {
+    margin-bottom: 47px;
+    padding-left: 0;
+    max-width: 730px;
+
+    &--active::before {
+      left: calc(100% + 43px);
+
+      height: 248px;
+    }
+  }
+
+  .add-plan__journey-plan-country {
+    position: relative;
+
+    &::before {
+      left: calc(100% + 37px);
+    }
+  }
+
+  .add-plan__journey-plan-country img {
+    position: absolute;
+    right: -155px;
+  }
+
+  .add-plan__journey-desc {
+    height: 142px;
+    padding: 25px;
+  }
+
   .add-plan__button {
     width: 286px;
-  }
+    margin-top: 57px;
 
-  .add-plan__button.button-step--next {
-    width: 286px;
-    margin-top: 8px;
-  }
-
-  .add-plan__button.button-step--prev {
-    width: 186px;
+    &--submit {
+      justify-content: flex-start;
+      width: 286px;
+    }
   }
 }
